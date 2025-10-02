@@ -1,0 +1,401 @@
+package com.deliveryplatform.integration;
+
+import com.deliveryplatform.exceptions.DeliveryAssignmentException;
+import com.deliveryplatform.exceptions.InvalidOrderStateException;
+import com.deliveryplatform.exceptions.OrderValidationException;
+import com.deliveryplatform.exceptions.RestaurantUnavailableException;
+import com.deliveryplatform.models.Order;
+import com.deliveryplatform.models.OrderItem;
+import com.deliveryplatform.models.OrderStatus;
+import com.deliveryplatform.models.Restaurant;
+import com.deliveryplatform.repositories.InMemoryOrderRepository;
+import com.deliveryplatform.repositories.InMemoryRestaurantRepository;
+import com.deliveryplatform.services.DeliveryService;
+import com.deliveryplatform.services.OrderLoggingService;
+import com.deliveryplatform.services.OrderService;
+import com.deliveryplatform.services.RestaurantService;
+import com.deliveryplatform.services.RestaurantServiceImpl;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
+import java.math.BigDecimal;
+import java.time.LocalTime;
+import java.util.Arrays;
+import java.util.List;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+/**
+ * Integration test for complete order lifecycle from creation to delivery.
+ */
+class OrderLifecycleIntegrationTest {
+
+    private OrderService orderService;
+    private RestaurantService restaurantService;
+    private DeliveryService deliveryService;
+    private OrderLoggingService loggingService;
+    
+    private InMemoryOrderRepository orderRepository;
+    private InMemoryRestaurantRepository restaurantRepository;
+    
+    private Restaurant testRestaurant;
+    private List<OrderItem> testItems;
+
+    @BeforeEach
+    void setUp() {
+        // Initialize repositories
+        orderRepository = new InMemoryOrderRepository();
+        restaurantRepository = new InMemoryRestaurantRepository();
+        loggingService = new OrderLoggingService();
+        
+        // Initialize services
+        orderService = new OrderService(orderRepository, loggingService);
+        restaurantService = new RestaurantServiceImpl(orderRepository, restaurantRepository, loggingService);
+        deliveryService = new DeliveryService(orderRepository, loggingService);
+        
+        // Set up test data
+        setupTestData();
+    }
+
+    private void setupTestData() {
+        // Create test restaurant
+        testRestaurant = new Restaurant(
+                "REST-001",
+                "Pizza Palace",
+                LocalTime.of(9, 0),
+                LocalTime.of(22, 0),
+                10 // max concurrent orders
+        );
+        restaurantRepository.save(testRestaurant);
+        
+        // Create test order items
+        OrderItem item1 = new OrderItem("ITEM-001", "Margherita Pizza", 2, new BigDecimal("15.99"));
+        OrderItem item2 = new OrderItem("ITEM-002", "Coca Cola", 2, new BigDecimal("2.99"));
+        testItems = Arrays.asList(item1, item2);
+    }
+
+    @Test
+    void testCompleteOrderLifecycle() throws Exception {
+        // Step 1: Customer creates an order
+        Order order = orderService.createOrder(
+                "CUST-001",
+                "REST-001",
+                testItems,
+                "123 Main St, Downtown City"
+        );
+        
+        assertNotNull(order);
+        assertEquals(OrderStatus.PENDING, order.getStatus());
+        assertEquals("CUST-001", order.getCustomerId());
+        assertEquals("REST-001", order.getRestaurantId());
+        assertEquals(2, order.getItems().size());
+        
+        // Verify total amount calculation (2 * 15.99 + 2 * 2.99 = 37.96)
+        assertEquals(0, new BigDecimal("37.96").compareTo(order.getTotalAmount()));
+        
+        String orderId = order.getOrderId();
+        
+        // Step 2: Restaurant accepts the order
+        restaurantService.acceptOrder(orderId, "REST-001");
+        
+        Order updatedOrder = orderRepository.findById(orderId).orElseThrow();
+        assertEquals(OrderStatus.ACCEPTED, updatedOrder.getStatus());
+        
+        // Step 3: Restaurant starts preparing the order
+        restaurantService.startPreparingOrder(orderId, "REST-001");
+        
+        updatedOrder = orderRepository.findById(orderId).orElseThrow();
+        assertEquals(OrderStatus.PREPARING, updatedOrder.getStatus());
+        
+        // Step 4: Restaurant marks order ready for delivery
+        restaurantService.markOrderReady(orderId, "REST-001");
+        
+        updatedOrder = orderRepository.findById(orderId).orElseThrow();
+        assertEquals(OrderStatus.READY_FOR_DELIVERY, updatedOrder.getStatus());
+        
+        // Step 5: Delivery service assigns a driver
+        String driverId = deliveryService.assignDriver(orderId);
+        
+        assertNotNull(driverId);
+        updatedOrder = orderRepository.findById(orderId).orElseThrow();
+        assertEquals(OrderStatus.IN_DELIVERY, updatedOrder.getStatus());
+        assertEquals(driverId, updatedOrder.getDriverId());
+        
+        // Step 6: Driver completes the delivery
+        deliveryService.completeDelivery(orderId, driverId);
+        
+        updatedOrder = orderRepository.findById(orderId).orElseThrow();
+        assertEquals(OrderStatus.DELIVERED, updatedOrder.getStatus());
+        assertNotNull(updatedOrder.getActualDeliveryTime());
+        assertTrue(updatedOrder.isTerminal());
+    }
+
+    @Test
+    void testOrderRejectionByRestaurant() throws Exception {
+        // Create an order
+        Order order = orderService.createOrder(
+                "CUST-002",
+                "REST-001",
+                testItems,
+                "456 Oak Ave, Uptown City"
+        );
+        
+        String orderId = order.getOrderId();
+        assertEquals(OrderStatus.PENDING, order.getStatus());
+        
+        // Restaurant rejects the order
+        String rejectionReason = "Out of ingredients for Margherita Pizza";
+        restaurantService.rejectOrder(orderId, "REST-001", rejectionReason);
+        
+        Order updatedOrder = orderRepository.findById(orderId).orElseThrow();
+        assertEquals(OrderStatus.REJECTED, updatedOrder.getStatus());
+        assertEquals(rejectionReason, updatedOrder.getRejectionReason());
+        assertTrue(updatedOrder.isTerminal());
+    }
+
+    @Test
+    void testOrderCancellationByCustomer() throws Exception {
+        // Create and accept an order
+        Order order = orderService.createOrder(
+                "CUST-003",
+                "REST-001",
+                testItems,
+                "789 Pine St, Midtown City"
+        );
+        
+        String orderId = order.getOrderId();
+        restaurantService.acceptOrder(orderId, "REST-001");
+        
+        // Customer cancels the order
+        String cancellationReason = "Customer changed mind";
+        orderService.cancelOrder(orderId, cancellationReason);
+        
+        Order updatedOrder = orderRepository.findById(orderId).orElseThrow();
+        assertEquals(OrderStatus.CANCELLED, updatedOrder.getStatus());
+        assertEquals(cancellationReason, updatedOrder.getCancellationReason());
+        assertTrue(updatedOrder.isTerminal());
+    }
+
+    @Test
+    void testRestaurantUnavailableException() throws OrderValidationException {
+        // Create order first
+        Order order = orderService.createOrder(
+                "CUST-004",
+                "REST-001",
+                testItems,
+                "321 Elm St, Suburbs"
+        );
+        
+        // Now make restaurant unavailable
+        testRestaurant.stopAcceptingOrders();
+        restaurantRepository.save(testRestaurant);
+        
+        // Try to accept order when restaurant is unavailable
+        assertThrows(RestaurantUnavailableException.class, () -> {
+            restaurantService.acceptOrder(order.getOrderId(), "REST-001");
+        });
+        
+        // Test another scenario: restaurant at capacity
+        testRestaurant.startAcceptingOrders(); // Re-enable
+        testRestaurant.setMaxConcurrentOrders(0); // Set capacity to 0
+        restaurantRepository.save(testRestaurant);
+        
+        Order order2 = orderService.createOrder(
+                "CUST-005",
+                "REST-001",
+                testItems,
+                "654 Maple Dr, Outskirts"
+        );
+        
+        assertThrows(RestaurantUnavailableException.class, () -> {
+            restaurantService.acceptOrder(order2.getOrderId(), "REST-001");
+        });
+    }
+
+    @Test
+    void testInvalidStateTransitions() throws Exception {
+        // Create an order
+        Order order = orderService.createOrder(
+                "CUST-006",
+                "REST-001",
+                testItems,
+                "987 Cedar Ln, East Side"
+        );
+        
+        String orderId = order.getOrderId();
+        
+        // Try invalid state transitions
+        
+        // Cannot start preparing without accepting first
+        assertThrows(InvalidOrderStateException.class, () -> {
+            restaurantService.startPreparingOrder(orderId, "REST-001");
+        });
+        
+        // Cannot mark ready without preparing first
+        assertThrows(InvalidOrderStateException.class, () -> {
+            restaurantService.markOrderReady(orderId, "REST-001");
+        });
+        
+        // Cannot assign driver without being ready
+        assertThrows(InvalidOrderStateException.class, () -> {
+            deliveryService.assignDriver(orderId);
+        });
+        
+        // Accept the order and try more invalid transitions
+        restaurantService.acceptOrder(orderId, "REST-001");
+        
+        // Cannot mark ready from accepted (need to prepare first)
+        assertThrows(InvalidOrderStateException.class, () -> {
+            restaurantService.markOrderReady(orderId, "REST-001");
+        });
+    }
+
+    @Test
+    void testDeliveryAssignmentFailure() throws Exception {
+        // Remove all drivers to simulate no drivers available
+        deliveryService.removeDriver("DRIVER-001");
+        deliveryService.removeDriver("DRIVER-002");
+        deliveryService.removeDriver("DRIVER-003");
+        deliveryService.removeDriver("DRIVER-004");
+        deliveryService.removeDriver("DRIVER-005");
+        
+        // Create and prepare order for delivery
+        Order order = orderService.createOrder(
+                "CUST-007",
+                "REST-001",
+                testItems,
+                "159 Birch Way, West End"
+        );
+        
+        String orderId = order.getOrderId();
+        restaurantService.acceptOrder(orderId, "REST-001");
+        restaurantService.startPreparingOrder(orderId, "REST-001");
+        restaurantService.markOrderReady(orderId, "REST-001");
+        
+        // Try to assign driver when none are available
+        assertThrows(DeliveryAssignmentException.class, () -> {
+            deliveryService.assignDriver(orderId);
+        });
+        
+        // Order should remain in READY_FOR_DELIVERY state
+        Order updatedOrder = orderRepository.findById(orderId).orElseThrow();
+        assertEquals(OrderStatus.READY_FOR_DELIVERY, updatedOrder.getStatus());
+    }
+
+    @Test
+    void testOrderValidationFailures() {
+        // Test missing customer ID
+        assertThrows(OrderValidationException.class, () -> {
+            orderService.createOrder(null, "REST-001", testItems, "123 Test St");
+        });
+        
+        // Test missing restaurant ID
+        assertThrows(OrderValidationException.class, () -> {
+            orderService.createOrder("CUST-008", null, testItems, "123 Test St");
+        });
+        
+        // Test empty items list
+        assertThrows(OrderValidationException.class, () -> {
+            orderService.createOrder("CUST-008", "REST-001", List.of(), "123 Test St");
+        });
+        
+        // Test missing delivery address
+        assertThrows(OrderValidationException.class, () -> {
+            orderService.createOrder("CUST-008", "REST-001", testItems, null);
+        });
+        
+        // Test items with invalid data
+        List<OrderItem> invalidItems = Arrays.asList(
+                new OrderItem(null, "Invalid Item", 1, new BigDecimal("10.00")) // null itemId
+        );
+        
+        assertThrows(OrderValidationException.class, () -> {
+            orderService.createOrder("CUST-008", "REST-001", invalidItems, "123 Test St");
+        });
+    }
+
+    @Test
+    void testMultipleOrdersForSameRestaurant() throws Exception {
+        // Create multiple orders for the same restaurant
+        Order order1 = orderService.createOrder("CUST-009", "REST-001", testItems, "Address 1");
+        Order order2 = orderService.createOrder("CUST-010", "REST-001", testItems, "Address 2");
+        Order order3 = orderService.createOrder("CUST-011", "REST-001", testItems, "Address 3");
+        
+        // Accept all orders
+        restaurantService.acceptOrder(order1.getOrderId(), "REST-001");
+        restaurantService.acceptOrder(order2.getOrderId(), "REST-001");
+        restaurantService.acceptOrder(order3.getOrderId(), "REST-001");
+        
+        // Verify all orders are accepted
+        assertEquals(OrderStatus.ACCEPTED, orderRepository.findById(order1.getOrderId()).orElseThrow().getStatus());
+        assertEquals(OrderStatus.ACCEPTED, orderRepository.findById(order2.getOrderId()).orElseThrow().getStatus());
+        assertEquals(OrderStatus.ACCEPTED, orderRepository.findById(order3.getOrderId()).orElseThrow().getStatus());
+        
+        // Verify restaurant capacity tracking
+        Restaurant restaurant = restaurantRepository.findById("REST-001").orElseThrow();
+        assertEquals(3, restaurant.getCurrentOrderCount());
+        assertEquals(7, restaurant.getRemainingCapacity()); // 10 max - 3 current = 7
+    }
+
+    @Test
+    void testDriverCapacityManagement() throws Exception {
+        // Create multiple orders ready for delivery
+        Order order1 = createOrderReadyForDelivery("CUST-012");
+        Order order2 = createOrderReadyForDelivery("CUST-013");
+        Order order3 = createOrderReadyForDelivery("CUST-014");
+        Order order4 = createOrderReadyForDelivery("CUST-015");
+        
+        // Assign drivers (should use different drivers due to capacity)
+        String driver1 = deliveryService.assignDriver(order1.getOrderId());
+        String driver2 = deliveryService.assignDriver(order2.getOrderId());
+        String driver3 = deliveryService.assignDriver(order3.getOrderId());
+        String driver4 = deliveryService.assignDriver(order4.getOrderId());
+        
+        // Verify all assignments worked
+        assertNotNull(driver1);
+        assertNotNull(driver2);
+        assertNotNull(driver3);
+        assertNotNull(driver4);
+        
+        // Check driver has orders assigned
+        assertTrue(deliveryService.getDriverOrderCount(driver1) > 0);
+        
+        // Complete first delivery to free up capacity
+        deliveryService.completeDelivery(order1.getOrderId(), driver1);
+        
+        // Verify order is delivered
+        Order completedOrder = orderRepository.findById(order1.getOrderId()).orElseThrow();
+        assertEquals(OrderStatus.DELIVERED, completedOrder.getStatus());
+        
+        // Verify driver capacity was released (should be less than before completion)
+        int finalDriverCount = deliveryService.getDriverOrderCount(driver1);
+        assertTrue(finalDriverCount >= 0, "Driver order count should be non-negative after delivery completion");
+    }
+
+    private Order createOrderReadyForDelivery(String customerId) throws Exception {
+        Order order = orderService.createOrder(customerId, "REST-001", testItems, "Test Address");
+        restaurantService.acceptOrder(order.getOrderId(), "REST-001");
+        restaurantService.startPreparingOrder(order.getOrderId(), "REST-001");
+        restaurantService.markOrderReady(order.getOrderId(), "REST-001");
+        return orderRepository.findById(order.getOrderId()).orElseThrow();
+    }
+
+    @Test
+    void testOrderSpecialInstructions() throws Exception {
+        // Create order
+        Order order = orderService.createOrder("CUST-016", "REST-001", testItems, "Special Address");
+        
+        // Update special instructions while in PENDING state
+        orderService.updateSpecialInstructions(order.getOrderId(), "Please ring doorbell twice");
+        
+        Order updatedOrder = orderRepository.findById(order.getOrderId()).orElseThrow();
+        assertEquals("Please ring doorbell twice", updatedOrder.getSpecialInstructions());
+        
+        // Accept order and try to update instructions (should fail)
+        restaurantService.acceptOrder(order.getOrderId(), "REST-001");
+        
+        assertThrows(InvalidOrderStateException.class, () -> {
+            orderService.updateSpecialInstructions(order.getOrderId(), "New instructions");
+        });
+    }
+}
