@@ -1,337 +1,419 @@
+/* ===== 新粗野主義風格 (Neo-Brutalism) ===== */
+
 /* 全局樣式 */
 .root {
-    -fx-font-family: "Microsoft YaHei", "微軟雅黑", Arial, sans-serif;
-    -fx-font-size: 13px;
-    -fx-background-color: #f5f5f5;
+    -fx-font-family: "Impact", "Arial Black", "Helvetica Neue", sans-serif;
+    -fx-font-size: 14px;
+    -fx-background-color: #FFFFFF;
 }
 
-/* 標題區域 */
+/* 粗野主義基礎色彩 - 黑白配色 */
+.brutalist-primary { -fx-background-color: #000000; }
+.brutalist-secondary { -fx-background-color: #FFFFFF; }
+.brutalist-accent { -fx-background-color: #000000; }
+.brutalist-warning { -fx-background-color: #FFFFFF; }
+.brutalist-info { -fx-background-color: #000000; }
+.brutalist-danger { -fx-background-color: #FFFFFF; }
+.brutalist-white { -fx-background-color: #FFFFFF; }
+
+/* 粗野主義標題區域 */
 .header {
-    -fx-background-color: linear-gradient(to bottom, #2c3e50, #34495e);
-    -fx-padding: 15;
+    -fx-background-color: #000000;
+    -fx-padding: 20;
+    -fx-border-color: #FFFFFF;
+    -fx-border-width: 0 0 8 0;
 }
 
 .title-bar {
-    -fx-padding: 0 0 10 0;
+    -fx-padding: 0 0 15 0;
 }
 
 .main-title {
-    -fx-text-fill: white;
-    -fx-font-size: 18px;
+    -fx-text-fill: #FFFFFF;
+    -fx-font-size: 32px;
     -fx-font-weight: bold;
+    -fx-font-family: "Impact", "Arial Black", sans-serif;
+    -fx-effect: dropshadow(gaussian, #FFFFFF, 4, 0, 2, 2);
 }
 
 .status-label {
-    -fx-text-fill: #2ecc71;
-    -fx-font-size: 12px;
-    -fx-padding: 5 10;
-    -fx-background-color: rgba(255, 255, 255, 0.2);
-    -fx-background-radius: 15;
+    -fx-text-fill: #000000;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-padding: 8 15;
+    -fx-background-color: #FFFFFF;
+    -fx-border-color: #000000;
+    -fx-border-width: 3;
+    -fx-background-radius: 0;
+    -fx-border-radius: 0;
 }
 
-/* 進度條 */
+/* 粗野主義進度條 */
 .progress-bar {
-    -fx-accent: #3498db;
+    -fx-accent: #000000;
+    -fx-background-color: #FFFFFF;
+    -fx-border-color: #000000;
+    -fx-border-width: 3;
+    -fx-background-radius: 0;
 }
 
-/* 標籤頁樣式 */
+/* 粗野主義標籤頁樣式 */
 .main-tabs {
-    -fx-tab-min-width: 120px;
-    -fx-tab-max-width: 120px;
+    -fx-tab-min-width: 140px;
+    -fx-tab-max-width: 140px;
 }
 
 .main-tabs .tab-pane .tab-header-area .tab-header-background {
-    -fx-background-color: #ecf0f1;
+    -fx-background-color: #FFFFFF;
+    -fx-border-color: #000000;
+    -fx-border-width: 0 0 5 0;
 }
 
 .main-tabs .tab {
-    -fx-background-color: #bdc3c7;
+    -fx-background-color: #FFFFFF;
     -fx-background-radius: 0;
-    -fx-border-width: 0 1 0 0;
-    -fx-border-color: #95a5a6;
+    -fx-border-width: 3 3 0 0;
+    -fx-border-color: #000000;
+    -fx-border-radius: 0;
 }
 
 .main-tabs .tab:selected {
-    -fx-background-color: white;
-    -fx-border-color: #3498db;
-    -fx-border-width: 0 3 0 0;
+    -fx-background-color: #000000;
+    -fx-border-color: #000000;
+    -fx-border-width: 3 3 0 0;
 }
 
 .main-tabs .tab .tab-label {
-    -fx-text-fill: #2c3e50;
+    -fx-text-fill: #000000;
     -fx-font-weight: bold;
+    -fx-font-family: "Impact", "Arial Black", sans-serif;
+    -fx-font-size: 12px;
 }
 
 .main-tabs .tab:selected .tab-label {
-    -fx-text-fill: #3498db;
+    -fx-text-fill: #FFFFFF;
+    -fx-font-weight: bold;
 }
 
-/* 內容面板 */
+/* 粗野主義內容面板 */
 .content-panel {
-    -fx-padding: 20;
-    -fx-background-color: white;
-    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 5, 0, 0, 2);
+    -fx-padding: 25;
+    -fx-background-color: #FFFFFF;
+    -fx-border-color: #000000;
+    -fx-border-width: 5;
+    -fx-background-radius: 0;
+    -fx-border-radius: 0;
 }
 
 .section-title {
-    -fx-font-size: 16px;
+    -fx-font-size: 20px;
     -fx-font-weight: bold;
-    -fx-text-fill: #2c3e50;
-    -fx-padding: 0 0 10 0;
+    -fx-text-fill: #000000;
+    -fx-padding: 0 0 15 0;
+    -fx-font-family: "Impact", "Arial Black", sans-serif;
 }
 
-/* 按鈕樣式 */
+/* 粗野主義按鈕樣式 */
 .button {
-    -fx-font-size: 12px;
+    -fx-font-size: 14px;
     -fx-font-weight: bold;
-    -fx-padding: 8 15;
+    -fx-font-family: "Impact", "Arial Black", sans-serif;
+    -fx-padding: 12 20;
     -fx-cursor: hand;
-    -fx-background-radius: 5;
-    -fx-border-radius: 5;
-    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 2, 0, 0, 1);
+    -fx-background-radius: 0;
+    -fx-border-radius: 0;
+    -fx-border-width: 4;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,1), 4, 0, 4, 4);
+}
+
+/* 異常觸發按鈕 - 黑白配色 */
+.exception-btn-validation {
+    -fx-background-color: #FFFFFF;
+    -fx-text-fill: #000000;
+    -fx-border-color: #000000;
+}
+
+.exception-btn-validation:hover {
+    -fx-background-color: #000000;
+    -fx-text-fill: #FFFFFF;
+}
+
+.exception-btn-restaurant {
+    -fx-background-color: #000000;
+    -fx-text-fill: #FFFFFF;
+    -fx-border-color: #000000;
+}
+
+.exception-btn-restaurant:hover {
+    -fx-background-color: #FFFFFF;
+    -fx-text-fill: #000000;
+}
+
+.exception-btn-state {
+    -fx-background-color: #FFFFFF;
+    -fx-text-fill: #000000;
+    -fx-border-color: #000000;
+}
+
+.exception-btn-state:hover {
+    -fx-background-color: #000000;
+    -fx-text-fill: #FFFFFF;
+}
+
+.exception-btn-delivery {
+    -fx-background-color: #000000;
+    -fx-text-fill: #FFFFFF;
+    -fx-border-color: #000000;
+}
+
+.exception-btn-delivery:hover {
+    -fx-background-color: #FFFFFF;
+    -fx-text-fill: #000000;
 }
 
 .primary-button {
-    -fx-background-color: #3498db;
-    -fx-text-fill: white;
-    -fx-border-color: #2980b9;
-    -fx-border-width: 1;
+    -fx-background-color: #000000;
+    -fx-text-fill: #FFFFFF;
+    -fx-border-color: #FFFFFF;
 }
 
 .primary-button:hover {
-    -fx-background-color: #2980b9;
+    -fx-background-color: #FFFFFF;
+    -fx-text-fill: #000000;
+    -fx-border-color: #000000;
 }
 
 .secondary-button {
-    -fx-background-color: #95a5a6;
-    -fx-text-fill: white;
-    -fx-border-color: #7f8c8d;
-    -fx-border-width: 1;
+    -fx-background-color: #FFFFFF;
+    -fx-text-fill: #000000;
+    -fx-border-color: #000000;
 }
 
 .secondary-button:hover {
-    -fx-background-color: #7f8c8d;
+    -fx-background-color: #000000;
+    -fx-text-fill: #FFFFFF;
 }
 
 .success-button {
-    -fx-background-color: #2ecc71;
-    -fx-text-fill: white;
-    -fx-border-color: #27ae60;
-    -fx-border-width: 1;
+    -fx-background-color: #FFFFFF;
+    -fx-text-fill: #000000;
+    -fx-border-color: #000000;
 }
 
 .success-button:hover {
-    -fx-background-color: #27ae60;
+    -fx-background-color: #000000;
+    -fx-text-fill: #FFFFFF;
 }
 
 .danger-button {
-    -fx-background-color: #e74c3c;
-    -fx-text-fill: white;
-    -fx-border-color: #c0392b;
-    -fx-border-width: 1;
+    -fx-background-color: #000000;
+    -fx-text-fill: #FFFFFF;
+    -fx-border-color: #000000;
 }
 
 .danger-button:hover {
-    -fx-background-color: #c0392b;
+    -fx-background-color: #FFFFFF;
+    -fx-text-fill: #000000;
 }
 
 .warning-button {
-    -fx-background-color: #f39c12;
-    -fx-text-fill: white;
-    -fx-border-color: #e67e22;
-    -fx-border-width: 1;
+    -fx-background-color: #FFFFFF;
+    -fx-text-fill: #000000;
+    -fx-border-color: #000000;
 }
 
 .warning-button:hover {
-    -fx-background-color: #e67e22;
+    -fx-background-color: #000000;
+    -fx-text-fill: #FFFFFF;
 }
 
 .info-button {
-    -fx-background-color: #9b59b6;
-    -fx-text-fill: white;
-    -fx-border-color: #8e44ad;
-    -fx-border-width: 1;
+    -fx-background-color: #000000;
+    -fx-text-fill: #FFFFFF;
+    -fx-border-color: #000000;
 }
 
 .info-button:hover {
-    -fx-background-color: #8e44ad;
+    -fx-background-color: #FFFFFF;
+    -fx-text-fill: #000000;
 }
 
 .small-button {
-    -fx-font-size: 10px;
-    -fx-padding: 5 10;
-    -fx-background-color: #ecf0f1;
-    -fx-text-fill: #2c3e50;
-    -fx-border-color: #bdc3c7;
-    -fx-border-width: 1;
+    -fx-font-size: 12px;
+    -fx-padding: 8 12;
+    -fx-background-color: #FFFFFF;
+    -fx-text-fill: #000000;
+    -fx-border-color: #000000;
+    -fx-border-width: 2;
 }
 
 .small-button:hover {
-    -fx-background-color: #d5dbdb;
+    -fx-background-color: #000000;
+    -fx-text-fill: #FFFFFF;
 }
 
-/* 輸入框樣式 */
+/* 粗野主義輸入框樣式 */
 .text-field, .text-area {
-    -fx-background-color: white;
-    -fx-border-color: #bdc3c7;
-    -fx-border-width: 1;
-    -fx-border-radius: 3;
-    -fx-background-radius: 3;
-    -fx-padding: 8;
+    -fx-background-color: #FFFFFF;
+    -fx-border-color: #000000;
+    -fx-border-width: 3;
+    -fx-border-radius: 0;
+    -fx-background-radius: 0;
+    -fx-padding: 10;
+    -fx-font-family: "Courier New", monospace;
+    -fx-font-size: 12px;
 }
 
 .text-field:focused, .text-area:focused {
-    -fx-border-color: #3498db;
-    -fx-border-width: 2;
+    -fx-border-color: #000000;
+    -fx-border-width: 4;
 }
 
 .combo-box {
-    -fx-background-color: white;
-    -fx-border-color: #bdc3c7;
-    -fx-border-width: 1;
-    -fx-border-radius: 3;
-    -fx-background-radius: 3;
+    -fx-background-color: #FFFFFF;
+    -fx-border-color: #000000;
+    -fx-border-width: 3;
+    -fx-border-radius: 0;
+    -fx-background-radius: 0;
 }
 
 .combo-box:focused {
-    -fx-border-color: #3498db;
-    -fx-border-width: 2;
+    -fx-border-color: #000000;
+    -fx-border-width: 4;
 }
 
-/* 訂單項目容器 */
+/* 粗野主義訂單項目容器 */
 .items-container {
-    -fx-background-color: #f8f9fa;
-    -fx-padding: 15;
-    -fx-border-color: #dee2e6;
-    -fx-border-width: 1;
-    -fx-border-radius: 5;
-    -fx-background-radius: 5;
+    -fx-background-color: #FFFFFF;
+    -fx-padding: 20;
+    -fx-border-color: #000000;
+    -fx-border-width: 4;
+    -fx-border-radius: 0;
+    -fx-background-radius: 0;
 }
 
 .item-row {
-    -fx-padding: 5;
+    -fx-padding: 8;
+    -fx-border-color: #000000;
+    -fx-border-width: 0 0 2 0;
 }
 
 .total-row {
-    -fx-padding: 10 5 5 5;
-    -fx-border-width: 1 0 0 0;
-    -fx-border-color: #dee2e6;
+    -fx-padding: 15 8 8 8;
+    -fx-border-width: 4 0 0 0;
+    -fx-border-color: #000000;
+    -fx-background-color: #000000;
 }
 
 .total-label {
     -fx-font-weight: bold;
-    -fx-font-size: 14px;
+    -fx-font-size: 16px;
+    -fx-font-family: "Impact", "Arial Black", sans-serif;
+    -fx-text-fill: #FFFFFF;
 }
 
 .total-amount {
     -fx-font-weight: bold;
-    -fx-font-size: 14px;
-    -fx-text-fill: #e74c3c;
+    -fx-font-size: 18px;
+    -fx-text-fill: #FFFFFF;
+    -fx-font-family: "Impact", "Arial Black", sans-serif;
 }
 
-/* 異常資訊區域 */
+/* 粗野主義異常資訊區域 */
 .exception-info {
-    -fx-background-color: #fff3cd;
-    -fx-border-color: #ffeaa7;
-    -fx-border-width: 1;
-    -fx-border-radius: 5;
-    -fx-background-radius: 5;
-    -fx-padding: 15;
+    -fx-background-color: #FFFFFF;
+    -fx-border-color: #000000;
+    -fx-border-width: 4;
+    -fx-border-radius: 0;
+    -fx-background-radius: 0;
+    -fx-padding: 20;
 }
 
 .info-title {
     -fx-font-weight: bold;
-    -fx-text-fill: #856404;
+    -fx-text-fill: #000000;
+    -fx-font-family: "Impact", "Arial Black", sans-serif;
+    -fx-font-size: 16px;
 }
 
 .info-text {
-    -fx-text-fill: #856404;
-    -fx-padding: 2 0 2 15;
+    -fx-text-fill: #000000;
+    -fx-padding: 5 0 5 20;
+    -fx-font-family: "Courier New", monospace;
 }
 
-/* 日誌面板 */
-.log-panel {
-    -fx-background-color: #2c3e50;
-    -fx-padding: 0;
-}
-
-.log-header {
-    -fx-background-color: #34495e;
-    -fx-padding: 10 15;
-    -fx-border-width: 1 0 0 0;
-    -fx-border-color: #4a6741;
-}
-
-.log-title {
-    -fx-text-fill: white;
-    -fx-font-weight: bold;
-    -fx-font-size: 14px;
-}
-
-.log-area {
-    -fx-background-color: #2c3e50;
-    -fx-text-fill: #ecf0f1;
-    -fx-font-family: "Consolas", "Monaco", "Courier New", monospace;
-    -fx-font-size: 11px;
-    -fx-padding: 10;
-    -fx-border-width: 0;
-    -fx-background-insets: 0;
-    -fx-background-radius: 0;
-}
-
-.log-area .content {
-    -fx-background-color: #2c3e50;
-}
-
-.log-area .scroll-pane {
-    -fx-background-color: #2c3e50;
-}
-
-.log-area .viewport {
-    -fx-background-color: #2c3e50;
-}
-
-/* 分隔線 */
+/* 粗野主義分隔線 */
 .separator {
-    -fx-background-color: #ecf0f1;
+    -fx-background-color: #FFFFFF;
 }
 
 .separator .line {
-    -fx-background-color: #bdc3c7;
+    -fx-background-color: #000000;
     -fx-border-width: 0;
+    -fx-min-height: 4px;
 }
 
-/* 標籤 */
+/* 粗野主義標籤 */
 .label {
-    -fx-text-fill: #2c3e50;
+    -fx-text-fill: #000000;
+    -fx-font-family: "Impact", "Arial Black", sans-serif;
 }
 
-/* 滾動條 */
+/* 粗野主義滾動條 */
 .scroll-pane {
-    -fx-background-color: transparent;
+    -fx-background-color: #FFFFFF;
+    -fx-border-color: #000000;
+    -fx-border-width: 2;
 }
 
 .scroll-bar {
-    -fx-background-color: #ecf0f1;
+    -fx-background-color: #FFFFFF;
+    -fx-border-color: #000000;
+    -fx-border-width: 2;
 }
 
 .scroll-bar .thumb {
-    -fx-background-color: #bdc3c7;
-    -fx-background-radius: 5;
+    -fx-background-color: #000000;
+    -fx-background-radius: 0;
+    -fx-border-color: #000000;
+    -fx-border-width: 2;
 }
 
 .scroll-bar .thumb:hover {
-    -fx-background-color: #95a5a6;
+    -fx-background-color: #FFFFFF;
+    -fx-border-color: #000000;
 }
 
-/* 響應式設計 */
+/* 響應式設計 - 左右布局優化 */
+@media screen and (max-width: 1200px) {
+    .exception-demo-container {
+        -fx-padding: 20;
+    }
+    
+    .exception-btn-container {
+        -fx-spacing: 10;
+    }
+    
+    .log-panel {
+        -fx-min-width: 350px;
+    }
+}
+
 @media screen and (max-width: 800px) {
     .main-tabs {
-        -fx-tab-min-width: 80px;
-        -fx-tab-max-width: 80px;
+        -fx-tab-min-width: 100px;
+        -fx-tab-max-width: 100px;
     }
     
     .content-panel {
-        -fx-padding: 10;
+        -fx-padding: 15;
+    }
+    
+    .exception-btn-container {
+        -fx-spacing: 8;
+    }
+    
+    .log-panel {
+        -fx-min-width: 300px;
     }
 }

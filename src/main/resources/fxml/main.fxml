@@ -3,246 +3,87 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
-<?import javafx.scene.text.Font?>
 
 <BorderPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.deliveryplatform.gui.MainController">
    <top>
-      <VBox styleClass="header">
+      <VBox styleClass="brutalist-header">
          <children>
-            <HBox alignment="CENTER_LEFT" spacing="10.0" styleClass="title-bar">
+            <HBox alignment="CENTER_LEFT" spacing="20.0" styleClass="brutalist-title-bar">
                <children>
-                  <Label styleClass="main-title" text="🍕 外賣平台異常處理演示系統" />
+                  <Label styleClass="brutalist-main-title" text="⚠️ EXCEPTION DEMO SYSTEM" />
                   <Region HBox.hgrow="ALWAYS" />
-                  <Label fx:id="statusLabel" styleClass="status-label" text="系統就緒" />
+                  <Label fx:id="statusLabel" styleClass="brutalist-status" text="READY" />
                </children>
             </HBox>
-            <ProgressBar fx:id="operationProgress" maxWidth="1.7976931348623157E308" />
+            <ProgressBar fx:id="operationProgress" maxWidth="1.7976931348623157E308" styleClass="brutalist-progress" />
          </children>
       </VBox>
    </top>
    <center>
-      <TabPane fx:id="mainTabPane" side="LEFT" styleClass="main-tabs" tabClosingPolicy="UNAVAILABLE">
-        <tabs>
-          <Tab styleClass="tab-order" text="📝 創建訂單">
-            <content>
-               <ScrollPane fitToWidth="true">
-                  <content>
-                     <VBox spacing="15.0" styleClass="content-panel">
-                        <children>
-                           <Label styleClass="section-title" text="訂單資訊輸入" />
-                           <GridPane hgap="10.0" vgap="10.0">
-                             <columnConstraints>
-                               <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="120.0" />
-                               <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="300.0" />
-                             </columnConstraints>
-                             <rowConstraints>
-                               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                             </rowConstraints>
-                              <children>
-                                 <Label text="客戶 ID:" />
-                                 <TextField fx:id="customerIdField" promptText="例: CUST-001" GridPane.columnIndex="1" />
-                                 <Label text="餐廳 ID:" GridPane.rowIndex="1" />
-                                 <TextField fx:id="restaurantIdField" promptText="例: REST-001" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                                 <Label text="配送地址:" GridPane.rowIndex="2" />
-                                 <TextField fx:id="deliveryAddressField" promptText="例: 台北市大安區信義路四段1號" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                              </children>
-                           </GridPane>
-                           
-                           <Separator />
-                           
-                           <Label styleClass="section-title" text="訂單項目 (預設)" />
-                           <VBox fx:id="orderItemsContainer" spacing="5.0" styleClass="items-container">
-                              <children>
-                                 <HBox alignment="CENTER_LEFT" spacing="10.0" styleClass="item-row">
-                                    <children>
-                                       <Label prefWidth="200.0" text="🍕 瑪格莉特披薩 x2" />
-                                       <Label text="$15.99 x 2 = $31.98" />
-                                    </children>
-                                 </HBox>
-                                 <HBox alignment="CENTER_LEFT" spacing="10.0" styleClass="item-row">
-                                    <children>
-                                       <Label prefWidth="200.0" text="🥤 可樂 x1" />
-                                       <Label text="$2.99 x 1 = $2.99" />
-                                    </children>
-                                 </HBox>
-                                 <Separator />
-                                 <HBox alignment="CENTER_LEFT" spacing="10.0" styleClass="total-row">
-                                    <children>
-                                       <Label prefWidth="200.0" styleClass="total-label" text="總計:" />
-                                       <Label styleClass="total-amount" text="$34.97" />
-                                    </children>
-                                 </HBox>
-                              </children>
-                           </VBox>
-                           
-                           <HBox alignment="CENTER" spacing="20.0">
-                              <children>
-                                 <Button fx:id="createOrderBtn" onAction="#onCreateOrder" styleClass="primary-button" text="🛒 創建訂單" />
-                                 <Button onAction="#onAddOrderItem" styleClass="secondary-button" text="➕ 添加項目" />
-                              </children>
-                           </HBox>
-                        </children>
-                     </VBox>
-                  </content>
-               </ScrollPane>
-            </content>
-          </Tab>
-          
-          <Tab styleClass="tab-restaurant" text="🍳 餐廳操作">
-            <content>
-               <ScrollPane fitToWidth="true">
-                  <content>
-                     <VBox spacing="15.0" styleClass="content-panel">
-                        <children>
-                           <Label styleClass="section-title" text="餐廳訂單處理" />
-                           <GridPane hgap="10.0" vgap="10.0">
-                             <columnConstraints>
-                               <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="120.0" />
-                               <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="300.0" />
-                             </columnConstraints>
-                             <rowConstraints>
-                               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                             </rowConstraints>
-                              <children>
-                                 <Label text="訂單 ID:" />
-                                 <TextField fx:id="orderIdField" promptText="例: ORD-12345678" GridPane.columnIndex="1" />
-                                 <Label text="餐廳 ID:" GridPane.rowIndex="1" />
-                                 <TextField fx:id="restaurantOperationIdField" text="REST-001" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                              </children>
-                           </GridPane>
-                           
-                           <VBox spacing="10.0">
-                              <children>
-                                 <Label text="拒絕原因 (如需拒絕訂單):" />
-                                 <TextArea fx:id="rejectionReasonArea" prefRowCount="3" promptText="例: 食材不足，無法製作該餐點" wrapText="true" />
-                              </children>
-                           </VBox>
-                           
-                           <Separator />
-                           
-                           <Label styleClass="section-title" text="操作按鈕" />
-                           <GridPane hgap="15.0" vgap="15.0">
-                             <columnConstraints>
-                               <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="150.0" />
-                               <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="150.0" />
-                             </columnConstraints>
-                             <rowConstraints>
-                               <RowConstraints minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
-                               <RowConstraints minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
-                             </rowConstraints>
-                              <children>
-                                 <Button fx:id="acceptOrderBtn" maxWidth="1.7976931348623157E308" onAction="#onAcceptOrder" styleClass="success-button" text="✅ 接受訂單" />
-                                 <Button fx:id="rejectOrderBtn" maxWidth="1.7976931348623157E308" onAction="#onRejectOrder" styleClass="danger-button" text="❌ 拒絕訂單" GridPane.columnIndex="1" />
-                                 <Button fx:id="startPreparingBtn" maxWidth="1.7976931348623157E308" onAction="#onStartPreparing" styleClass="warning-button" text="👨‍🍳 開始準備" GridPane.rowIndex="1" />
-                                 <Button fx:id="markReadyBtn" maxWidth="1.7976931348623157E308" onAction="#onMarkReady" styleClass="info-button" text="📦 標記就緒" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                              </children>
-                           </GridPane>
-                        </children>
-                     </VBox>
-                  </content>
-               </ScrollPane>
-            </content>
-          </Tab>
-          
-          <Tab styleClass="tab-delivery" text="🚗 配送操作">
-             <content>
-                <ScrollPane fitToWidth="true">
-                   <content>
-                      <VBox spacing="15.0" styleClass="content-panel">
-                         <children>
-                            <Label styleClass="section-title" text="配送管理" />
-                            <GridPane hgap="10.0" vgap="10.0">
-                              <columnConstraints>
-                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="120.0" />
-                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="300.0" />
-                              </columnConstraints>
-                              <rowConstraints>
-                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              </rowConstraints>
-                               <children>
-                                  <Label text="訂單 ID:" />
-                                  <TextField fx:id="deliveryOrderIdField" promptText="例: ORD-12345678" GridPane.columnIndex="1" />
-                                  <Label text="司機 ID:" GridPane.rowIndex="1" />
-                                  <TextField fx:id="driverIdField" promptText="自動分配或手動輸入" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                               </children>
-                            </GridPane>
-                            
-                            <Separator />
-                            
-                            <Label styleClass="section-title" text="配送操作" />
-                            <HBox alignment="CENTER" spacing="20.0">
-                               <children>
-                                  <Button fx:id="assignDriverBtn" onAction="#onAssignDriver" styleClass="primary-button" text="🚗 分配司機" />
-                                  <Button fx:id="completeDeliveryBtn" onAction="#onCompleteDelivery" styleClass="success-button" text="✅ 完成配送" />
-                               </children>
-                            </HBox>
-                         </children>
-                      </VBox>
-                   </content>
-                </ScrollPane>
-             </content>
-          </Tab>
-          
-          <Tab styleClass="tab-exception" text="⚠️ 異常測試">
-             <content>
-                <ScrollPane fitToWidth="true">
-                   <content>
-                      <VBox spacing="15.0" styleClass="content-panel">
-                         <children>
-                            <Label styleClass="section-title" text="異常情況測試" />
-                            <VBox spacing="10.0">
-                               <children>
-                                  <Label text="選擇要測試的異常類型:" />
-                                  <ComboBox fx:id="exceptionTypeCombo" maxWidth="1.7976931348623157E308" />
-                               </children>
-                            </VBox>
-                            
-                            <GridPane hgap="10.0" vgap="10.0">
-                              <columnConstraints>
-                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="120.0" />
-                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="300.0" />
-                              </columnConstraints>
-                              <rowConstraints>
-                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              </rowConstraints>
-                               <children>
-                                  <Label text="測試訂單 ID:" />
-                                  <TextField fx:id="testOrderIdField" promptText="留空將使用預設值" GridPane.columnIndex="1" />
-                                  <Label text="測試餐廳 ID:" GridPane.rowIndex="1" />
-                                  <TextField fx:id="testRestaurantIdField" text="REST-CLOSED" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                               </children>
-                            </GridPane>
-                            
-                            <Separator />
-                            
-                            <VBox spacing="10.0" styleClass="exception-info">
-                               <children>
-                                  <Label styleClass="info-title" text="💡 異常說明:" />
-                                  <Label styleClass="info-text" text="• OrderValidationException: 當訂單資料不完整或不符合規範時拋出" wrapText="true" />
-                                  <Label styleClass="info-text" text="• RestaurantUnavailableException: 當餐廳關閉或達到容量上限時拋出" wrapText="true" />
-                                  <Label styleClass="info-text" text="• InvalidOrderStateException: 當嘗試無效的訂單狀態轉換時拋出" wrapText="true" />
-                                  <Label styleClass="info-text" text="• DeliveryAssignmentException: 當無法分配配送司機時拋出" wrapText="true" />
-                               </children>
-                            </VBox>
-                            
-                            <HBox alignment="CENTER">
-                               <children>
-                                  <Button fx:id="triggerExceptionBtn" onAction="#onTriggerException" styleClass="danger-button" text="🎯 觸發異常" />
-                               </children>
-                            </HBox>
-                         </children>
-                      </VBox>
-                   </content>
-                </ScrollPane>
-             </content>
-          </Tab>
-        </tabs>
-      </TabPane>
+      <HBox styleClass="brutalist-main-container">
+         <children>
+            <!-- Exception Trigger Panel -->
+            <VBox styleClass="brutalist-exception-panel" spacing="25.0" HBox.hgrow="NEVER">
+               <children>
+                  <Label styleClass="brutalist-panel-title" text="EXCEPTION TRIGGERS" />
+                  
+                  <!-- OrderValidationException -->
+                  <VBox spacing="10.0" styleClass="brutalist-exception-block validation-block">
+                     <children>
+                        <Label styleClass="brutalist-exception-label" text="ORDER VALIDATION" />
+                        <Button fx:id="orderValidationExceptionBtn" onAction="#triggerOrderValidationException" 
+                                styleClass="brutalist-exception-btn validation-btn" text="TRIGGER VALIDATION ERROR" maxWidth="1.7976931348623157E308" />
+                        <Label styleClass="brutalist-exception-desc" text="INVALID ORDER DATA" wrapText="true" />
+                     </children>
+                  </VBox>
+                  
+                  <!-- RestaurantUnavailableException -->
+                  <VBox spacing="10.0" styleClass="brutalist-exception-block restaurant-block">
+                     <children>
+                        <Label styleClass="brutalist-exception-label" text="RESTAURANT ERROR" />
+                        <Button fx:id="restaurantUnavailableExceptionBtn" onAction="#triggerRestaurantUnavailableException" 
+                                styleClass="brutalist-exception-btn restaurant-btn" text="TRIGGER RESTAURANT ERROR" maxWidth="1.7976931348623157E308" />
+                        <Label styleClass="brutalist-exception-desc" text="RESTAURANT CLOSED/FULL" wrapText="true" />
+                     </children>
+                  </VBox>
+                  
+                  <!-- InvalidOrderStateException -->
+                  <VBox spacing="10.0" styleClass="brutalist-exception-block state-block">
+                     <children>
+                        <Label styleClass="brutalist-exception-label" text="INVALID STATE" />
+                        <Button fx:id="invalidStateExceptionBtn" onAction="#triggerInvalidStateException" 
+                                styleClass="brutalist-exception-btn state-btn" text="TRIGGER STATE ERROR" maxWidth="1.7976931348623157E308" />
+                        <Label styleClass="brutalist-exception-desc" text="INVALID STATUS TRANSITION" wrapText="true" />
+                     </children>
+                  </VBox>
+                  
+                  <!-- DeliveryAssignmentException -->
+                  <VBox spacing="10.0" styleClass="brutalist-exception-block delivery-block">
+                     <children>
+                        <Label styleClass="brutalist-exception-label" text="DELIVERY ERROR" />
+                        <Button fx:id="deliveryAssignmentExceptionBtn" onAction="#triggerDeliveryAssignmentException" 
+                                styleClass="brutalist-exception-btn delivery-btn" text="TRIGGER DELIVERY ERROR" maxWidth="1.7976931348623157E308" />
+                        <Label styleClass="brutalist-exception-desc" text="NO DRIVERS AVAILABLE" wrapText="true" />
+                     </children>
+                  </VBox>
+                  
+                  <Separator styleClass="brutalist-separator" />
+                  
+                  <!-- Quick Actions -->
+                  <VBox spacing="12.0">
+                     <children>
+                        <Label styleClass="brutalist-panel-subtitle" text="QUICK ACTIONS" />
+                        <Button fx:id="createOrderBtn" onAction="#onCreateOrder" 
+                                styleClass="brutalist-action-btn create-btn" text="CREATE ORDER" maxWidth="1.7976931348623157E308" />
+                        <Button fx:id="clearLogBtn" onAction="#onClearLog" 
+                                styleClass="brutalist-action-btn clear-btn" text="CLEAR LOGS" maxWidth="1.7976931348623157E308" />
+                     </children>
+                  </VBox>
+               </children>
+               <padding>
+                  <Insets bottom="25.0" left="25.0" right="25.0" top="25.0" />
+               </padding>
+            </VBox>
    </center>
    <bottom>
       <VBox styleClass="log-panel">
@@ -260,3 +101,4 @@
       </VBox>
    </bottom>
 </BorderPane>
+

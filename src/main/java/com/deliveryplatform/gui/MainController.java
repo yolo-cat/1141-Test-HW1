@@ -104,24 +104,32 @@ public class MainController implements Initializable {
      * 初始化 GUI 組件
      */
     private void initializeGUI() {
-        // 設置異常類型選擇器
-        exceptionTypeCombo.getItems().addAll(
-            "OrderValidationException - 訂單驗證錯誤",
-            "RestaurantUnavailableException - 餐廳不可用",
-            "InvalidOrderStateException - 無效狀態轉換", 
-            "DeliveryAssignmentException - 配送分配失敗"
-        );
-        exceptionTypeCombo.setValue(exceptionTypeCombo.getItems().get(0));
-        
-        // 設置進度條
-        operationProgress.setVisible(false);
-        
-        // 設置狀態標籤
-        updateStatus("系統已就緒", false);
-        
-        // 設置日誌區域
-        logDisplayArea.setEditable(false);
-        logDisplayArea.setWrapText(true);
+        // 設置異常類型選擇器 (如果存在)
+        if (exceptionTypeCombo != null) {
+            exceptionTypeCombo.getItems().addAll(
+                "OrderValidationException - 訂單驗證錯誤",
+                "RestaurantUnavailableException - 餐廳不可用",
+                "InvalidOrderStateException - 無效狀態轉換",
+                "DeliveryAssignmentException - 配送分配失敗"
+            );
+            exceptionTypeCombo.setValue(exceptionTypeCombo.getItems().get(0));
+        }
+
+        // 設置進度條 (如果存在)
+        if (operationProgress != null) {
+            operationProgress.setVisible(false);
+        }
+
+        // 設置狀態標籤 (如果存在)
+        if (statusLabel != null) {
+            updateStatus("系統已就緒", false);
+        }
+
+        // 設置日誌區域 (如果存在)
+        if (logDisplayArea != null) {
+            logDisplayArea.setEditable(false);
+            logDisplayArea.setWrapText(true);
+        }
     }
     
     /**
@@ -156,9 +164,15 @@ public class MainController implements Initializable {
      * 啟動日誌監控
      */
     private void startLogMonitoring() {
-        // 這裡可以添加實時日誌監控邏輯
-        appendLog("=== 外賣平台異常演示系統啟動 ===");
-        appendLog("時間: " + LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss")));
+        // 粗野主義風格的啟動日誌
+        appendLog("███████████████████████████████████████████████████");
+        appendLog("██  外賣平台異常演示系統 - 新粗野主義風格版本  ██");
+        appendLog("███████████████████████████████████████████████████");
+        appendLog("啟動時間: " + LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss")));
+        appendLog("系統狀態: 就緒");
+        appendLog("可用異常類型: 4 種");
+        appendLog("GUI 風格: Neo-Brutalism (新粗野主義)");
+        appendLog("═══════════════════════════════════════════════════");
     }
 
     // ========== 訂單創建相關方法 ==========
@@ -451,7 +465,7 @@ public class MainController implements Initializable {
                 appendLog("訂單ID: " + e.getOrderId());
                 appendLog("當前狀態: " + e.getCurrentStatus());
                 appendLog("嘗試狀態: " + e.getAttemptedStatus());
-                return "InvalidOrderStateException 已觸發";
+                return "InvalidOrderStateException 已觸发";
             } catch (Exception e) {
                 appendLog("觸發了其他異常: " + e.getClass().getSimpleName());
                 appendLog("錯誤: " + e.getMessage());
@@ -554,25 +568,147 @@ public class MainController implements Initializable {
      * 添加日誌訊息
      */
     private void appendLog(String message) {
-        Platform.runLater(() -> {
-            String timestamp = LocalDateTime.now().format(DateTimeFormatter.ofPattern("HH:mm:ss.SSS"));
-            logDisplayArea.appendText("[" + timestamp + "] " + message + "\n");
-            
-            // 自動滾動到底部
-            logDisplayArea.setScrollTop(Double.MAX_VALUE);
-        });
+        if (logDisplayArea != null) {
+            Platform.runLater(() -> {
+                String timestamp = LocalDateTime.now().format(DateTimeFormatter.ofPattern("HH:mm:ss.SSS"));
+                logDisplayArea.appendText("[" + timestamp + "] " + message + "\n");
+
+                // 自動滾動到底部
+                logDisplayArea.setScrollTop(Double.MAX_VALUE);
+            });
+        } else {
+            // 如果沒有日誌區域，則輸出到控制台
+            System.out.println("[" + LocalDateTime.now().format(DateTimeFormatter.ofPattern("HH:mm:ss.SSS")) + "] " + message);
+        }
     }
     
     /**
      * 更新狀態標籤
      */
     private void updateStatus(String message, boolean isError) {
-        Platform.runLater(() -> {
-            statusLabel.setText(message);
-            if (isError) {
-                statusLabel.setStyle("-fx-text-fill: red;");
-            } else {
-                statusLabel.setStyle("-fx-text-fill: green;");
+        if (statusLabel != null) {
+            Platform.runLater(() -> {
+                statusLabel.setText(message);
+                if (isError) {
+                    statusLabel.setStyle("-fx-text-fill: red;");
+                } else {
+                    statusLabel.setStyle("-fx-text-fill: green;");
+                }
+            });
+        } else {
+            // 如果沒有狀態標籤，則輸出到控制台
+            System.out.println("Status: " + message + (isError ? " (ERROR)" : ""));
+        }
+    }
+
+    // ========== 新增的異常觸發方法 ==========
+    
+    @FXML
+    private void onTriggerValidationException() {
+        runAsyncOperation("觸發訂單驗證異常", () -> {
+            try {
+                appendLog("\n🎯 === 觸發 OrderValidationException ===");
+                appendLog("嘗試創建無效訂單 (所有必要欄位為空或無效)...");
+                
+                // 故意傳入無效資料來觸發 OrderValidationException
+                orderService.createOrder(null, "", List.of(), null);
+                return "不應該到達這裡";
+            } catch (OrderValidationException e) {
+                appendLog("✅ 成功觸發 OrderValidationException!");
+                appendLog("錯誤代碼: " + e.getErrorCode());
+                appendLog("錯誤數量: " + e.getErrorCount());
+                appendLog("時間戳: " + e.getTimestamp());
+                appendLog("詳細錯誤:");
+                e.getValidationErrors().forEach(error -> appendLog("  ❌ " + error));
+                return "OrderValidationException 已觸發";
+            }
+        });
+    }
+    
+    @FXML
+    private void onTriggerRestaurantException() {
+        runAsyncOperation("觸發餐廳不可用異常", () -> {
+            try {
+                appendLog("\n🎯 === 觸發 RestaurantUnavailableException ===");
+                appendLog("嘗試向關閉的餐廳分配訂單...");
+                
+                // 使用關閉的餐廳來觸發 RestaurantUnavailableException
+                restaurantService.acceptOrder("TEST-ORDER", "REST-CLOSED");
+                return "不應該到達這裡";
+            } catch (RestaurantUnavailableException e) {
+                appendLog("✅ 成功觸發 RestaurantUnavailableException!");
+                appendLog("錯誤代碼: " + e.getErrorCode());
+                appendLog("餐廳ID: " + e.getRestaurantId());
+                appendLog("時間戳: " + e.getTimestamp());
+                appendLog("錯誤訊息: " + e.getMessage());
+                return "RestaurantUnavailableException 已觸發";
+            } catch (Exception e) {
+                appendLog("觸發了其他異常: " + e.getClass().getSimpleName());
+                appendLog("錯誤訊息: " + e.getMessage());
+                return e.getMessage();
+            }
+        });
+    }
+    
+    @FXML
+    private void onTriggerStateException() {
+        runAsyncOperation("觸發無效狀態轉換異常", () -> {
+            try {
+                appendLog("\n🎯 === 觸發 InvalidOrderStateException ===");
+                appendLog("嘗試在訂單未接受時直接開始準備...");
+                
+                // 嘗試無效的狀態轉換來觸發 InvalidOrderStateException
+                restaurantService.startPreparingOrder("FAKE-ORDER-ID", "REST-001");
+                return "不應該到達這裡";
+            } catch (InvalidOrderStateException e) {
+                appendLog("✅ 成功觸發 InvalidOrderStateException!");
+                appendLog("錯誤代碼: " + e.getErrorCode());
+                appendLog("訂單ID: " + e.getOrderId());
+                appendLog("當前狀態: " + e.getCurrentStatus());
+                appendLog("嘗試狀態: " + e.getAttemptedStatus());
+                appendLog("時間戳: " + e.getTimestamp());
+                return "InvalidOrderStateException 已觸發";
+            } catch (Exception e) {
+                appendLog("觸發了其他異常: " + e.getClass().getSimpleName());
+                appendLog("錯誤訊息: " + e.getMessage());
+                return e.getMessage();
+            }
+        });
+    }
+    
+    @FXML
+    private void onTriggerDeliveryException() {
+        runAsyncOperation("觸發配送分配異常", () -> {
+            try {
+                appendLog("\n🎯 === 觸發 DeliveryAssignmentException ===");
+                appendLog("移除所有可用司機...");
+                
+                // 移除所有司機來觸發異常
+                for (int i = 1; i <= 5; i++) {
+                    deliveryService.removeDriver("DRIVER-00" + i);
+                }
+                
+                appendLog("嘗試分配司機給訂單 (無可用司機)...");
+                deliveryService.assignDriver("FAKE-ORDER-ID");
+                return "不應該到達這裡";
+            } catch (DeliveryAssignmentException e) {
+                appendLog("✅ 成功觸發 DeliveryAssignmentException!");
+                appendLog("錯誤代碼: " + e.getErrorCode());
+                appendLog("訂單ID: " + e.getOrderId());
+                appendLog("失敗原因: " + e.getFailureReason());
+                appendLog("時間戳: " + e.getTimestamp());
+                
+                // 重新添加司機以供後續測試
+                appendLog("重新添加司機以供後續測試...");
+                for (int i = 1; i <= 5; i++) {
+                    deliveryService.addDriver("DRIVER-00" + i);
+                }
+                
+                return "DeliveryAssignmentException 已觸發";
+            } catch (Exception e) {
+                appendLog("觸發了其他異常: " + e.getClass().getSimpleName());
+                appendLog("錯誤訊息: " + e.getMessage());
+                return e.getMessage();
             }
         });
     }

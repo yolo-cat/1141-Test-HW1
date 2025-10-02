@@ -23,7 +23,7 @@ public class ExceptionDemoApp extends Application {
         }
 
         // 載入 FXML 文件
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/main.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/simple.fxml"));
         Scene scene = new Scene(loader.load());
         
         // 載入 CSS 樣式
@@ -37,8 +37,7 @@ public class ExceptionDemoApp extends Application {
     }
 
     public static void main(String[] args) {
-        // 設置 JavaFX 系統屬性
-        System.setProperty("javafx.preloader", ExceptionDemoApp.class.getCanonicalName());
+        // 啟動 JavaFX 應用程式
         launch(args);
     }
 }

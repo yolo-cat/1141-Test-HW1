@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.deliveryplatform.gui.MainController">
+   <center>
+      <VBox spacing="15.0">
+         <children>
+            <Label text="Order Items Container Test" />
+            <VBox fx:id="orderItemsContainer" spacing="5.0">
+               <children>
+                  <HBox alignment="CENTER_LEFT" spacing="10.0">
+                     <children>
+                        <Label prefWidth="200.0" text="Pizza x2" />
+                        <Label text="$15.99 x 2 = $31.98" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>

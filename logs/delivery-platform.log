@@ -1487,3 +1487,1123 @@
 2025-10-02 15:24:58.669 [main] INFO  com.deliveryplatform.models.Order - Order created: orderId=ORD-1E894D1C, customerId=CUST-004, restaurantId=REST-CLOSED, amount=10.00
 2025-10-02 15:24:58.670 [main] WARN  com.deliveryplatform.services.OrderLoggingService - Business exception occurred: orderId=ORD-1E894D1C, errorCode=RESTAURANT_UNAVAILABLE, message=Restaurant REST-CLOSED is currently unavailable: Restaurant is closed, timestamp=2025-10-02T15:24:58.669978
 2025-10-02 15:24:58.670 [main] WARN  com.deliveryplatform.services.OrderLoggingService - Restaurant operation failed: restaurantId=REST-CLOSED, operation=ACCEPT_ORDER, orderId=ORD-1E894D1C
+2025-10-02 15:46:59.184 [JavaFX Application Thread] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-001
+2025-10-02 15:46:59.187 [JavaFX Application Thread] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-002
+2025-10-02 15:46:59.187 [JavaFX Application Thread] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-003
+2025-10-02 15:46:59.187 [JavaFX Application Thread] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-004
+2025-10-02 15:46:59.187 [JavaFX Application Thread] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-005
+2025-10-02 15:48:15.937 [JavaFX Application Thread] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-001
+2025-10-02 15:48:15.941 [JavaFX Application Thread] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-002
+2025-10-02 15:48:15.941 [JavaFX Application Thread] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-003
+2025-10-02 15:48:15.941 [JavaFX Application Thread] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-004
+2025-10-02 15:48:15.941 [JavaFX Application Thread] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-005
+2025-10-02 15:54:33.171 [JavaFX Application Thread] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-001
+2025-10-02 15:54:33.174 [JavaFX Application Thread] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-002
+2025-10-02 15:54:33.174 [JavaFX Application Thread] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-003
+2025-10-02 15:54:33.174 [JavaFX Application Thread] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-004
+2025-10-02 15:54:33.174 [JavaFX Application Thread] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-005
+2025-10-02 15:55:46.900 [JavaFX Application Thread] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-001
+2025-10-02 15:55:46.903 [JavaFX Application Thread] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-002
+2025-10-02 15:55:46.903 [JavaFX Application Thread] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-003
+2025-10-02 15:55:46.903 [JavaFX Application Thread] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-004
+2025-10-02 15:55:46.903 [JavaFX Application Thread] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-005
+2025-10-02 15:56:48.483 [JavaFX Application Thread] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-001
+2025-10-02 15:56:48.485 [JavaFX Application Thread] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-002
+2025-10-02 15:56:48.485 [JavaFX Application Thread] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-003
+2025-10-02 15:56:48.485 [JavaFX Application Thread] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-004
+2025-10-02 15:56:48.486 [JavaFX Application Thread] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-005
+2025-10-02 21:01:17.672 [JavaFX Application Thread] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-001
+2025-10-02 21:01:17.674 [JavaFX Application Thread] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-002
+2025-10-02 21:01:17.674 [JavaFX Application Thread] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-003
+2025-10-02 21:01:17.675 [JavaFX Application Thread] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-004
+2025-10-02 21:01:17.675 [JavaFX Application Thread] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-005
+2025-10-02 21:02:58.598 [JavaFX Application Thread] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-001
+2025-10-02 21:02:58.600 [JavaFX Application Thread] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-002
+2025-10-02 21:02:58.600 [JavaFX Application Thread] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-003
+2025-10-02 21:02:58.600 [JavaFX Application Thread] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-004
+2025-10-02 21:02:58.600 [JavaFX Application Thread] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-005
+2025-10-02 21:03:14.617 [Thread-3] WARN  com.deliveryplatform.services.OrderLoggingService - Business exception occurred: orderId=unknown, errorCode=ORDER_VALIDATION_FAILED, message=Order validation failed: Customer ID is required, Restaurant ID is required, Delivery address is required, Order must have at least one item, timestamp=2025-10-02T21:03:14.617379
+2025-10-02 21:03:16.428 [Thread-4] WARN  com.deliveryplatform.services.OrderLoggingService - Business exception occurred: orderId=unknown, errorCode=ORDER_VALIDATION_FAILED, message=Order validation failed: Customer ID is required, Restaurant ID is required, Delivery address is required, Order must have at least one item, timestamp=2025-10-02T21:03:16.428222
+2025-10-02 21:03:28.373 [Thread-5] WARN  com.deliveryplatform.services.OrderLoggingService - Business exception occurred: orderId=unknown, errorCode=ORDER_VALIDATION_FAILED, message=Order validation failed: Customer ID is required, Restaurant ID is required, Delivery address is required, Order must have at least one item, timestamp=2025-10-02T21:03:28.373346
+2025-10-02 21:03:29.077 [Thread-6] WARN  com.deliveryplatform.services.OrderLoggingService - Business exception occurred: orderId=unknown, errorCode=ORDER_VALIDATION_FAILED, message=Order validation failed: Customer ID is required, Restaurant ID is required, Delivery address is required, Order must have at least one item, timestamp=2025-10-02T21:03:29.077330
+2025-10-02 21:03:29.539 [Thread-7] WARN  com.deliveryplatform.services.OrderLoggingService - Business exception occurred: orderId=unknown, errorCode=ORDER_VALIDATION_FAILED, message=Order validation failed: Customer ID is required, Restaurant ID is required, Delivery address is required, Order must have at least one item, timestamp=2025-10-02T21:03:29.539594
+2025-10-02 21:03:30.614 [Thread-8] WARN  com.deliveryplatform.services.OrderLoggingService - Business exception occurred: orderId=TEST-ORDER, errorCode=RESTAURANT_UNAVAILABLE, message=Restaurant REST-CLOSED is currently unavailable: Restaurant is closed, timestamp=2025-10-02T21:03:30.613868
+2025-10-02 21:03:30.615 [Thread-8] WARN  com.deliveryplatform.services.OrderLoggingService - Restaurant operation failed: restaurantId=REST-CLOSED, operation=ACCEPT_ORDER, orderId=TEST-ORDER
+2025-10-02 21:03:31.074 [Thread-9] WARN  com.deliveryplatform.services.OrderLoggingService - Business exception occurred: orderId=TEST-ORDER, errorCode=RESTAURANT_UNAVAILABLE, message=Restaurant REST-CLOSED is currently unavailable: Restaurant is closed, timestamp=2025-10-02T21:03:31.074576
+2025-10-02 21:03:31.075 [Thread-9] WARN  com.deliveryplatform.services.OrderLoggingService - Restaurant operation failed: restaurantId=REST-CLOSED, operation=ACCEPT_ORDER, orderId=TEST-ORDER
+2025-10-02 21:03:31.557 [Thread-10] WARN  com.deliveryplatform.services.OrderLoggingService - Business exception occurred: orderId=TEST-ORDER, errorCode=RESTAURANT_UNAVAILABLE, message=Restaurant REST-CLOSED is currently unavailable: Restaurant is closed, timestamp=2025-10-02T21:03:31.557265
+2025-10-02 21:03:31.558 [Thread-10] WARN  com.deliveryplatform.services.OrderLoggingService - Restaurant operation failed: restaurantId=REST-CLOSED, operation=ACCEPT_ORDER, orderId=TEST-ORDER
+2025-10-02 21:03:32.627 [Thread-11] ERROR ERROR_EVENTS - System error occurred: context=startPreparingOrder, orderId=FAKE-ORDER-ID, errorType=IllegalArgumentException, message=Order not found: FAKE-ORDER-ID
+java.lang.IllegalArgumentException: Order not found: FAKE-ORDER-ID
+	at com.deliveryplatform.services.RestaurantServiceImpl.getOrderAndValidateOwnership(RestaurantServiceImpl.java:365) ~[classes/:?]
+	at com.deliveryplatform.services.RestaurantServiceImpl.getOrderAndValidateForPreparation(RestaurantServiceImpl.java:339) ~[classes/:?]
+	at com.deliveryplatform.services.RestaurantServiceImpl.startPreparingOrder(RestaurantServiceImpl.java:181) [classes/:?]
+	at com.deliveryplatform.gui.MainController.lambda$onTriggerStateException$0(MainController.java:661) [classes/:?]
+	at com.deliveryplatform.gui.MainController$1.call(MainController.java:534) [classes/:?]
+	at com.deliveryplatform.gui.MainController$1.call(MainController.java:531) [classes/:?]
+	at javafx.concurrent.Task$TaskCallable.call(Task.java:1399) [javafx-graphics-21.0.1-mac-aarch64.jar:?]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:328) [?:?]
+	at java.lang.Thread.run(Thread.java:1474) [?:?]
+2025-10-02 21:03:32.639 [Thread-11] WARN  com.deliveryplatform.services.OrderLoggingService - Restaurant operation failed: restaurantId=REST-001, operation=START_PREPARING, orderId=FAKE-ORDER-ID
+2025-10-02 21:03:32.840 [Thread-12] ERROR ERROR_EVENTS - System error occurred: context=startPreparingOrder, orderId=FAKE-ORDER-ID, errorType=IllegalArgumentException, message=Order not found: FAKE-ORDER-ID
+java.lang.IllegalArgumentException: Order not found: FAKE-ORDER-ID
+	at com.deliveryplatform.services.RestaurantServiceImpl.getOrderAndValidateOwnership(RestaurantServiceImpl.java:365) ~[classes/:?]
+	at com.deliveryplatform.services.RestaurantServiceImpl.getOrderAndValidateForPreparation(RestaurantServiceImpl.java:339) ~[classes/:?]
+	at com.deliveryplatform.services.RestaurantServiceImpl.startPreparingOrder(RestaurantServiceImpl.java:181) [classes/:?]
+	at com.deliveryplatform.gui.MainController.lambda$onTriggerStateException$0(MainController.java:661) [classes/:?]
+	at com.deliveryplatform.gui.MainController$1.call(MainController.java:534) [classes/:?]
+	at com.deliveryplatform.gui.MainController$1.call(MainController.java:531) [classes/:?]
+	at javafx.concurrent.Task$TaskCallable.call(Task.java:1399) [javafx-graphics-21.0.1-mac-aarch64.jar:?]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:328) [?:?]
+	at java.lang.Thread.run(Thread.java:1474) [?:?]
+2025-10-02 21:03:32.842 [Thread-12] WARN  com.deliveryplatform.services.OrderLoggingService - Restaurant operation failed: restaurantId=REST-001, operation=START_PREPARING, orderId=FAKE-ORDER-ID
+2025-10-02 21:03:33.040 [Thread-13] ERROR ERROR_EVENTS - System error occurred: context=startPreparingOrder, orderId=FAKE-ORDER-ID, errorType=IllegalArgumentException, message=Order not found: FAKE-ORDER-ID
+java.lang.IllegalArgumentException: Order not found: FAKE-ORDER-ID
+	at com.deliveryplatform.services.RestaurantServiceImpl.getOrderAndValidateOwnership(RestaurantServiceImpl.java:365) ~[classes/:?]
+	at com.deliveryplatform.services.RestaurantServiceImpl.getOrderAndValidateForPreparation(RestaurantServiceImpl.java:339) ~[classes/:?]
+	at com.deliveryplatform.services.RestaurantServiceImpl.startPreparingOrder(RestaurantServiceImpl.java:181) [classes/:?]
+	at com.deliveryplatform.gui.MainController.lambda$onTriggerStateException$0(MainController.java:661) [classes/:?]
+	at com.deliveryplatform.gui.MainController$1.call(MainController.java:534) [classes/:?]
+	at com.deliveryplatform.gui.MainController$1.call(MainController.java:531) [classes/:?]
+	at javafx.concurrent.Task$TaskCallable.call(Task.java:1399) [javafx-graphics-21.0.1-mac-aarch64.jar:?]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:328) [?:?]
+	at java.lang.Thread.run(Thread.java:1474) [?:?]
+2025-10-02 21:03:33.041 [Thread-13] WARN  com.deliveryplatform.services.OrderLoggingService - Restaurant operation failed: restaurantId=REST-001, operation=START_PREPARING, orderId=FAKE-ORDER-ID
+2025-10-02 21:03:33.779 [Thread-14] INFO  com.deliveryplatform.services.DeliveryService - Driver removed from available pool: driverId=DRIVER-001
+2025-10-02 21:03:33.780 [Thread-14] INFO  com.deliveryplatform.services.DeliveryService - Driver removed from available pool: driverId=DRIVER-002
+2025-10-02 21:03:33.780 [Thread-14] INFO  com.deliveryplatform.services.DeliveryService - Driver removed from available pool: driverId=DRIVER-003
+2025-10-02 21:03:33.780 [Thread-14] INFO  com.deliveryplatform.services.DeliveryService - Driver removed from available pool: driverId=DRIVER-004
+2025-10-02 21:03:33.780 [Thread-14] INFO  com.deliveryplatform.services.DeliveryService - Driver removed from available pool: driverId=DRIVER-005
+2025-10-02 21:03:33.781 [Thread-14] ERROR ERROR_EVENTS - System error occurred: context=assignDriver, orderId=FAKE-ORDER-ID, errorType=IllegalArgumentException, message=Order not found: FAKE-ORDER-ID
+java.lang.IllegalArgumentException: Order not found: FAKE-ORDER-ID
+	at com.deliveryplatform.services.DeliveryService.getOrderAndValidateForDelivery(DeliveryService.java:258) ~[classes/:?]
+	at com.deliveryplatform.services.DeliveryService.assignDriver(DeliveryService.java:62) [classes/:?]
+	at com.deliveryplatform.gui.MainController.lambda$onTriggerDeliveryException$0(MainController.java:692) [classes/:?]
+	at com.deliveryplatform.gui.MainController$1.call(MainController.java:534) [classes/:?]
+	at com.deliveryplatform.gui.MainController$1.call(MainController.java:531) [classes/:?]
+	at javafx.concurrent.Task$TaskCallable.call(Task.java:1399) [javafx-graphics-21.0.1-mac-aarch64.jar:?]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:328) [?:?]
+	at java.lang.Thread.run(Thread.java:1474) [?:?]
+2025-10-02 21:03:33.957 [Thread-15] INFO  com.deliveryplatform.services.DeliveryService - Driver removed from available pool: driverId=DRIVER-001
+2025-10-02 21:03:33.957 [Thread-15] INFO  com.deliveryplatform.services.DeliveryService - Driver removed from available pool: driverId=DRIVER-002
+2025-10-02 21:03:33.957 [Thread-15] INFO  com.deliveryplatform.services.DeliveryService - Driver removed from available pool: driverId=DRIVER-003
+2025-10-02 21:03:33.957 [Thread-15] INFO  com.deliveryplatform.services.DeliveryService - Driver removed from available pool: driverId=DRIVER-004
+2025-10-02 21:03:33.957 [Thread-15] INFO  com.deliveryplatform.services.DeliveryService - Driver removed from available pool: driverId=DRIVER-005
+2025-10-02 21:03:33.958 [Thread-15] ERROR ERROR_EVENTS - System error occurred: context=assignDriver, orderId=FAKE-ORDER-ID, errorType=IllegalArgumentException, message=Order not found: FAKE-ORDER-ID
+java.lang.IllegalArgumentException: Order not found: FAKE-ORDER-ID
+	at com.deliveryplatform.services.DeliveryService.getOrderAndValidateForDelivery(DeliveryService.java:258) ~[classes/:?]
+	at com.deliveryplatform.services.DeliveryService.assignDriver(DeliveryService.java:62) [classes/:?]
+	at com.deliveryplatform.gui.MainController.lambda$onTriggerDeliveryException$0(MainController.java:692) [classes/:?]
+	at com.deliveryplatform.gui.MainController$1.call(MainController.java:534) [classes/:?]
+	at com.deliveryplatform.gui.MainController$1.call(MainController.java:531) [classes/:?]
+	at javafx.concurrent.Task$TaskCallable.call(Task.java:1399) [javafx-graphics-21.0.1-mac-aarch64.jar:?]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:328) [?:?]
+	at java.lang.Thread.run(Thread.java:1474) [?:?]
+2025-10-02 21:03:34.139 [Thread-16] INFO  com.deliveryplatform.services.DeliveryService - Driver removed from available pool: driverId=DRIVER-001
+2025-10-02 21:03:34.140 [Thread-16] INFO  com.deliveryplatform.services.DeliveryService - Driver removed from available pool: driverId=DRIVER-002
+2025-10-02 21:03:34.140 [Thread-16] INFO  com.deliveryplatform.services.DeliveryService - Driver removed from available pool: driverId=DRIVER-003
+2025-10-02 21:03:34.141 [Thread-16] INFO  com.deliveryplatform.services.DeliveryService - Driver removed from available pool: driverId=DRIVER-004
+2025-10-02 21:03:34.141 [Thread-16] INFO  com.deliveryplatform.services.DeliveryService - Driver removed from available pool: driverId=DRIVER-005
+2025-10-02 21:03:34.141 [Thread-16] ERROR ERROR_EVENTS - System error occurred: context=assignDriver, orderId=FAKE-ORDER-ID, errorType=IllegalArgumentException, message=Order not found: FAKE-ORDER-ID
+java.lang.IllegalArgumentException: Order not found: FAKE-ORDER-ID
+	at com.deliveryplatform.services.DeliveryService.getOrderAndValidateForDelivery(DeliveryService.java:258) ~[classes/:?]
+	at com.deliveryplatform.services.DeliveryService.assignDriver(DeliveryService.java:62) [classes/:?]
+	at com.deliveryplatform.gui.MainController.lambda$onTriggerDeliveryException$0(MainController.java:692) [classes/:?]
+	at com.deliveryplatform.gui.MainController$1.call(MainController.java:534) [classes/:?]
+	at com.deliveryplatform.gui.MainController$1.call(MainController.java:531) [classes/:?]
+	at javafx.concurrent.Task$TaskCallable.call(Task.java:1399) [javafx-graphics-21.0.1-mac-aarch64.jar:?]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:328) [?:?]
+	at java.lang.Thread.run(Thread.java:1474) [?:?]
+2025-10-02 21:03:40.161 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-001
+2025-10-02 21:03:40.163 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-002
+2025-10-02 21:03:40.163 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-003
+2025-10-02 21:03:40.163 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-004
+2025-10-02 21:03:40.163 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-005
+2025-10-02 21:03:40.186 [main] INFO  com.deliveryplatform.models.Order - Order created: orderId=ORD-9D6E43E1, customerId=CUST-004, restaurantId=REST-001, amount=37.96
+2025-10-02 21:03:40.189 [main] WARN  com.deliveryplatform.services.OrderLoggingService - Business exception occurred: orderId=ORD-9D6E43E1, errorCode=RESTAURANT_UNAVAILABLE, message=Restaurant REST-001 is currently unavailable: Temporarily not accepting orders, timestamp=2025-10-02T21:03:40.189534
+2025-10-02 21:03:40.189 [main] WARN  com.deliveryplatform.services.OrderLoggingService - Restaurant operation failed: restaurantId=REST-001, operation=ACCEPT_ORDER, orderId=ORD-9D6E43E1
+2025-10-02 21:03:40.190 [main] INFO  com.deliveryplatform.models.Order - Order created: orderId=ORD-5918CD7A, customerId=CUST-005, restaurantId=REST-001, amount=37.96
+2025-10-02 21:03:40.190 [main] WARN  com.deliveryplatform.services.OrderLoggingService - Business exception occurred: orderId=ORD-5918CD7A, errorCode=RESTAURANT_UNAVAILABLE, message=Restaurant REST-001 is currently unavailable: At maximum capacity (0 orders), timestamp=2025-10-02T21:03:40.190645
+2025-10-02 21:03:40.190 [main] WARN  com.deliveryplatform.services.OrderLoggingService - Restaurant operation failed: restaurantId=REST-001, operation=ACCEPT_ORDER, orderId=ORD-5918CD7A
+2025-10-02 21:03:40.196 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-001
+2025-10-02 21:03:40.196 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-002
+2025-10-02 21:03:40.196 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-003
+2025-10-02 21:03:40.196 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-004
+2025-10-02 21:03:40.196 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-005
+2025-10-02 21:03:40.197 [main] WARN  com.deliveryplatform.services.OrderLoggingService - Business exception occurred: orderId=unknown, errorCode=ORDER_VALIDATION_FAILED, message=Order validation failed: Customer ID is required, timestamp=2025-10-02T21:03:40.197421
+2025-10-02 21:03:40.197 [main] WARN  com.deliveryplatform.services.OrderLoggingService - Business exception occurred: orderId=unknown, errorCode=ORDER_VALIDATION_FAILED, message=Order validation failed: Restaurant ID is required, timestamp=2025-10-02T21:03:40.197812
+2025-10-02 21:03:40.198 [main] WARN  com.deliveryplatform.services.OrderLoggingService - Business exception occurred: orderId=unknown, errorCode=ORDER_VALIDATION_FAILED, message=Order validation failed: Order must have at least one item, timestamp=2025-10-02T21:03:40.198116
+2025-10-02 21:03:40.198 [main] WARN  com.deliveryplatform.services.OrderLoggingService - Business exception occurred: orderId=unknown, errorCode=ORDER_VALIDATION_FAILED, message=Order validation failed: Delivery address is required, timestamp=2025-10-02T21:03:40.198448
+2025-10-02 21:03:40.198 [main] WARN  com.deliveryplatform.services.OrderLoggingService - Business exception occurred: orderId=unknown, errorCode=ORDER_VALIDATION_FAILED, message=Order validation failed: Item 1: Item ID is required, timestamp=2025-10-02T21:03:40.198906
+2025-10-02 21:03:40.200 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-001
+2025-10-02 21:03:40.200 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-002
+2025-10-02 21:03:40.200 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-003
+2025-10-02 21:03:40.200 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-004
+2025-10-02 21:03:40.200 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-005
+2025-10-02 21:03:40.201 [main] INFO  com.deliveryplatform.models.Order - Order created: orderId=ORD-AB28623D, customerId=CUST-003, restaurantId=REST-001, amount=37.96
+2025-10-02 21:03:40.201 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-AB28623D, from=PENDING, to=ACCEPTED, reason=Restaurant REST-001 accepted the order
+2025-10-02 21:03:40.202 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-AB28623D, from=ACCEPTED, to=CANCELLED, reason=Customer changed mind
+2025-10-02 21:03:40.202 [main] WARN  com.deliveryplatform.services.OrderLoggingService - Order termination: orderId=ORD-AB28623D, finalStatus=CANCELLED, reason=Customer changed mind
+2025-10-02 21:03:40.202 [main] INFO  com.deliveryplatform.services.OrderService - Order cancelled: orderId=ORD-AB28623D, reason=Customer changed mind
+2025-10-02 21:03:40.204 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-001
+2025-10-02 21:03:40.204 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-002
+2025-10-02 21:03:40.204 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-003
+2025-10-02 21:03:40.205 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-004
+2025-10-02 21:03:40.205 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-005
+2025-10-02 21:03:40.205 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver removed from available pool: driverId=DRIVER-001
+2025-10-02 21:03:40.205 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver removed from available pool: driverId=DRIVER-002
+2025-10-02 21:03:40.205 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver removed from available pool: driverId=DRIVER-003
+2025-10-02 21:03:40.205 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver removed from available pool: driverId=DRIVER-004
+2025-10-02 21:03:40.206 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver removed from available pool: driverId=DRIVER-005
+2025-10-02 21:03:40.206 [main] INFO  com.deliveryplatform.models.Order - Order created: orderId=ORD-E43510CD, customerId=CUST-007, restaurantId=REST-001, amount=37.96
+2025-10-02 21:03:40.206 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-E43510CD, from=PENDING, to=ACCEPTED, reason=Restaurant REST-001 accepted the order
+2025-10-02 21:03:40.206 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-E43510CD, from=ACCEPTED, to=PREPARING, reason=Restaurant started preparing the order
+2025-10-02 21:03:40.206 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-E43510CD, from=PREPARING, to=READY_FOR_DELIVERY, reason=Order is ready for pickup by delivery driver
+2025-10-02 21:03:40.207 [main] WARN  com.deliveryplatform.services.OrderLoggingService - Delivery operation failed: orderId=ORD-E43510CD, driverId=unassigned, operation=DRIVER_ASSIGNMENT
+2025-10-02 21:03:40.207 [main] WARN  com.deliveryplatform.services.OrderLoggingService - Business exception occurred: orderId=ORD-E43510CD, errorCode=DELIVERY_ASSIGNMENT_FAILED, message=Failed to assign delivery for order ORD-E43510CD: No drivers available for delivery assignment, timestamp=2025-10-02T21:03:40.207666
+2025-10-02 21:03:40.208 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-001
+2025-10-02 21:03:40.208 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-002
+2025-10-02 21:03:40.209 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-003
+2025-10-02 21:03:40.209 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-004
+2025-10-02 21:03:40.209 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-005
+2025-10-02 21:03:40.209 [main] INFO  com.deliveryplatform.models.Order - Order created: orderId=ORD-9C37D315, customerId=CUST-016, restaurantId=REST-001, amount=37.96
+2025-10-02 21:03:40.209 [main] INFO  com.deliveryplatform.services.OrderService - Special instructions updated for order: orderId=ORD-9C37D315
+2025-10-02 21:03:40.209 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-9C37D315, from=PENDING, to=ACCEPTED, reason=Restaurant REST-001 accepted the order
+2025-10-02 21:03:40.210 [main] WARN  com.deliveryplatform.services.OrderLoggingService - Business exception occurred: orderId=ORD-9C37D315, errorCode=INVALID_STATE_TRANSITION, message=Cannot transition order ORD-9C37D315 from ACCEPTED to ACCEPTED: Special instructions can only be updated for pending orders, timestamp=2025-10-02T21:03:40.210134
+2025-10-02 21:03:40.211 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-001
+2025-10-02 21:03:40.211 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-002
+2025-10-02 21:03:40.211 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-003
+2025-10-02 21:03:40.211 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-004
+2025-10-02 21:03:40.211 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-005
+2025-10-02 21:03:40.212 [main] INFO  com.deliveryplatform.models.Order - Order created: orderId=ORD-5C455A8E, customerId=CUST-002, restaurantId=REST-001, amount=37.96
+2025-10-02 21:03:40.212 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-5C455A8E, from=PENDING, to=REJECTED, reason=Out of ingredients for Margherita Pizza
+2025-10-02 21:03:40.212 [main] WARN  com.deliveryplatform.services.OrderLoggingService - Order termination: orderId=ORD-5C455A8E, finalStatus=REJECTED, reason=Rejected by restaurant: Out of ingredients for Margherita Pizza
+2025-10-02 21:03:40.213 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-001
+2025-10-02 21:03:40.213 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-002
+2025-10-02 21:03:40.213 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-003
+2025-10-02 21:03:40.213 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-004
+2025-10-02 21:03:40.214 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-005
+2025-10-02 21:03:40.214 [main] INFO  com.deliveryplatform.models.Order - Order created: orderId=ORD-A49514F9, customerId=CUST-009, restaurantId=REST-001, amount=37.96
+2025-10-02 21:03:40.214 [main] INFO  com.deliveryplatform.models.Order - Order created: orderId=ORD-34BA4E5D, customerId=CUST-010, restaurantId=REST-001, amount=37.96
+2025-10-02 21:03:40.214 [main] INFO  com.deliveryplatform.models.Order - Order created: orderId=ORD-96A1E29F, customerId=CUST-011, restaurantId=REST-001, amount=37.96
+2025-10-02 21:03:40.215 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-A49514F9, from=PENDING, to=ACCEPTED, reason=Restaurant REST-001 accepted the order
+2025-10-02 21:03:40.215 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-34BA4E5D, from=PENDING, to=ACCEPTED, reason=Restaurant REST-001 accepted the order
+2025-10-02 21:03:40.215 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-96A1E29F, from=PENDING, to=ACCEPTED, reason=Restaurant REST-001 accepted the order
+2025-10-02 21:03:40.216 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-001
+2025-10-02 21:03:40.216 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-002
+2025-10-02 21:03:40.216 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-003
+2025-10-02 21:03:40.216 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-004
+2025-10-02 21:03:40.216 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-005
+2025-10-02 21:03:40.216 [main] INFO  com.deliveryplatform.models.Order - Order created: orderId=ORD-8687DDA8, customerId=CUST-006, restaurantId=REST-001, amount=37.96
+2025-10-02 21:03:40.217 [main] WARN  com.deliveryplatform.services.OrderLoggingService - Business exception occurred: orderId=ORD-8687DDA8, errorCode=INVALID_STATE_TRANSITION, message=Cannot transition order ORD-8687DDA8 from PENDING to PREPARING: Order must be in ACCEPTED status to start preparation, timestamp=2025-10-02T21:03:40.217179
+2025-10-02 21:03:40.217 [main] WARN  com.deliveryplatform.services.OrderLoggingService - Restaurant operation failed: restaurantId=REST-001, operation=START_PREPARING, orderId=ORD-8687DDA8
+2025-10-02 21:03:40.217 [main] WARN  com.deliveryplatform.services.OrderLoggingService - Business exception occurred: orderId=ORD-8687DDA8, errorCode=INVALID_STATE_TRANSITION, message=Cannot transition order ORD-8687DDA8 from PENDING to READY_FOR_DELIVERY: Order must be in PREPARING status to be marked ready, timestamp=2025-10-02T21:03:40.217532
+2025-10-02 21:03:40.217 [main] WARN  com.deliveryplatform.services.OrderLoggingService - Restaurant operation failed: restaurantId=REST-001, operation=MARK_ORDER_READY, orderId=ORD-8687DDA8
+2025-10-02 21:03:40.217 [main] WARN  com.deliveryplatform.services.OrderLoggingService - Business exception occurred: orderId=ORD-8687DDA8, errorCode=INVALID_STATE_TRANSITION, message=Cannot transition order ORD-8687DDA8 from PENDING to IN_DELIVERY: Order must be ready for delivery to assign a driver, timestamp=2025-10-02T21:03:40.217859
+2025-10-02 21:03:40.218 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-8687DDA8, from=PENDING, to=ACCEPTED, reason=Restaurant REST-001 accepted the order
+2025-10-02 21:03:40.218 [main] WARN  com.deliveryplatform.services.OrderLoggingService - Business exception occurred: orderId=ORD-8687DDA8, errorCode=INVALID_STATE_TRANSITION, message=Cannot transition order ORD-8687DDA8 from ACCEPTED to READY_FOR_DELIVERY: Order must be in PREPARING status to be marked ready, timestamp=2025-10-02T21:03:40.218261
+2025-10-02 21:03:40.218 [main] WARN  com.deliveryplatform.services.OrderLoggingService - Restaurant operation failed: restaurantId=REST-001, operation=MARK_ORDER_READY, orderId=ORD-8687DDA8
+2025-10-02 21:03:40.219 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-001
+2025-10-02 21:03:40.219 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-002
+2025-10-02 21:03:40.219 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-003
+2025-10-02 21:03:40.219 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-004
+2025-10-02 21:03:40.219 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-005
+2025-10-02 21:03:40.220 [main] INFO  com.deliveryplatform.models.Order - Order created: orderId=ORD-844319A0, customerId=CUST-012, restaurantId=REST-001, amount=37.96
+2025-10-02 21:03:40.220 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-844319A0, from=PENDING, to=ACCEPTED, reason=Restaurant REST-001 accepted the order
+2025-10-02 21:03:40.220 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-844319A0, from=ACCEPTED, to=PREPARING, reason=Restaurant started preparing the order
+2025-10-02 21:03:40.220 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-844319A0, from=PREPARING, to=READY_FOR_DELIVERY, reason=Order is ready for pickup by delivery driver
+2025-10-02 21:03:40.220 [main] INFO  com.deliveryplatform.models.Order - Order created: orderId=ORD-FB5FF25D, customerId=CUST-013, restaurantId=REST-001, amount=37.96
+2025-10-02 21:03:40.220 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-FB5FF25D, from=PENDING, to=ACCEPTED, reason=Restaurant REST-001 accepted the order
+2025-10-02 21:03:40.220 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-FB5FF25D, from=ACCEPTED, to=PREPARING, reason=Restaurant started preparing the order
+2025-10-02 21:03:40.221 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-FB5FF25D, from=PREPARING, to=READY_FOR_DELIVERY, reason=Order is ready for pickup by delivery driver
+2025-10-02 21:03:40.221 [main] INFO  com.deliveryplatform.models.Order - Order created: orderId=ORD-01EA1C62, customerId=CUST-014, restaurantId=REST-001, amount=37.96
+2025-10-02 21:03:40.221 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-01EA1C62, from=PENDING, to=ACCEPTED, reason=Restaurant REST-001 accepted the order
+2025-10-02 21:03:40.221 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-01EA1C62, from=ACCEPTED, to=PREPARING, reason=Restaurant started preparing the order
+2025-10-02 21:03:40.221 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-01EA1C62, from=PREPARING, to=READY_FOR_DELIVERY, reason=Order is ready for pickup by delivery driver
+2025-10-02 21:03:40.221 [main] INFO  com.deliveryplatform.models.Order - Order created: orderId=ORD-8318C704, customerId=CUST-015, restaurantId=REST-001, amount=37.96
+2025-10-02 21:03:40.221 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-8318C704, from=PENDING, to=ACCEPTED, reason=Restaurant REST-001 accepted the order
+2025-10-02 21:03:40.222 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-8318C704, from=ACCEPTED, to=PREPARING, reason=Restaurant started preparing the order
+2025-10-02 21:03:40.222 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-8318C704, from=PREPARING, to=READY_FOR_DELIVERY, reason=Order is ready for pickup by delivery driver
+2025-10-02 21:03:40.222 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-844319A0, from=READY_FOR_DELIVERY, to=IN_DELIVERY, reason=Assigned to driver: DRIVER-005
+2025-10-02 21:03:40.222 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver assigned successfully: orderId=ORD-844319A0, driverId=DRIVER-005
+2025-10-02 21:03:40.222 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-FB5FF25D, from=READY_FOR_DELIVERY, to=IN_DELIVERY, reason=Assigned to driver: DRIVER-005
+2025-10-02 21:03:40.222 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver assigned successfully: orderId=ORD-FB5FF25D, driverId=DRIVER-005
+2025-10-02 21:03:40.222 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-01EA1C62, from=READY_FOR_DELIVERY, to=IN_DELIVERY, reason=Assigned to driver: DRIVER-005
+2025-10-02 21:03:40.223 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver at capacity: driverId=DRIVER-005, orderCount=3
+2025-10-02 21:03:40.223 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver assigned successfully: orderId=ORD-01EA1C62, driverId=DRIVER-005
+2025-10-02 21:03:40.223 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-8318C704, from=READY_FOR_DELIVERY, to=IN_DELIVERY, reason=Assigned to driver: DRIVER-003
+2025-10-02 21:03:40.223 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver assigned successfully: orderId=ORD-8318C704, driverId=DRIVER-003
+2025-10-02 21:03:40.223 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-844319A0, from=IN_DELIVERY, to=DELIVERED, reason=Order delivered successfully
+2025-10-02 21:03:40.223 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver capacity released: driverId=DRIVER-005, remainingOrders=2
+2025-10-02 21:03:40.223 [main] INFO  com.deliveryplatform.services.DeliveryService - Delivery completed successfully: orderId=ORD-844319A0, driverId=DRIVER-005
+2025-10-02 21:03:40.224 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-001
+2025-10-02 21:03:40.224 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-002
+2025-10-02 21:03:40.225 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-003
+2025-10-02 21:03:40.225 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-004
+2025-10-02 21:03:40.225 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-005
+2025-10-02 21:03:40.225 [main] INFO  com.deliveryplatform.models.Order - Order created: orderId=ORD-CA94AC60, customerId=CUST-001, restaurantId=REST-001, amount=37.96
+2025-10-02 21:03:40.225 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-CA94AC60, from=PENDING, to=ACCEPTED, reason=Restaurant REST-001 accepted the order
+2025-10-02 21:03:40.225 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-CA94AC60, from=ACCEPTED, to=PREPARING, reason=Restaurant started preparing the order
+2025-10-02 21:03:40.226 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-CA94AC60, from=PREPARING, to=READY_FOR_DELIVERY, reason=Order is ready for pickup by delivery driver
+2025-10-02 21:03:40.226 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-CA94AC60, from=READY_FOR_DELIVERY, to=IN_DELIVERY, reason=Assigned to driver: DRIVER-005
+2025-10-02 21:03:40.226 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver assigned successfully: orderId=ORD-CA94AC60, driverId=DRIVER-005
+2025-10-02 21:03:40.226 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-CA94AC60, from=IN_DELIVERY, to=DELIVERED, reason=Order delivered successfully
+2025-10-02 21:03:40.226 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver capacity released: driverId=DRIVER-005, remainingOrders=0
+2025-10-02 21:03:40.226 [main] INFO  com.deliveryplatform.services.DeliveryService - Delivery completed successfully: orderId=ORD-CA94AC60, driverId=DRIVER-005
+2025-10-02 21:03:40.231 [main] INFO  com.deliveryplatform.models.Order - Order created: orderId=ORD-C8FE5E75, customerId=customer123, restaurantId=restaurant456, amount=34.97
+2025-10-02 21:03:40.231 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-C8FE5E75, from=PENDING, to=ACCEPTED, reason=Restaurant confirmed
+2025-10-02 21:03:40.233 [main] INFO  com.deliveryplatform.models.Order - Order created: orderId=ORD-F9C7AF8F, customerId=customer123, restaurantId=restaurant456, amount=34.97
+2025-10-02 21:03:40.233 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-F9C7AF8F, from=PENDING, to=ACCEPTED, reason=Order accepted by restaurant
+2025-10-02 21:03:40.234 [main] INFO  com.deliveryplatform.models.Order - Order created: orderId=ORD-2B7476D2, customerId=customer123, restaurantId=restaurant456, amount=34.97
+2025-10-02 21:03:40.234 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-2B7476D2, from=PENDING, to=ACCEPTED, reason=Restaurant confirmed
+2025-10-02 21:03:40.235 [main] INFO  com.deliveryplatform.models.Order - Order created: orderId=ORD-797FF854, customerId=customer123, restaurantId=restaurant456, amount=34.97
+2025-10-02 21:03:40.250 [main] INFO  com.deliveryplatform.models.Order - Order created: orderId=ORD-249B31B4, customerId=customer123, restaurantId=restaurant456, amount=34.97
+2025-10-02 21:03:40.262 [main] INFO  com.deliveryplatform.models.Order - Order created: orderId=ORD-2EEEA4C3, customerId=customer123, restaurantId=restaurant456, amount=34.97
+2025-10-02 21:03:40.262 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-2EEEA4C3, from=PENDING, to=ACCEPTED, reason=Restaurant confirmed
+2025-10-02 21:03:40.263 [main] INFO  com.deliveryplatform.models.Order - Order created: orderId=ORD-5D28746A, customerId=customer123, restaurantId=restaurant456, amount=34.97
+2025-10-02 21:03:40.263 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-5D28746A, from=PENDING, to=ACCEPTED, reason=Restaurant confirmed
+2025-10-02 21:03:40.263 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-5D28746A, from=ACCEPTED, to=PREPARING, reason=Restaurant started preparing the order
+2025-10-02 21:03:40.264 [main] INFO  com.deliveryplatform.models.Order - Order created: orderId=ORD-4C5F4A08, customerId=customer123, restaurantId=restaurant456, amount=34.97
+2025-10-02 21:03:40.264 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-4C5F4A08, from=PENDING, to=ACCEPTED, reason=Restaurant confirmed
+2025-10-02 21:03:40.264 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-4C5F4A08, from=ACCEPTED, to=PREPARING, reason=Restaurant started preparing the order
+2025-10-02 21:03:40.264 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-4C5F4A08, from=PREPARING, to=READY_FOR_DELIVERY, reason=Order is ready for pickup by delivery driver
+2025-10-02 21:03:40.266 [main] INFO  com.deliveryplatform.models.Order - Order created: orderId=ORD-66C1DC9B, customerId=customer123, restaurantId=restaurant456, amount=34.97
+2025-10-02 21:03:40.266 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-66C1DC9B, from=PENDING, to=ACCEPTED, reason=Restaurant confirmed
+2025-10-02 21:03:40.266 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-66C1DC9B, from=ACCEPTED, to=PREPARING, reason=Restaurant started preparing the order
+2025-10-02 21:03:40.266 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-66C1DC9B, from=PREPARING, to=READY_FOR_DELIVERY, reason=Order is ready for pickup by delivery driver
+2025-10-02 21:03:40.266 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-66C1DC9B, from=READY_FOR_DELIVERY, to=IN_DELIVERY, reason=Assigned to driver: driver123
+2025-10-02 21:03:40.267 [main] INFO  com.deliveryplatform.models.Order - Order created: orderId=ORD-6EEC9E68, customerId=customer123, restaurantId=restaurant456, amount=34.97
+2025-10-02 21:03:40.268 [main] INFO  com.deliveryplatform.models.Order - Order created: orderId=ORD-03C80CAE, customerId=customer123, restaurantId=restaurant456, amount=34.97
+2025-10-02 21:03:40.268 [main] INFO  com.deliveryplatform.models.Order - Order created: orderId=ORD-0549A0C8, customerId=cust1, restaurantId=rest1, amount=34.97
+2025-10-02 21:03:40.268 [main] INFO  com.deliveryplatform.models.Order - Order created: orderId=ORD-B9E74D22, customerId=cust2, restaurantId=rest2, amount=34.97
+2025-10-02 21:03:40.269 [main] INFO  com.deliveryplatform.models.Order - Order created: orderId=ORD-66338910, customerId=customer123, restaurantId=restaurant456, amount=34.97
+2025-10-02 21:03:40.270 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-66338910, from=PENDING, to=ACCEPTED, reason=Restaurant confirmed
+2025-10-02 21:03:40.271 [main] INFO  com.deliveryplatform.models.Order - Order created: orderId=ORD-E990DF62, customerId=customer123, restaurantId=restaurant456, amount=34.97
+2025-10-02 21:03:40.271 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-E990DF62, from=PENDING, to=ACCEPTED, reason=Restaurant confirmed order
+2025-10-02 21:03:40.272 [main] INFO  com.deliveryplatform.models.Order - Order created: orderId=ORD-8EAD6C64, customerId=customer123, restaurantId=restaurant456, amount=34.97
+2025-10-02 21:03:40.273 [main] INFO  com.deliveryplatform.models.Order - Order created: orderId=ORD-A378C141, customerId=customer123, restaurantId=restaurant456, amount=34.97
+2025-10-02 21:03:40.274 [main] INFO  com.deliveryplatform.models.Order - Order created: orderId=ORD-5F37B4B0, customerId=customer123, restaurantId=restaurant456, amount=34.97
+2025-10-02 21:03:40.276 [main] INFO  com.deliveryplatform.models.Order - Order created: orderId=ORD-D0504EA5, customerId=customer123, restaurantId=restaurant456, amount=34.97
+2025-10-02 21:03:40.276 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-D0504EA5, from=PENDING, to=ACCEPTED, reason=Restaurant confirmed
+2025-10-02 21:03:40.277 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-D0504EA5, from=ACCEPTED, to=PREPARING, reason=Restaurant started preparing the order
+2025-10-02 21:03:40.277 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-D0504EA5, from=PREPARING, to=READY_FOR_DELIVERY, reason=Order is ready for pickup by delivery driver
+2025-10-02 21:03:40.277 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-D0504EA5, from=READY_FOR_DELIVERY, to=IN_DELIVERY, reason=Assigned to driver: driver123
+2025-10-02 21:03:40.277 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-D0504EA5, from=IN_DELIVERY, to=DELIVERED, reason=Order delivered successfully
+2025-10-02 21:03:40.278 [main] INFO  com.deliveryplatform.models.Order - Order created: orderId=ORD-8DBCBE29, customerId=customer123, restaurantId=restaurant456, amount=34.97
+2025-10-02 21:03:40.278 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-8DBCBE29, from=PENDING, to=CANCELLED, reason=Customer cancelled
+2025-10-02 21:03:40.279 [main] INFO  com.deliveryplatform.models.Order - Order created: orderId=ORD-F3753BDF, customerId=customer123, restaurantId=restaurant456, amount=34.97
+2025-10-02 21:03:40.279 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-F3753BDF, from=PENDING, to=REJECTED, reason=Restaurant rejected
+2025-10-02 21:03:40.280 [main] INFO  com.deliveryplatform.models.Order - Order created: orderId=ORD-CF4B605C, customerId=customer123, restaurantId=restaurant456, amount=34.97
+2025-10-02 21:03:40.280 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-CF4B605C, from=PENDING, to=REJECTED, reason=Restaurant is closed
+2025-10-02 21:03:40.281 [main] INFO  com.deliveryplatform.models.Order - Order created: orderId=ORD-81E48E56, customerId=customer123, restaurantId=restaurant456, amount=34.97
+2025-10-02 21:03:40.282 [main] INFO  com.deliveryplatform.models.Order - Order created: orderId=ORD-967C9C38, customerId=customer123, restaurantId=restaurant456, amount=34.97
+2025-10-02 21:03:40.282 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-967C9C38, from=PENDING, to=ACCEPTED, reason=Restaurant confirmed
+2025-10-02 21:03:40.283 [main] INFO  com.deliveryplatform.models.Order - Order created: orderId=ORD-85E0570B, customerId=customer123, restaurantId=restaurant456, amount=34.97
+2025-10-02 21:03:40.284 [main] INFO  com.deliveryplatform.models.Order - Order created: orderId=ORD-81DF8C37, customerId=customer123, restaurantId=restaurant456, amount=34.97
+2025-10-02 21:03:40.285 [main] INFO  com.deliveryplatform.models.Order - Order created: orderId=ORD-4CDAF26F, customerId=customer123, restaurantId=restaurant456, amount=34.97
+2025-10-02 21:03:40.286 [main] INFO  com.deliveryplatform.models.Order - Order created: orderId=ORD-30E5D34E, customerId=customer123, restaurantId=restaurant456, amount=34.97
+2025-10-02 21:03:40.286 [main] INFO  com.deliveryplatform.models.Order - Order created: orderId=ORD-B75B7B43, customerId=customer123, restaurantId=restaurant456, amount=34.97
+2025-10-02 21:03:40.287 [main] INFO  com.deliveryplatform.models.Order - Order created: orderId=ORD-3785C5AB, customerId=customer123, restaurantId=restaurant456, amount=34.97
+2025-10-02 21:03:40.287 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-3785C5AB, from=PENDING, to=ACCEPTED, reason=Restaurant confirmed
+2025-10-02 21:03:40.287 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-3785C5AB, from=ACCEPTED, to=PREPARING, reason=Restaurant started preparing the order
+2025-10-02 21:03:40.287 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-3785C5AB, from=PREPARING, to=READY_FOR_DELIVERY, reason=Order is ready for pickup by delivery driver
+2025-10-02 21:03:40.287 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-3785C5AB, from=READY_FOR_DELIVERY, to=IN_DELIVERY, reason=Assigned to driver: driver789
+2025-10-02 21:03:40.287 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-3785C5AB, from=IN_DELIVERY, to=DELIVERED, reason=Order delivered successfully
+2025-10-02 21:03:40.288 [main] INFO  com.deliveryplatform.models.Order - Order created: orderId=ORD-E313D6B8, customerId=customer123, restaurantId=restaurant456, amount=34.97
+2025-10-02 21:03:40.289 [main] INFO  com.deliveryplatform.models.Order - Order created: orderId=ORD-7D40AA1F, customerId=customer123, restaurantId=restaurant456, amount=34.97
+2025-10-02 21:03:40.289 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-7D40AA1F, from=PENDING, to=CANCELLED, reason=Customer requested cancellation
+2025-10-02 21:03:40.290 [main] INFO  com.deliveryplatform.models.Order - Order created: orderId=ORD-2DFA5483, customerId=customer123, restaurantId=restaurant456, amount=34.97
+2025-10-02 21:03:40.369 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-001
+2025-10-02 21:03:40.369 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-002
+2025-10-02 21:03:40.369 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-003
+2025-10-02 21:03:40.369 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-004
+2025-10-02 21:03:40.369 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-005
+2025-10-02 21:03:40.369 [main] INFO  com.deliveryplatform.models.Order - Order created: orderId=ORD-49254BDD, customerId=CUST-007, restaurantId=REST-001, amount=34.97
+2025-10-02 21:03:40.370 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-49254BDD, from=PENDING, to=ACCEPTED, reason=Restaurant REST-001 accepted the order
+2025-10-02 21:03:40.370 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-49254BDD, from=ACCEPTED, to=PREPARING, reason=Restaurant started preparing the order
+2025-10-02 21:03:40.370 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-49254BDD, from=PREPARING, to=READY_FOR_DELIVERY, reason=Order is ready for pickup by delivery driver
+2025-10-02 21:03:40.370 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-49254BDD, from=READY_FOR_DELIVERY, to=IN_DELIVERY, reason=Assigned to driver: DRIVER-005
+2025-10-02 21:03:40.370 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver assigned successfully: orderId=ORD-49254BDD, driverId=DRIVER-005
+2025-10-02 21:03:40.371 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-49254BDD, from=IN_DELIVERY, to=DELIVERED, reason=Order delivered successfully
+2025-10-02 21:03:40.371 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver capacity released: driverId=DRIVER-005, remainingOrders=0
+2025-10-02 21:03:40.371 [main] INFO  com.deliveryplatform.services.DeliveryService - Delivery completed successfully: orderId=ORD-49254BDD, driverId=DRIVER-005
+2025-10-02 21:03:40.372 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-001
+2025-10-02 21:03:40.372 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-002
+2025-10-02 21:03:40.373 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-003
+2025-10-02 21:03:40.373 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-004
+2025-10-02 21:03:40.373 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-005
+2025-10-02 21:03:40.375 [main] WARN  com.deliveryplatform.services.OrderLoggingService - Business exception occurred: orderId=unknown, errorCode=ORDER_VALIDATION_FAILED, message=Order validation failed: Customer ID is required, Restaurant ID is required, Delivery address is required, Order must have at least one item, timestamp=2025-10-02T21:03:40.375071
+2025-10-02 21:03:40.377 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-001
+2025-10-02 21:03:40.377 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-002
+2025-10-02 21:03:40.377 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-003
+2025-10-02 21:03:40.377 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-004
+2025-10-02 21:03:40.377 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-005
+2025-10-02 21:03:40.377 [main] INFO  com.deliveryplatform.models.Order - Order created: orderId=ORD-E81919A3, customerId=CUST-002, restaurantId=REST-001, amount=10.00
+2025-10-02 21:03:40.378 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-E81919A3, from=PENDING, to=ACCEPTED, reason=Restaurant REST-001 accepted the order
+2025-10-02 21:03:40.378 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-E81919A3, from=ACCEPTED, to=PREPARING, reason=Restaurant started preparing the order
+2025-10-02 21:03:40.378 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-E81919A3, from=PREPARING, to=READY_FOR_DELIVERY, reason=Order is ready for pickup by delivery driver
+2025-10-02 21:03:40.378 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-001
+2025-10-02 21:03:40.379 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-002
+2025-10-02 21:03:40.379 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-003
+2025-10-02 21:03:40.379 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-004
+2025-10-02 21:03:40.379 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-005
+2025-10-02 21:03:40.379 [main] INFO  com.deliveryplatform.models.Order - Order created: orderId=ORD-909A5EA3, customerId=CUST-001, restaurantId=REST-001, amount=34.97
+2025-10-02 21:03:40.380 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-001
+2025-10-02 21:03:40.380 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-002
+2025-10-02 21:03:40.380 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-003
+2025-10-02 21:03:40.380 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-004
+2025-10-02 21:03:40.380 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-005
+2025-10-02 21:03:40.382 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver removed from available pool: driverId=DRIVER-001
+2025-10-02 21:03:40.382 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver removed from available pool: driverId=DRIVER-002
+2025-10-02 21:03:40.382 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver removed from available pool: driverId=DRIVER-003
+2025-10-02 21:03:40.383 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver removed from available pool: driverId=DRIVER-004
+2025-10-02 21:03:40.383 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver removed from available pool: driverId=DRIVER-005
+2025-10-02 21:03:40.386 [main] INFO  com.deliveryplatform.models.Order - Order created: orderId=ORD-176E5127, customerId=CUST-006, restaurantId=REST-001, amount=10.00
+2025-10-02 21:03:40.386 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-176E5127, from=PENDING, to=ACCEPTED, reason=Restaurant REST-001 accepted the order
+2025-10-02 21:03:40.386 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-176E5127, from=ACCEPTED, to=PREPARING, reason=Restaurant started preparing the order
+2025-10-02 21:03:40.386 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-176E5127, from=PREPARING, to=READY_FOR_DELIVERY, reason=Order is ready for pickup by delivery driver
+2025-10-02 21:03:40.387 [main] WARN  com.deliveryplatform.services.OrderLoggingService - Delivery operation failed: orderId=ORD-176E5127, driverId=unassigned, operation=DRIVER_ASSIGNMENT
+2025-10-02 21:03:40.387 [main] WARN  com.deliveryplatform.services.OrderLoggingService - Business exception occurred: orderId=ORD-176E5127, errorCode=DELIVERY_ASSIGNMENT_FAILED, message=Failed to assign delivery for order ORD-176E5127: No drivers available for delivery assignment, timestamp=2025-10-02T21:03:40.387397
+2025-10-02 21:03:40.387 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-001
+2025-10-02 21:03:40.387 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-002
+2025-10-02 21:03:40.387 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-003
+2025-10-02 21:03:40.387 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-004
+2025-10-02 21:03:40.387 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-005
+2025-10-02 21:03:40.389 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-001
+2025-10-02 21:03:40.389 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-002
+2025-10-02 21:03:40.389 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-003
+2025-10-02 21:03:40.389 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-004
+2025-10-02 21:03:40.389 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-005
+2025-10-02 21:03:40.389 [main] INFO  com.deliveryplatform.models.Order - Order created: orderId=ORD-CF76480C, customerId=CUST-003, restaurantId=REST-001, amount=10.00
+2025-10-02 21:03:40.389 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-CF76480C, from=PENDING, to=ACCEPTED, reason=Restaurant REST-001 accepted the order
+2025-10-02 21:03:40.389 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-CF76480C, from=ACCEPTED, to=PREPARING, reason=Restaurant started preparing the order
+2025-10-02 21:03:40.389 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-CF76480C, from=PREPARING, to=READY_FOR_DELIVERY, reason=Order is ready for pickup by delivery driver
+2025-10-02 21:03:40.390 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-CF76480C, from=READY_FOR_DELIVERY, to=IN_DELIVERY, reason=Assigned to driver: DRIVER-005
+2025-10-02 21:03:40.390 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver assigned successfully: orderId=ORD-CF76480C, driverId=DRIVER-005
+2025-10-02 21:03:40.390 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-CF76480C, from=IN_DELIVERY, to=DELIVERED, reason=Order delivered successfully
+2025-10-02 21:03:40.391 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver capacity released: driverId=DRIVER-005, remainingOrders=0
+2025-10-02 21:03:40.391 [main] INFO  com.deliveryplatform.services.DeliveryService - Delivery completed successfully: orderId=ORD-CF76480C, driverId=DRIVER-005
+2025-10-02 21:03:40.392 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-001
+2025-10-02 21:03:40.393 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-002
+2025-10-02 21:03:40.393 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-003
+2025-10-02 21:03:40.393 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-004
+2025-10-02 21:03:40.393 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-005
+2025-10-02 21:03:40.394 [main] INFO  com.deliveryplatform.models.Order - Order created: orderId=ORD-65C3EB42, customerId=CUST-005, restaurantId=REST-001, amount=10.00
+2025-10-02 21:03:40.394 [main] WARN  com.deliveryplatform.services.OrderLoggingService - Business exception occurred: orderId=ORD-65C3EB42, errorCode=INVALID_STATE_TRANSITION, message=Cannot transition order ORD-65C3EB42 from PENDING to PREPARING: Order must be in ACCEPTED status to start preparation, timestamp=2025-10-02T21:03:40.394788
+2025-10-02 21:03:40.395 [main] WARN  com.deliveryplatform.services.OrderLoggingService - Restaurant operation failed: restaurantId=REST-001, operation=START_PREPARING, orderId=ORD-65C3EB42
+2025-10-02 21:03:40.396 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-001
+2025-10-02 21:03:40.396 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-002
+2025-10-02 21:03:40.396 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-003
+2025-10-02 21:03:40.396 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-004
+2025-10-02 21:03:40.396 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-005
+2025-10-02 21:03:40.396 [main] INFO  com.deliveryplatform.models.Order - Order created: orderId=ORD-6C872BB9, customerId=CUST-004, restaurantId=REST-CLOSED, amount=10.00
+2025-10-02 21:03:40.397 [main] WARN  com.deliveryplatform.services.OrderLoggingService - Business exception occurred: orderId=ORD-6C872BB9, errorCode=RESTAURANT_UNAVAILABLE, message=Restaurant REST-CLOSED is currently unavailable: Restaurant is closed, timestamp=2025-10-02T21:03:40.396955
+2025-10-02 21:03:40.397 [main] WARN  com.deliveryplatform.services.OrderLoggingService - Restaurant operation failed: restaurantId=REST-CLOSED, operation=ACCEPT_ORDER, orderId=ORD-6C872BB9
+2025-10-02 21:03:41.539 [Thread-17] WARN  com.deliveryplatform.services.OrderLoggingService - Business exception occurred: orderId=TEST-ORDER, errorCode=RESTAURANT_UNAVAILABLE, message=Restaurant REST-CLOSED is currently unavailable: Restaurant is closed, timestamp=2025-10-02T21:03:41.539696
+2025-10-02 21:03:41.540 [Thread-17] WARN  com.deliveryplatform.services.OrderLoggingService - Restaurant operation failed: restaurantId=REST-CLOSED, operation=ACCEPT_ORDER, orderId=TEST-ORDER
+2025-10-02 21:03:42.508 [Thread-18] WARN  com.deliveryplatform.services.OrderLoggingService - Business exception occurred: orderId=TEST-ORDER, errorCode=RESTAURANT_UNAVAILABLE, message=Restaurant REST-CLOSED is currently unavailable: Restaurant is closed, timestamp=2025-10-02T21:03:42.508044
+2025-10-02 21:03:42.509 [Thread-18] WARN  com.deliveryplatform.services.OrderLoggingService - Restaurant operation failed: restaurantId=REST-CLOSED, operation=ACCEPT_ORDER, orderId=TEST-ORDER
+2025-10-02 21:03:47.406 [Thread-19] WARN  com.deliveryplatform.services.OrderLoggingService - Business exception occurred: orderId=unknown, errorCode=ORDER_VALIDATION_FAILED, message=Order validation failed: Customer ID is required, Restaurant ID is required, Delivery address is required, Order must have at least one item, timestamp=2025-10-02T21:03:47.406635
+2025-10-02 21:03:49.840 [Thread-20] ERROR ERROR_EVENTS - System error occurred: context=startPreparingOrder, orderId=FAKE-ORDER-ID, errorType=IllegalArgumentException, message=Order not found: FAKE-ORDER-ID
+java.lang.IllegalArgumentException: Order not found: FAKE-ORDER-ID
+	at com.deliveryplatform.services.RestaurantServiceImpl.getOrderAndValidateOwnership(RestaurantServiceImpl.java:365) ~[classes/:?]
+	at com.deliveryplatform.services.RestaurantServiceImpl.getOrderAndValidateForPreparation(RestaurantServiceImpl.java:339) ~[classes/:?]
+	at com.deliveryplatform.services.RestaurantServiceImpl.startPreparingOrder(RestaurantServiceImpl.java:181) [classes/:?]
+	at com.deliveryplatform.gui.MainController.lambda$onTriggerStateException$0(MainController.java:661) [classes/:?]
+	at com.deliveryplatform.gui.MainController$1.call(MainController.java:534) [classes/:?]
+	at com.deliveryplatform.gui.MainController$1.call(MainController.java:531) [classes/:?]
+	at javafx.concurrent.Task$TaskCallable.call(Task.java:1399) [javafx-graphics-21.0.1-mac-aarch64.jar:?]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:328) [?:?]
+	at java.lang.Thread.run(Thread.java:1474) [?:?]
+2025-10-02 21:03:49.841 [Thread-20] WARN  com.deliveryplatform.services.OrderLoggingService - Restaurant operation failed: restaurantId=REST-001, operation=START_PREPARING, orderId=FAKE-ORDER-ID
+2025-10-02 21:03:53.239 [Thread-21] WARN  com.deliveryplatform.services.OrderLoggingService - Business exception occurred: orderId=TEST-ORDER, errorCode=RESTAURANT_UNAVAILABLE, message=Restaurant REST-CLOSED is currently unavailable: Restaurant is closed, timestamp=2025-10-02T21:03:53.239309
+2025-10-02 21:03:53.239 [Thread-21] WARN  com.deliveryplatform.services.OrderLoggingService - Restaurant operation failed: restaurantId=REST-CLOSED, operation=ACCEPT_ORDER, orderId=TEST-ORDER
+2025-10-02 21:03:54.624 [Thread-22] INFO  com.deliveryplatform.services.DeliveryService - Driver removed from available pool: driverId=DRIVER-001
+2025-10-02 21:03:54.625 [Thread-22] INFO  com.deliveryplatform.services.DeliveryService - Driver removed from available pool: driverId=DRIVER-002
+2025-10-02 21:03:54.625 [Thread-22] INFO  com.deliveryplatform.services.DeliveryService - Driver removed from available pool: driverId=DRIVER-003
+2025-10-02 21:03:54.625 [Thread-22] INFO  com.deliveryplatform.services.DeliveryService - Driver removed from available pool: driverId=DRIVER-004
+2025-10-02 21:03:54.625 [Thread-22] INFO  com.deliveryplatform.services.DeliveryService - Driver removed from available pool: driverId=DRIVER-005
+2025-10-02 21:03:54.626 [Thread-22] ERROR ERROR_EVENTS - System error occurred: context=assignDriver, orderId=FAKE-ORDER-ID, errorType=IllegalArgumentException, message=Order not found: FAKE-ORDER-ID
+java.lang.IllegalArgumentException: Order not found: FAKE-ORDER-ID
+	at com.deliveryplatform.services.DeliveryService.getOrderAndValidateForDelivery(DeliveryService.java:258) ~[classes/:?]
+	at com.deliveryplatform.services.DeliveryService.assignDriver(DeliveryService.java:62) [classes/:?]
+	at com.deliveryplatform.gui.MainController.lambda$onTriggerDeliveryException$0(MainController.java:692) [classes/:?]
+	at com.deliveryplatform.gui.MainController$1.call(MainController.java:534) [classes/:?]
+	at com.deliveryplatform.gui.MainController$1.call(MainController.java:531) [classes/:?]
+	at javafx.concurrent.Task$TaskCallable.call(Task.java:1399) [javafx-graphics-21.0.1-mac-aarch64.jar:?]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:328) [?:?]
+	at java.lang.Thread.run(Thread.java:1474) [?:?]
+2025-10-02 21:06:55.461 [JavaFX Application Thread] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-001
+2025-10-02 21:06:55.463 [JavaFX Application Thread] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-002
+2025-10-02 21:06:55.463 [JavaFX Application Thread] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-003
+2025-10-02 21:06:55.463 [JavaFX Application Thread] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-004
+2025-10-02 21:06:55.463 [JavaFX Application Thread] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-005
+2025-10-02 21:08:57.073 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-001
+2025-10-02 21:08:57.075 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-002
+2025-10-02 21:08:57.075 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-003
+2025-10-02 21:08:57.075 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-004
+2025-10-02 21:08:57.076 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-005
+2025-10-02 21:08:57.105 [main] INFO  com.deliveryplatform.models.Order - Order created: orderId=ORD-25E906E1, customerId=CUST-004, restaurantId=REST-001, amount=37.96
+2025-10-02 21:08:57.107 [main] WARN  com.deliveryplatform.services.OrderLoggingService - Business exception occurred: orderId=ORD-25E906E1, errorCode=RESTAURANT_UNAVAILABLE, message=Restaurant REST-001 is currently unavailable: Temporarily not accepting orders, timestamp=2025-10-02T21:08:57.107611
+2025-10-02 21:08:57.108 [main] WARN  com.deliveryplatform.services.OrderLoggingService - Restaurant operation failed: restaurantId=REST-001, operation=ACCEPT_ORDER, orderId=ORD-25E906E1
+2025-10-02 21:08:57.108 [main] INFO  com.deliveryplatform.models.Order - Order created: orderId=ORD-9078DD1E, customerId=CUST-005, restaurantId=REST-001, amount=37.96
+2025-10-02 21:08:57.108 [main] WARN  com.deliveryplatform.services.OrderLoggingService - Business exception occurred: orderId=ORD-9078DD1E, errorCode=RESTAURANT_UNAVAILABLE, message=Restaurant REST-001 is currently unavailable: At maximum capacity (0 orders), timestamp=2025-10-02T21:08:57.108693
+2025-10-02 21:08:57.108 [main] WARN  com.deliveryplatform.services.OrderLoggingService - Restaurant operation failed: restaurantId=REST-001, operation=ACCEPT_ORDER, orderId=ORD-9078DD1E
+2025-10-02 21:08:57.114 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-001
+2025-10-02 21:08:57.114 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-002
+2025-10-02 21:08:57.114 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-003
+2025-10-02 21:08:57.114 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-004
+2025-10-02 21:08:57.114 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-005
+2025-10-02 21:08:57.116 [main] WARN  com.deliveryplatform.services.OrderLoggingService - Business exception occurred: orderId=unknown, errorCode=ORDER_VALIDATION_FAILED, message=Order validation failed: Customer ID is required, timestamp=2025-10-02T21:08:57.115883
+2025-10-02 21:08:57.116 [main] WARN  com.deliveryplatform.services.OrderLoggingService - Business exception occurred: orderId=unknown, errorCode=ORDER_VALIDATION_FAILED, message=Order validation failed: Restaurant ID is required, timestamp=2025-10-02T21:08:57.116554
+2025-10-02 21:08:57.116 [main] WARN  com.deliveryplatform.services.OrderLoggingService - Business exception occurred: orderId=unknown, errorCode=ORDER_VALIDATION_FAILED, message=Order validation failed: Order must have at least one item, timestamp=2025-10-02T21:08:57.116838
+2025-10-02 21:08:57.117 [main] WARN  com.deliveryplatform.services.OrderLoggingService - Business exception occurred: orderId=unknown, errorCode=ORDER_VALIDATION_FAILED, message=Order validation failed: Delivery address is required, timestamp=2025-10-02T21:08:57.117131
+2025-10-02 21:08:57.117 [main] WARN  com.deliveryplatform.services.OrderLoggingService - Business exception occurred: orderId=unknown, errorCode=ORDER_VALIDATION_FAILED, message=Order validation failed: Item 1: Item ID is required, timestamp=2025-10-02T21:08:57.117560
+2025-10-02 21:08:57.118 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-001
+2025-10-02 21:08:57.118 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-002
+2025-10-02 21:08:57.119 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-003
+2025-10-02 21:08:57.119 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-004
+2025-10-02 21:08:57.119 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-005
+2025-10-02 21:08:57.120 [main] INFO  com.deliveryplatform.models.Order - Order created: orderId=ORD-B5453263, customerId=CUST-003, restaurantId=REST-001, amount=37.96
+2025-10-02 21:08:57.120 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-B5453263, from=PENDING, to=ACCEPTED, reason=Restaurant REST-001 accepted the order
+2025-10-02 21:08:57.121 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-B5453263, from=ACCEPTED, to=CANCELLED, reason=Customer changed mind
+2025-10-02 21:08:57.121 [main] WARN  com.deliveryplatform.services.OrderLoggingService - Order termination: orderId=ORD-B5453263, finalStatus=CANCELLED, reason=Customer changed mind
+2025-10-02 21:08:57.121 [main] INFO  com.deliveryplatform.services.OrderService - Order cancelled: orderId=ORD-B5453263, reason=Customer changed mind
+2025-10-02 21:08:57.123 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-001
+2025-10-02 21:08:57.123 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-002
+2025-10-02 21:08:57.123 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-003
+2025-10-02 21:08:57.123 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-004
+2025-10-02 21:08:57.123 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-005
+2025-10-02 21:08:57.124 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver removed from available pool: driverId=DRIVER-001
+2025-10-02 21:08:57.124 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver removed from available pool: driverId=DRIVER-002
+2025-10-02 21:08:57.124 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver removed from available pool: driverId=DRIVER-003
+2025-10-02 21:08:57.124 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver removed from available pool: driverId=DRIVER-004
+2025-10-02 21:08:57.124 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver removed from available pool: driverId=DRIVER-005
+2025-10-02 21:08:57.124 [main] INFO  com.deliveryplatform.models.Order - Order created: orderId=ORD-B33972A1, customerId=CUST-007, restaurantId=REST-001, amount=37.96
+2025-10-02 21:08:57.125 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-B33972A1, from=PENDING, to=ACCEPTED, reason=Restaurant REST-001 accepted the order
+2025-10-02 21:08:57.125 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-B33972A1, from=ACCEPTED, to=PREPARING, reason=Restaurant started preparing the order
+2025-10-02 21:08:57.125 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-B33972A1, from=PREPARING, to=READY_FOR_DELIVERY, reason=Order is ready for pickup by delivery driver
+2025-10-02 21:08:57.126 [main] WARN  com.deliveryplatform.services.OrderLoggingService - Delivery operation failed: orderId=ORD-B33972A1, driverId=unassigned, operation=DRIVER_ASSIGNMENT
+2025-10-02 21:08:57.126 [main] WARN  com.deliveryplatform.services.OrderLoggingService - Business exception occurred: orderId=ORD-B33972A1, errorCode=DELIVERY_ASSIGNMENT_FAILED, message=Failed to assign delivery for order ORD-B33972A1: No drivers available for delivery assignment, timestamp=2025-10-02T21:08:57.126483
+2025-10-02 21:08:57.127 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-001
+2025-10-02 21:08:57.127 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-002
+2025-10-02 21:08:57.127 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-003
+2025-10-02 21:08:57.128 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-004
+2025-10-02 21:08:57.128 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-005
+2025-10-02 21:08:57.128 [main] INFO  com.deliveryplatform.models.Order - Order created: orderId=ORD-DEB29538, customerId=CUST-016, restaurantId=REST-001, amount=37.96
+2025-10-02 21:08:57.128 [main] INFO  com.deliveryplatform.services.OrderService - Special instructions updated for order: orderId=ORD-DEB29538
+2025-10-02 21:08:57.129 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-DEB29538, from=PENDING, to=ACCEPTED, reason=Restaurant REST-001 accepted the order
+2025-10-02 21:08:57.129 [main] WARN  com.deliveryplatform.services.OrderLoggingService - Business exception occurred: orderId=ORD-DEB29538, errorCode=INVALID_STATE_TRANSITION, message=Cannot transition order ORD-DEB29538 from ACCEPTED to ACCEPTED: Special instructions can only be updated for pending orders, timestamp=2025-10-02T21:08:57.129848
+2025-10-02 21:08:57.131 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-001
+2025-10-02 21:08:57.131 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-002
+2025-10-02 21:08:57.131 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-003
+2025-10-02 21:08:57.131 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-004
+2025-10-02 21:08:57.131 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-005
+2025-10-02 21:08:57.131 [main] INFO  com.deliveryplatform.models.Order - Order created: orderId=ORD-7613A1CB, customerId=CUST-002, restaurantId=REST-001, amount=37.96
+2025-10-02 21:08:57.132 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-7613A1CB, from=PENDING, to=REJECTED, reason=Out of ingredients for Margherita Pizza
+2025-10-02 21:08:57.132 [main] WARN  com.deliveryplatform.services.OrderLoggingService - Order termination: orderId=ORD-7613A1CB, finalStatus=REJECTED, reason=Rejected by restaurant: Out of ingredients for Margherita Pizza
+2025-10-02 21:08:57.133 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-001
+2025-10-02 21:08:57.133 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-002
+2025-10-02 21:08:57.133 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-003
+2025-10-02 21:08:57.133 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-004
+2025-10-02 21:08:57.133 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-005
+2025-10-02 21:08:57.133 [main] INFO  com.deliveryplatform.models.Order - Order created: orderId=ORD-538E3E1D, customerId=CUST-009, restaurantId=REST-001, amount=37.96
+2025-10-02 21:08:57.134 [main] INFO  com.deliveryplatform.models.Order - Order created: orderId=ORD-61D631E4, customerId=CUST-010, restaurantId=REST-001, amount=37.96
+2025-10-02 21:08:57.134 [main] INFO  com.deliveryplatform.models.Order - Order created: orderId=ORD-7CD95B33, customerId=CUST-011, restaurantId=REST-001, amount=37.96
+2025-10-02 21:08:57.134 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-538E3E1D, from=PENDING, to=ACCEPTED, reason=Restaurant REST-001 accepted the order
+2025-10-02 21:08:57.134 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-61D631E4, from=PENDING, to=ACCEPTED, reason=Restaurant REST-001 accepted the order
+2025-10-02 21:08:57.134 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-7CD95B33, from=PENDING, to=ACCEPTED, reason=Restaurant REST-001 accepted the order
+2025-10-02 21:08:57.135 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-001
+2025-10-02 21:08:57.135 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-002
+2025-10-02 21:08:57.135 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-003
+2025-10-02 21:08:57.136 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-004
+2025-10-02 21:08:57.136 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-005
+2025-10-02 21:08:57.136 [main] INFO  com.deliveryplatform.models.Order - Order created: orderId=ORD-2B7E3A03, customerId=CUST-006, restaurantId=REST-001, amount=37.96
+2025-10-02 21:08:57.136 [main] WARN  com.deliveryplatform.services.OrderLoggingService - Business exception occurred: orderId=ORD-2B7E3A03, errorCode=INVALID_STATE_TRANSITION, message=Cannot transition order ORD-2B7E3A03 from PENDING to PREPARING: Order must be in ACCEPTED status to start preparation, timestamp=2025-10-02T21:08:57.136731
+2025-10-02 21:08:57.136 [main] WARN  com.deliveryplatform.services.OrderLoggingService - Restaurant operation failed: restaurantId=REST-001, operation=START_PREPARING, orderId=ORD-2B7E3A03
+2025-10-02 21:08:57.137 [main] WARN  com.deliveryplatform.services.OrderLoggingService - Business exception occurred: orderId=ORD-2B7E3A03, errorCode=INVALID_STATE_TRANSITION, message=Cannot transition order ORD-2B7E3A03 from PENDING to READY_FOR_DELIVERY: Order must be in PREPARING status to be marked ready, timestamp=2025-10-02T21:08:57.137090
+2025-10-02 21:08:57.137 [main] WARN  com.deliveryplatform.services.OrderLoggingService - Restaurant operation failed: restaurantId=REST-001, operation=MARK_ORDER_READY, orderId=ORD-2B7E3A03
+2025-10-02 21:08:57.137 [main] WARN  com.deliveryplatform.services.OrderLoggingService - Business exception occurred: orderId=ORD-2B7E3A03, errorCode=INVALID_STATE_TRANSITION, message=Cannot transition order ORD-2B7E3A03 from PENDING to IN_DELIVERY: Order must be ready for delivery to assign a driver, timestamp=2025-10-02T21:08:57.137546
+2025-10-02 21:08:57.137 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-2B7E3A03, from=PENDING, to=ACCEPTED, reason=Restaurant REST-001 accepted the order
+2025-10-02 21:08:57.138 [main] WARN  com.deliveryplatform.services.OrderLoggingService - Business exception occurred: orderId=ORD-2B7E3A03, errorCode=INVALID_STATE_TRANSITION, message=Cannot transition order ORD-2B7E3A03 from ACCEPTED to READY_FOR_DELIVERY: Order must be in PREPARING status to be marked ready, timestamp=2025-10-02T21:08:57.137985
+2025-10-02 21:08:57.138 [main] WARN  com.deliveryplatform.services.OrderLoggingService - Restaurant operation failed: restaurantId=REST-001, operation=MARK_ORDER_READY, orderId=ORD-2B7E3A03
+2025-10-02 21:08:57.138 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-001
+2025-10-02 21:08:57.139 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-002
+2025-10-02 21:08:57.139 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-003
+2025-10-02 21:08:57.139 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-004
+2025-10-02 21:08:57.139 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-005
+2025-10-02 21:08:57.139 [main] INFO  com.deliveryplatform.models.Order - Order created: orderId=ORD-BABD2202, customerId=CUST-012, restaurantId=REST-001, amount=37.96
+2025-10-02 21:08:57.139 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-BABD2202, from=PENDING, to=ACCEPTED, reason=Restaurant REST-001 accepted the order
+2025-10-02 21:08:57.139 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-BABD2202, from=ACCEPTED, to=PREPARING, reason=Restaurant started preparing the order
+2025-10-02 21:08:57.139 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-BABD2202, from=PREPARING, to=READY_FOR_DELIVERY, reason=Order is ready for pickup by delivery driver
+2025-10-02 21:08:57.140 [main] INFO  com.deliveryplatform.models.Order - Order created: orderId=ORD-A69A6511, customerId=CUST-013, restaurantId=REST-001, amount=37.96
+2025-10-02 21:08:57.140 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-A69A6511, from=PENDING, to=ACCEPTED, reason=Restaurant REST-001 accepted the order
+2025-10-02 21:08:57.140 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-A69A6511, from=ACCEPTED, to=PREPARING, reason=Restaurant started preparing the order
+2025-10-02 21:08:57.140 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-A69A6511, from=PREPARING, to=READY_FOR_DELIVERY, reason=Order is ready for pickup by delivery driver
+2025-10-02 21:08:57.140 [main] INFO  com.deliveryplatform.models.Order - Order created: orderId=ORD-4EAC01A0, customerId=CUST-014, restaurantId=REST-001, amount=37.96
+2025-10-02 21:08:57.140 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-4EAC01A0, from=PENDING, to=ACCEPTED, reason=Restaurant REST-001 accepted the order
+2025-10-02 21:08:57.140 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-4EAC01A0, from=ACCEPTED, to=PREPARING, reason=Restaurant started preparing the order
+2025-10-02 21:08:57.141 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-4EAC01A0, from=PREPARING, to=READY_FOR_DELIVERY, reason=Order is ready for pickup by delivery driver
+2025-10-02 21:08:57.141 [main] INFO  com.deliveryplatform.models.Order - Order created: orderId=ORD-B35A657B, customerId=CUST-015, restaurantId=REST-001, amount=37.96
+2025-10-02 21:08:57.141 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-B35A657B, from=PENDING, to=ACCEPTED, reason=Restaurant REST-001 accepted the order
+2025-10-02 21:08:57.141 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-B35A657B, from=ACCEPTED, to=PREPARING, reason=Restaurant started preparing the order
+2025-10-02 21:08:57.141 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-B35A657B, from=PREPARING, to=READY_FOR_DELIVERY, reason=Order is ready for pickup by delivery driver
+2025-10-02 21:08:57.141 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-BABD2202, from=READY_FOR_DELIVERY, to=IN_DELIVERY, reason=Assigned to driver: DRIVER-005
+2025-10-02 21:08:57.141 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver assigned successfully: orderId=ORD-BABD2202, driverId=DRIVER-005
+2025-10-02 21:08:57.142 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-A69A6511, from=READY_FOR_DELIVERY, to=IN_DELIVERY, reason=Assigned to driver: DRIVER-005
+2025-10-02 21:08:57.142 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver assigned successfully: orderId=ORD-A69A6511, driverId=DRIVER-005
+2025-10-02 21:08:57.142 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-4EAC01A0, from=READY_FOR_DELIVERY, to=IN_DELIVERY, reason=Assigned to driver: DRIVER-005
+2025-10-02 21:08:57.142 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver at capacity: driverId=DRIVER-005, orderCount=3
+2025-10-02 21:08:57.142 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver assigned successfully: orderId=ORD-4EAC01A0, driverId=DRIVER-005
+2025-10-02 21:08:57.142 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-B35A657B, from=READY_FOR_DELIVERY, to=IN_DELIVERY, reason=Assigned to driver: DRIVER-003
+2025-10-02 21:08:57.142 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver assigned successfully: orderId=ORD-B35A657B, driverId=DRIVER-003
+2025-10-02 21:08:57.142 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-BABD2202, from=IN_DELIVERY, to=DELIVERED, reason=Order delivered successfully
+2025-10-02 21:08:57.143 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver capacity released: driverId=DRIVER-005, remainingOrders=2
+2025-10-02 21:08:57.143 [main] INFO  com.deliveryplatform.services.DeliveryService - Delivery completed successfully: orderId=ORD-BABD2202, driverId=DRIVER-005
+2025-10-02 21:08:57.144 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-001
+2025-10-02 21:08:57.144 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-002
+2025-10-02 21:08:57.144 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-003
+2025-10-02 21:08:57.144 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-004
+2025-10-02 21:08:57.144 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-005
+2025-10-02 21:08:57.144 [main] INFO  com.deliveryplatform.models.Order - Order created: orderId=ORD-8BC1D1C4, customerId=CUST-001, restaurantId=REST-001, amount=37.96
+2025-10-02 21:08:57.145 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-8BC1D1C4, from=PENDING, to=ACCEPTED, reason=Restaurant REST-001 accepted the order
+2025-10-02 21:08:57.145 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-8BC1D1C4, from=ACCEPTED, to=PREPARING, reason=Restaurant started preparing the order
+2025-10-02 21:08:57.145 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-8BC1D1C4, from=PREPARING, to=READY_FOR_DELIVERY, reason=Order is ready for pickup by delivery driver
+2025-10-02 21:08:57.145 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-8BC1D1C4, from=READY_FOR_DELIVERY, to=IN_DELIVERY, reason=Assigned to driver: DRIVER-005
+2025-10-02 21:08:57.145 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver assigned successfully: orderId=ORD-8BC1D1C4, driverId=DRIVER-005
+2025-10-02 21:08:57.146 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-8BC1D1C4, from=IN_DELIVERY, to=DELIVERED, reason=Order delivered successfully
+2025-10-02 21:08:57.146 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver capacity released: driverId=DRIVER-005, remainingOrders=0
+2025-10-02 21:08:57.146 [main] INFO  com.deliveryplatform.services.DeliveryService - Delivery completed successfully: orderId=ORD-8BC1D1C4, driverId=DRIVER-005
+2025-10-02 21:08:57.151 [main] INFO  com.deliveryplatform.models.Order - Order created: orderId=ORD-49E407F2, customerId=customer123, restaurantId=restaurant456, amount=34.97
+2025-10-02 21:08:57.151 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-49E407F2, from=PENDING, to=ACCEPTED, reason=Restaurant confirmed
+2025-10-02 21:08:57.152 [main] INFO  com.deliveryplatform.models.Order - Order created: orderId=ORD-D1FF318E, customerId=customer123, restaurantId=restaurant456, amount=34.97
+2025-10-02 21:08:57.152 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-D1FF318E, from=PENDING, to=ACCEPTED, reason=Order accepted by restaurant
+2025-10-02 21:08:57.153 [main] INFO  com.deliveryplatform.models.Order - Order created: orderId=ORD-2E727D6F, customerId=customer123, restaurantId=restaurant456, amount=34.97
+2025-10-02 21:08:57.153 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-2E727D6F, from=PENDING, to=ACCEPTED, reason=Restaurant confirmed
+2025-10-02 21:08:57.154 [main] INFO  com.deliveryplatform.models.Order - Order created: orderId=ORD-DB48DBA0, customerId=customer123, restaurantId=restaurant456, amount=34.97
+2025-10-02 21:08:57.171 [main] INFO  com.deliveryplatform.models.Order - Order created: orderId=ORD-BD7E7987, customerId=customer123, restaurantId=restaurant456, amount=34.97
+2025-10-02 21:08:57.183 [main] INFO  com.deliveryplatform.models.Order - Order created: orderId=ORD-E6A10E62, customerId=customer123, restaurantId=restaurant456, amount=34.97
+2025-10-02 21:08:57.184 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-E6A10E62, from=PENDING, to=ACCEPTED, reason=Restaurant confirmed
+2025-10-02 21:08:57.185 [main] INFO  com.deliveryplatform.models.Order - Order created: orderId=ORD-F3E55BA8, customerId=customer123, restaurantId=restaurant456, amount=34.97
+2025-10-02 21:08:57.185 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-F3E55BA8, from=PENDING, to=ACCEPTED, reason=Restaurant confirmed
+2025-10-02 21:08:57.185 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-F3E55BA8, from=ACCEPTED, to=PREPARING, reason=Restaurant started preparing the order
+2025-10-02 21:08:57.186 [main] INFO  com.deliveryplatform.models.Order - Order created: orderId=ORD-2E1206D8, customerId=customer123, restaurantId=restaurant456, amount=34.97
+2025-10-02 21:08:57.186 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-2E1206D8, from=PENDING, to=ACCEPTED, reason=Restaurant confirmed
+2025-10-02 21:08:57.186 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-2E1206D8, from=ACCEPTED, to=PREPARING, reason=Restaurant started preparing the order
+2025-10-02 21:08:57.186 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-2E1206D8, from=PREPARING, to=READY_FOR_DELIVERY, reason=Order is ready for pickup by delivery driver
+2025-10-02 21:08:57.187 [main] INFO  com.deliveryplatform.models.Order - Order created: orderId=ORD-9E5C68D7, customerId=customer123, restaurantId=restaurant456, amount=34.97
+2025-10-02 21:08:57.187 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-9E5C68D7, from=PENDING, to=ACCEPTED, reason=Restaurant confirmed
+2025-10-02 21:08:57.187 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-9E5C68D7, from=ACCEPTED, to=PREPARING, reason=Restaurant started preparing the order
+2025-10-02 21:08:57.188 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-9E5C68D7, from=PREPARING, to=READY_FOR_DELIVERY, reason=Order is ready for pickup by delivery driver
+2025-10-02 21:08:57.188 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-9E5C68D7, from=READY_FOR_DELIVERY, to=IN_DELIVERY, reason=Assigned to driver: driver123
+2025-10-02 21:08:57.189 [main] INFO  com.deliveryplatform.models.Order - Order created: orderId=ORD-0D2ABEE2, customerId=customer123, restaurantId=restaurant456, amount=34.97
+2025-10-02 21:08:57.190 [main] INFO  com.deliveryplatform.models.Order - Order created: orderId=ORD-0AFB959D, customerId=customer123, restaurantId=restaurant456, amount=34.97
+2025-10-02 21:08:57.190 [main] INFO  com.deliveryplatform.models.Order - Order created: orderId=ORD-9891DA73, customerId=cust1, restaurantId=rest1, amount=34.97
+2025-10-02 21:08:57.190 [main] INFO  com.deliveryplatform.models.Order - Order created: orderId=ORD-D6EED589, customerId=cust2, restaurantId=rest2, amount=34.97
+2025-10-02 21:08:57.192 [main] INFO  com.deliveryplatform.models.Order - Order created: orderId=ORD-75854606, customerId=customer123, restaurantId=restaurant456, amount=34.97
+2025-10-02 21:08:57.192 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-75854606, from=PENDING, to=ACCEPTED, reason=Restaurant confirmed
+2025-10-02 21:08:57.193 [main] INFO  com.deliveryplatform.models.Order - Order created: orderId=ORD-C32D7977, customerId=customer123, restaurantId=restaurant456, amount=34.97
+2025-10-02 21:08:57.194 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-C32D7977, from=PENDING, to=ACCEPTED, reason=Restaurant confirmed order
+2025-10-02 21:08:57.195 [main] INFO  com.deliveryplatform.models.Order - Order created: orderId=ORD-1C7F0905, customerId=customer123, restaurantId=restaurant456, amount=34.97
+2025-10-02 21:08:57.196 [main] INFO  com.deliveryplatform.models.Order - Order created: orderId=ORD-EB43C8DD, customerId=customer123, restaurantId=restaurant456, amount=34.97
+2025-10-02 21:08:57.198 [main] INFO  com.deliveryplatform.models.Order - Order created: orderId=ORD-71E3370E, customerId=customer123, restaurantId=restaurant456, amount=34.97
+2025-10-02 21:08:57.200 [main] INFO  com.deliveryplatform.models.Order - Order created: orderId=ORD-C7F75451, customerId=customer123, restaurantId=restaurant456, amount=34.97
+2025-10-02 21:08:57.200 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-C7F75451, from=PENDING, to=ACCEPTED, reason=Restaurant confirmed
+2025-10-02 21:08:57.200 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-C7F75451, from=ACCEPTED, to=PREPARING, reason=Restaurant started preparing the order
+2025-10-02 21:08:57.200 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-C7F75451, from=PREPARING, to=READY_FOR_DELIVERY, reason=Order is ready for pickup by delivery driver
+2025-10-02 21:08:57.200 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-C7F75451, from=READY_FOR_DELIVERY, to=IN_DELIVERY, reason=Assigned to driver: driver123
+2025-10-02 21:08:57.200 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-C7F75451, from=IN_DELIVERY, to=DELIVERED, reason=Order delivered successfully
+2025-10-02 21:08:57.201 [main] INFO  com.deliveryplatform.models.Order - Order created: orderId=ORD-011B6DF5, customerId=customer123, restaurantId=restaurant456, amount=34.97
+2025-10-02 21:08:57.201 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-011B6DF5, from=PENDING, to=CANCELLED, reason=Customer cancelled
+2025-10-02 21:08:57.202 [main] INFO  com.deliveryplatform.models.Order - Order created: orderId=ORD-6B52A27A, customerId=customer123, restaurantId=restaurant456, amount=34.97
+2025-10-02 21:08:57.202 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-6B52A27A, from=PENDING, to=REJECTED, reason=Restaurant rejected
+2025-10-02 21:08:57.203 [main] INFO  com.deliveryplatform.models.Order - Order created: orderId=ORD-C3B822AA, customerId=customer123, restaurantId=restaurant456, amount=34.97
+2025-10-02 21:08:57.203 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-C3B822AA, from=PENDING, to=REJECTED, reason=Restaurant is closed
+2025-10-02 21:08:57.203 [main] INFO  com.deliveryplatform.models.Order - Order created: orderId=ORD-04B978F2, customerId=customer123, restaurantId=restaurant456, amount=34.97
+2025-10-02 21:08:57.204 [main] INFO  com.deliveryplatform.models.Order - Order created: orderId=ORD-D563A9D3, customerId=customer123, restaurantId=restaurant456, amount=34.97
+2025-10-02 21:08:57.205 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-D563A9D3, from=PENDING, to=ACCEPTED, reason=Restaurant confirmed
+2025-10-02 21:08:57.205 [main] INFO  com.deliveryplatform.models.Order - Order created: orderId=ORD-EBF49D3B, customerId=customer123, restaurantId=restaurant456, amount=34.97
+2025-10-02 21:08:57.206 [main] INFO  com.deliveryplatform.models.Order - Order created: orderId=ORD-20683829, customerId=customer123, restaurantId=restaurant456, amount=34.97
+2025-10-02 21:08:57.207 [main] INFO  com.deliveryplatform.models.Order - Order created: orderId=ORD-4EDAF7E5, customerId=customer123, restaurantId=restaurant456, amount=34.97
+2025-10-02 21:08:57.208 [main] INFO  com.deliveryplatform.models.Order - Order created: orderId=ORD-41E744B3, customerId=customer123, restaurantId=restaurant456, amount=34.97
+2025-10-02 21:08:57.209 [main] INFO  com.deliveryplatform.models.Order - Order created: orderId=ORD-AA8A6EC6, customerId=customer123, restaurantId=restaurant456, amount=34.97
+2025-10-02 21:08:57.209 [main] INFO  com.deliveryplatform.models.Order - Order created: orderId=ORD-24984AFB, customerId=customer123, restaurantId=restaurant456, amount=34.97
+2025-10-02 21:08:57.209 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-24984AFB, from=PENDING, to=ACCEPTED, reason=Restaurant confirmed
+2025-10-02 21:08:57.209 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-24984AFB, from=ACCEPTED, to=PREPARING, reason=Restaurant started preparing the order
+2025-10-02 21:08:57.210 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-24984AFB, from=PREPARING, to=READY_FOR_DELIVERY, reason=Order is ready for pickup by delivery driver
+2025-10-02 21:08:57.210 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-24984AFB, from=READY_FOR_DELIVERY, to=IN_DELIVERY, reason=Assigned to driver: driver789
+2025-10-02 21:08:57.210 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-24984AFB, from=IN_DELIVERY, to=DELIVERED, reason=Order delivered successfully
+2025-10-02 21:08:57.210 [main] INFO  com.deliveryplatform.models.Order - Order created: orderId=ORD-F83EF4E2, customerId=customer123, restaurantId=restaurant456, amount=34.97
+2025-10-02 21:08:57.212 [main] INFO  com.deliveryplatform.models.Order - Order created: orderId=ORD-D669504A, customerId=customer123, restaurantId=restaurant456, amount=34.97
+2025-10-02 21:08:57.212 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-D669504A, from=PENDING, to=CANCELLED, reason=Customer requested cancellation
+2025-10-02 21:08:57.213 [main] INFO  com.deliveryplatform.models.Order - Order created: orderId=ORD-1BC06DBD, customerId=customer123, restaurantId=restaurant456, amount=34.97
+2025-10-02 21:08:57.270 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-001
+2025-10-02 21:08:57.270 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-002
+2025-10-02 21:08:57.270 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-003
+2025-10-02 21:08:57.270 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-004
+2025-10-02 21:08:57.270 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-005
+2025-10-02 21:08:57.271 [main] INFO  com.deliveryplatform.models.Order - Order created: orderId=ORD-75517991, customerId=CUST-007, restaurantId=REST-001, amount=34.97
+2025-10-02 21:08:57.271 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-75517991, from=PENDING, to=ACCEPTED, reason=Restaurant REST-001 accepted the order
+2025-10-02 21:08:57.271 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-75517991, from=ACCEPTED, to=PREPARING, reason=Restaurant started preparing the order
+2025-10-02 21:08:57.271 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-75517991, from=PREPARING, to=READY_FOR_DELIVERY, reason=Order is ready for pickup by delivery driver
+2025-10-02 21:08:57.271 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-75517991, from=READY_FOR_DELIVERY, to=IN_DELIVERY, reason=Assigned to driver: DRIVER-005
+2025-10-02 21:08:57.271 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver assigned successfully: orderId=ORD-75517991, driverId=DRIVER-005
+2025-10-02 21:08:57.272 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-75517991, from=IN_DELIVERY, to=DELIVERED, reason=Order delivered successfully
+2025-10-02 21:08:57.272 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver capacity released: driverId=DRIVER-005, remainingOrders=0
+2025-10-02 21:08:57.272 [main] INFO  com.deliveryplatform.services.DeliveryService - Delivery completed successfully: orderId=ORD-75517991, driverId=DRIVER-005
+2025-10-02 21:08:57.273 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-001
+2025-10-02 21:08:57.273 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-002
+2025-10-02 21:08:57.273 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-003
+2025-10-02 21:08:57.273 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-004
+2025-10-02 21:08:57.273 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-005
+2025-10-02 21:08:57.273 [main] WARN  com.deliveryplatform.services.OrderLoggingService - Business exception occurred: orderId=unknown, errorCode=ORDER_VALIDATION_FAILED, message=Order validation failed: Customer ID is required, Restaurant ID is required, Delivery address is required, Order must have at least one item, timestamp=2025-10-02T21:08:57.273789
+2025-10-02 21:08:57.274 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-001
+2025-10-02 21:08:57.274 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-002
+2025-10-02 21:08:57.274 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-003
+2025-10-02 21:08:57.274 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-004
+2025-10-02 21:08:57.274 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-005
+2025-10-02 21:08:57.274 [main] INFO  com.deliveryplatform.models.Order - Order created: orderId=ORD-AD80BBE4, customerId=CUST-002, restaurantId=REST-001, amount=10.00
+2025-10-02 21:08:57.275 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-AD80BBE4, from=PENDING, to=ACCEPTED, reason=Restaurant REST-001 accepted the order
+2025-10-02 21:08:57.275 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-AD80BBE4, from=ACCEPTED, to=PREPARING, reason=Restaurant started preparing the order
+2025-10-02 21:08:57.275 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-AD80BBE4, from=PREPARING, to=READY_FOR_DELIVERY, reason=Order is ready for pickup by delivery driver
+2025-10-02 21:08:57.275 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-001
+2025-10-02 21:08:57.276 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-002
+2025-10-02 21:08:57.276 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-003
+2025-10-02 21:08:57.276 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-004
+2025-10-02 21:08:57.276 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-005
+2025-10-02 21:08:57.277 [main] INFO  com.deliveryplatform.models.Order - Order created: orderId=ORD-99FE6CA6, customerId=CUST-001, restaurantId=REST-001, amount=34.97
+2025-10-02 21:08:57.277 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-001
+2025-10-02 21:08:57.277 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-002
+2025-10-02 21:08:57.278 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-003
+2025-10-02 21:08:57.278 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-004
+2025-10-02 21:08:57.279 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-005
+2025-10-02 21:08:57.279 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver removed from available pool: driverId=DRIVER-001
+2025-10-02 21:08:57.279 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver removed from available pool: driverId=DRIVER-002
+2025-10-02 21:08:57.279 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver removed from available pool: driverId=DRIVER-003
+2025-10-02 21:08:57.279 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver removed from available pool: driverId=DRIVER-004
+2025-10-02 21:08:57.279 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver removed from available pool: driverId=DRIVER-005
+2025-10-02 21:08:57.279 [main] INFO  com.deliveryplatform.models.Order - Order created: orderId=ORD-884BEB62, customerId=CUST-006, restaurantId=REST-001, amount=10.00
+2025-10-02 21:08:57.280 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-884BEB62, from=PENDING, to=ACCEPTED, reason=Restaurant REST-001 accepted the order
+2025-10-02 21:08:57.280 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-884BEB62, from=ACCEPTED, to=PREPARING, reason=Restaurant started preparing the order
+2025-10-02 21:08:57.280 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-884BEB62, from=PREPARING, to=READY_FOR_DELIVERY, reason=Order is ready for pickup by delivery driver
+2025-10-02 21:08:57.281 [main] WARN  com.deliveryplatform.services.OrderLoggingService - Delivery operation failed: orderId=ORD-884BEB62, driverId=unassigned, operation=DRIVER_ASSIGNMENT
+2025-10-02 21:08:57.281 [main] WARN  com.deliveryplatform.services.OrderLoggingService - Business exception occurred: orderId=ORD-884BEB62, errorCode=DELIVERY_ASSIGNMENT_FAILED, message=Failed to assign delivery for order ORD-884BEB62: No drivers available for delivery assignment, timestamp=2025-10-02T21:08:57.281204
+2025-10-02 21:08:57.281 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-001
+2025-10-02 21:08:57.281 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-002
+2025-10-02 21:08:57.281 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-003
+2025-10-02 21:08:57.281 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-004
+2025-10-02 21:08:57.281 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-005
+2025-10-02 21:08:57.282 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-001
+2025-10-02 21:08:57.282 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-002
+2025-10-02 21:08:57.282 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-003
+2025-10-02 21:08:57.282 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-004
+2025-10-02 21:08:57.282 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-005
+2025-10-02 21:08:57.282 [main] INFO  com.deliveryplatform.models.Order - Order created: orderId=ORD-5E179532, customerId=CUST-003, restaurantId=REST-001, amount=10.00
+2025-10-02 21:08:57.283 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-5E179532, from=PENDING, to=ACCEPTED, reason=Restaurant REST-001 accepted the order
+2025-10-02 21:08:57.283 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-5E179532, from=ACCEPTED, to=PREPARING, reason=Restaurant started preparing the order
+2025-10-02 21:08:57.283 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-5E179532, from=PREPARING, to=READY_FOR_DELIVERY, reason=Order is ready for pickup by delivery driver
+2025-10-02 21:08:57.283 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-5E179532, from=READY_FOR_DELIVERY, to=IN_DELIVERY, reason=Assigned to driver: DRIVER-005
+2025-10-02 21:08:57.283 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver assigned successfully: orderId=ORD-5E179532, driverId=DRIVER-005
+2025-10-02 21:08:57.283 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-5E179532, from=IN_DELIVERY, to=DELIVERED, reason=Order delivered successfully
+2025-10-02 21:08:57.283 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver capacity released: driverId=DRIVER-005, remainingOrders=0
+2025-10-02 21:08:57.283 [main] INFO  com.deliveryplatform.services.DeliveryService - Delivery completed successfully: orderId=ORD-5E179532, driverId=DRIVER-005
+2025-10-02 21:08:57.284 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-001
+2025-10-02 21:08:57.284 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-002
+2025-10-02 21:08:57.284 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-003
+2025-10-02 21:08:57.284 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-004
+2025-10-02 21:08:57.285 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-005
+2025-10-02 21:08:57.285 [main] INFO  com.deliveryplatform.models.Order - Order created: orderId=ORD-CFBAFA18, customerId=CUST-005, restaurantId=REST-001, amount=10.00
+2025-10-02 21:08:57.285 [main] WARN  com.deliveryplatform.services.OrderLoggingService - Business exception occurred: orderId=ORD-CFBAFA18, errorCode=INVALID_STATE_TRANSITION, message=Cannot transition order ORD-CFBAFA18 from PENDING to PREPARING: Order must be in ACCEPTED status to start preparation, timestamp=2025-10-02T21:08:57.285542
+2025-10-02 21:08:57.285 [main] WARN  com.deliveryplatform.services.OrderLoggingService - Restaurant operation failed: restaurantId=REST-001, operation=START_PREPARING, orderId=ORD-CFBAFA18
+2025-10-02 21:08:57.286 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-001
+2025-10-02 21:08:57.286 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-002
+2025-10-02 21:08:57.286 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-003
+2025-10-02 21:08:57.286 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-004
+2025-10-02 21:08:57.286 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-005
+2025-10-02 21:08:57.286 [main] INFO  com.deliveryplatform.models.Order - Order created: orderId=ORD-E6FA56E9, customerId=CUST-004, restaurantId=REST-CLOSED, amount=10.00
+2025-10-02 21:08:57.286 [main] WARN  com.deliveryplatform.services.OrderLoggingService - Business exception occurred: orderId=ORD-E6FA56E9, errorCode=RESTAURANT_UNAVAILABLE, message=Restaurant REST-CLOSED is currently unavailable: Restaurant is closed, timestamp=2025-10-02T21:08:57.286917
+2025-10-02 21:08:57.287 [main] WARN  com.deliveryplatform.services.OrderLoggingService - Restaurant operation failed: restaurantId=REST-CLOSED, operation=ACCEPT_ORDER, orderId=ORD-E6FA56E9
+2025-10-02 21:10:48.384 [JavaFX Application Thread] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-001
+2025-10-02 21:10:48.385 [JavaFX Application Thread] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-002
+2025-10-02 21:10:48.385 [JavaFX Application Thread] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-003
+2025-10-02 21:10:48.385 [JavaFX Application Thread] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-004
+2025-10-02 21:10:48.385 [JavaFX Application Thread] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-005
+2025-10-02 21:11:29.207 [Thread-3] WARN  com.deliveryplatform.services.OrderLoggingService - Business exception occurred: orderId=unknown, errorCode=ORDER_VALIDATION_FAILED, message=Order validation failed: Customer ID is required, Restaurant ID is required, Delivery address is required, Order must have at least one item, timestamp=2025-10-02T21:11:29.206966
+2025-10-02 21:11:29.946 [Thread-4] WARN  com.deliveryplatform.services.OrderLoggingService - Business exception occurred: orderId=unknown, errorCode=ORDER_VALIDATION_FAILED, message=Order validation failed: Customer ID is required, Restaurant ID is required, Delivery address is required, Order must have at least one item, timestamp=2025-10-02T21:11:29.945840
+2025-10-02 21:11:30.574 [Thread-5] WARN  com.deliveryplatform.services.OrderLoggingService - Business exception occurred: orderId=unknown, errorCode=ORDER_VALIDATION_FAILED, message=Order validation failed: Customer ID is required, Restaurant ID is required, Delivery address is required, Order must have at least one item, timestamp=2025-10-02T21:11:30.574078
+2025-10-02 21:11:31.525 [Thread-6] WARN  com.deliveryplatform.services.OrderLoggingService - Business exception occurred: orderId=unknown, errorCode=ORDER_VALIDATION_FAILED, message=Order validation failed: Customer ID is required, Restaurant ID is required, Delivery address is required, Order must have at least one item, timestamp=2025-10-02T21:11:31.525076
+2025-10-02 21:11:32.797 [Thread-7] WARN  com.deliveryplatform.services.OrderLoggingService - Business exception occurred: orderId=TEST-ORDER, errorCode=RESTAURANT_UNAVAILABLE, message=Restaurant REST-CLOSED is currently unavailable: Restaurant is closed, timestamp=2025-10-02T21:11:32.796633
+2025-10-02 21:11:32.798 [Thread-7] WARN  com.deliveryplatform.services.OrderLoggingService - Restaurant operation failed: restaurantId=REST-CLOSED, operation=ACCEPT_ORDER, orderId=TEST-ORDER
+2025-10-02 21:11:34.725 [Thread-8] WARN  com.deliveryplatform.services.OrderLoggingService - Business exception occurred: orderId=TEST-ORDER, errorCode=RESTAURANT_UNAVAILABLE, message=Restaurant REST-CLOSED is currently unavailable: Restaurant is closed, timestamp=2025-10-02T21:11:34.725470
+2025-10-02 21:11:34.726 [Thread-8] WARN  com.deliveryplatform.services.OrderLoggingService - Restaurant operation failed: restaurantId=REST-CLOSED, operation=ACCEPT_ORDER, orderId=TEST-ORDER
+2025-10-02 21:11:35.677 [Thread-9] WARN  com.deliveryplatform.services.OrderLoggingService - Business exception occurred: orderId=TEST-ORDER, errorCode=RESTAURANT_UNAVAILABLE, message=Restaurant REST-CLOSED is currently unavailable: Restaurant is closed, timestamp=2025-10-02T21:11:35.677333
+2025-10-02 21:11:35.678 [Thread-9] WARN  com.deliveryplatform.services.OrderLoggingService - Restaurant operation failed: restaurantId=REST-CLOSED, operation=ACCEPT_ORDER, orderId=TEST-ORDER
+2025-10-02 21:11:36.407 [Thread-10] WARN  com.deliveryplatform.services.OrderLoggingService - Business exception occurred: orderId=TEST-ORDER, errorCode=RESTAURANT_UNAVAILABLE, message=Restaurant REST-CLOSED is currently unavailable: Restaurant is closed, timestamp=2025-10-02T21:11:36.407515
+2025-10-02 21:11:36.408 [Thread-10] WARN  com.deliveryplatform.services.OrderLoggingService - Restaurant operation failed: restaurantId=REST-CLOSED, operation=ACCEPT_ORDER, orderId=TEST-ORDER
+2025-10-02 21:11:43.428 [Thread-11] ERROR ERROR_EVENTS - System error occurred: context=startPreparingOrder, orderId=FAKE-ORDER-ID, errorType=IllegalArgumentException, message=Order not found: FAKE-ORDER-ID
+java.lang.IllegalArgumentException: Order not found: FAKE-ORDER-ID
+	at com.deliveryplatform.services.RestaurantServiceImpl.getOrderAndValidateOwnership(RestaurantServiceImpl.java:365) ~[classes/:?]
+	at com.deliveryplatform.services.RestaurantServiceImpl.getOrderAndValidateForPreparation(RestaurantServiceImpl.java:339) ~[classes/:?]
+	at com.deliveryplatform.services.RestaurantServiceImpl.startPreparingOrder(RestaurantServiceImpl.java:181) [classes/:?]
+	at com.deliveryplatform.gui.MainController.lambda$onTriggerStateException$0(MainController.java:661) [classes/:?]
+	at com.deliveryplatform.gui.MainController$1.call(MainController.java:534) [classes/:?]
+	at com.deliveryplatform.gui.MainController$1.call(MainController.java:531) [classes/:?]
+	at javafx.concurrent.Task$TaskCallable.call(Task.java:1399) [javafx-graphics-21.0.1-mac-aarch64.jar:?]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:328) [?:?]
+	at java.lang.Thread.run(Thread.java:1474) [?:?]
+2025-10-02 21:11:43.443 [Thread-11] WARN  com.deliveryplatform.services.OrderLoggingService - Restaurant operation failed: restaurantId=REST-001, operation=START_PREPARING, orderId=FAKE-ORDER-ID
+2025-10-02 21:11:46.708 [Thread-12] WARN  com.deliveryplatform.services.OrderLoggingService - Business exception occurred: orderId=TEST-ORDER, errorCode=RESTAURANT_UNAVAILABLE, message=Restaurant REST-CLOSED is currently unavailable: Restaurant is closed, timestamp=2025-10-02T21:11:46.708506
+2025-10-02 21:11:46.709 [Thread-12] WARN  com.deliveryplatform.services.OrderLoggingService - Restaurant operation failed: restaurantId=REST-CLOSED, operation=ACCEPT_ORDER, orderId=TEST-ORDER
+2025-10-02 21:11:49.712 [Thread-13] INFO  com.deliveryplatform.services.DeliveryService - Driver removed from available pool: driverId=DRIVER-001
+2025-10-02 21:11:49.713 [Thread-13] INFO  com.deliveryplatform.services.DeliveryService - Driver removed from available pool: driverId=DRIVER-002
+2025-10-02 21:11:49.713 [Thread-13] INFO  com.deliveryplatform.services.DeliveryService - Driver removed from available pool: driverId=DRIVER-003
+2025-10-02 21:11:49.713 [Thread-13] INFO  com.deliveryplatform.services.DeliveryService - Driver removed from available pool: driverId=DRIVER-004
+2025-10-02 21:11:49.713 [Thread-13] INFO  com.deliveryplatform.services.DeliveryService - Driver removed from available pool: driverId=DRIVER-005
+2025-10-02 21:11:49.714 [Thread-13] ERROR ERROR_EVENTS - System error occurred: context=assignDriver, orderId=FAKE-ORDER-ID, errorType=IllegalArgumentException, message=Order not found: FAKE-ORDER-ID
+java.lang.IllegalArgumentException: Order not found: FAKE-ORDER-ID
+	at com.deliveryplatform.services.DeliveryService.getOrderAndValidateForDelivery(DeliveryService.java:258) ~[classes/:?]
+	at com.deliveryplatform.services.DeliveryService.assignDriver(DeliveryService.java:62) [classes/:?]
+	at com.deliveryplatform.gui.MainController.lambda$onTriggerDeliveryException$0(MainController.java:692) [classes/:?]
+	at com.deliveryplatform.gui.MainController$1.call(MainController.java:534) [classes/:?]
+	at com.deliveryplatform.gui.MainController$1.call(MainController.java:531) [classes/:?]
+	at javafx.concurrent.Task$TaskCallable.call(Task.java:1399) [javafx-graphics-21.0.1-mac-aarch64.jar:?]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:328) [?:?]
+	at java.lang.Thread.run(Thread.java:1474) [?:?]
+2025-10-02 21:11:51.473 [Thread-14] ERROR ERROR_EVENTS - System error occurred: context=startPreparingOrder, orderId=FAKE-ORDER-ID, errorType=IllegalArgumentException, message=Order not found: FAKE-ORDER-ID
+java.lang.IllegalArgumentException: Order not found: FAKE-ORDER-ID
+	at com.deliveryplatform.services.RestaurantServiceImpl.getOrderAndValidateOwnership(RestaurantServiceImpl.java:365) ~[classes/:?]
+	at com.deliveryplatform.services.RestaurantServiceImpl.getOrderAndValidateForPreparation(RestaurantServiceImpl.java:339) ~[classes/:?]
+	at com.deliveryplatform.services.RestaurantServiceImpl.startPreparingOrder(RestaurantServiceImpl.java:181) [classes/:?]
+	at com.deliveryplatform.gui.MainController.lambda$onTriggerStateException$0(MainController.java:661) [classes/:?]
+	at com.deliveryplatform.gui.MainController$1.call(MainController.java:534) [classes/:?]
+	at com.deliveryplatform.gui.MainController$1.call(MainController.java:531) [classes/:?]
+	at javafx.concurrent.Task$TaskCallable.call(Task.java:1399) [javafx-graphics-21.0.1-mac-aarch64.jar:?]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:328) [?:?]
+	at java.lang.Thread.run(Thread.java:1474) [?:?]
+2025-10-02 21:11:51.474 [Thread-14] WARN  com.deliveryplatform.services.OrderLoggingService - Restaurant operation failed: restaurantId=REST-001, operation=START_PREPARING, orderId=FAKE-ORDER-ID
+2025-10-02 21:11:52.258 [Thread-15] WARN  com.deliveryplatform.services.OrderLoggingService - Business exception occurred: orderId=unknown, errorCode=ORDER_VALIDATION_FAILED, message=Order validation failed: Customer ID is required, Restaurant ID is required, Delivery address is required, Order must have at least one item, timestamp=2025-10-02T21:11:52.257768
+2025-10-02 21:15:44.953 [JavaFX Application Thread] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-001
+2025-10-02 21:15:44.955 [JavaFX Application Thread] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-002
+2025-10-02 21:15:44.955 [JavaFX Application Thread] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-003
+2025-10-02 21:15:44.955 [JavaFX Application Thread] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-004
+2025-10-02 21:15:44.955 [JavaFX Application Thread] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-005
+2025-10-02 21:18:45.408 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-001
+2025-10-02 21:18:45.409 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-002
+2025-10-02 21:18:45.409 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-003
+2025-10-02 21:18:45.409 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-004
+2025-10-02 21:18:45.410 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-005
+2025-10-02 21:18:45.430 [main] INFO  com.deliveryplatform.models.Order - Order created: orderId=ORD-F0DEDBC2, customerId=CUST-004, restaurantId=REST-001, amount=37.96
+2025-10-02 21:18:45.432 [main] WARN  com.deliveryplatform.services.OrderLoggingService - Business exception occurred: orderId=ORD-F0DEDBC2, errorCode=RESTAURANT_UNAVAILABLE, message=Restaurant REST-001 is currently unavailable: Temporarily not accepting orders, timestamp=2025-10-02T21:18:45.432318
+2025-10-02 21:18:45.432 [main] WARN  com.deliveryplatform.services.OrderLoggingService - Restaurant operation failed: restaurantId=REST-001, operation=ACCEPT_ORDER, orderId=ORD-F0DEDBC2
+2025-10-02 21:18:45.432 [main] INFO  com.deliveryplatform.models.Order - Order created: orderId=ORD-6A8EBF1E, customerId=CUST-005, restaurantId=REST-001, amount=37.96
+2025-10-02 21:18:45.433 [main] WARN  com.deliveryplatform.services.OrderLoggingService - Business exception occurred: orderId=ORD-6A8EBF1E, errorCode=RESTAURANT_UNAVAILABLE, message=Restaurant REST-001 is currently unavailable: At maximum capacity (0 orders), timestamp=2025-10-02T21:18:45.433235
+2025-10-02 21:18:45.433 [main] WARN  com.deliveryplatform.services.OrderLoggingService - Restaurant operation failed: restaurantId=REST-001, operation=ACCEPT_ORDER, orderId=ORD-6A8EBF1E
+2025-10-02 21:18:45.437 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-001
+2025-10-02 21:18:45.437 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-002
+2025-10-02 21:18:45.437 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-003
+2025-10-02 21:18:45.438 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-004
+2025-10-02 21:18:45.438 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-005
+2025-10-02 21:18:45.439 [main] WARN  com.deliveryplatform.services.OrderLoggingService - Business exception occurred: orderId=unknown, errorCode=ORDER_VALIDATION_FAILED, message=Order validation failed: Customer ID is required, timestamp=2025-10-02T21:18:45.439246
+2025-10-02 21:18:45.439 [main] WARN  com.deliveryplatform.services.OrderLoggingService - Business exception occurred: orderId=unknown, errorCode=ORDER_VALIDATION_FAILED, message=Order validation failed: Restaurant ID is required, timestamp=2025-10-02T21:18:45.439714
+2025-10-02 21:18:45.440 [main] WARN  com.deliveryplatform.services.OrderLoggingService - Business exception occurred: orderId=unknown, errorCode=ORDER_VALIDATION_FAILED, message=Order validation failed: Order must have at least one item, timestamp=2025-10-02T21:18:45.440002
+2025-10-02 21:18:45.440 [main] WARN  com.deliveryplatform.services.OrderLoggingService - Business exception occurred: orderId=unknown, errorCode=ORDER_VALIDATION_FAILED, message=Order validation failed: Delivery address is required, timestamp=2025-10-02T21:18:45.440278
+2025-10-02 21:18:45.440 [main] WARN  com.deliveryplatform.services.OrderLoggingService - Business exception occurred: orderId=unknown, errorCode=ORDER_VALIDATION_FAILED, message=Order validation failed: Item 1: Item ID is required, timestamp=2025-10-02T21:18:45.440694
+2025-10-02 21:18:45.441 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-001
+2025-10-02 21:18:45.442 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-002
+2025-10-02 21:18:45.442 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-003
+2025-10-02 21:18:45.442 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-004
+2025-10-02 21:18:45.442 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-005
+2025-10-02 21:18:45.442 [main] INFO  com.deliveryplatform.models.Order - Order created: orderId=ORD-8CF3587B, customerId=CUST-003, restaurantId=REST-001, amount=37.96
+2025-10-02 21:18:45.443 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-8CF3587B, from=PENDING, to=ACCEPTED, reason=Restaurant REST-001 accepted the order
+2025-10-02 21:18:45.444 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-8CF3587B, from=ACCEPTED, to=CANCELLED, reason=Customer changed mind
+2025-10-02 21:18:45.444 [main] WARN  com.deliveryplatform.services.OrderLoggingService - Order termination: orderId=ORD-8CF3587B, finalStatus=CANCELLED, reason=Customer changed mind
+2025-10-02 21:18:45.444 [main] INFO  com.deliveryplatform.services.OrderService - Order cancelled: orderId=ORD-8CF3587B, reason=Customer changed mind
+2025-10-02 21:18:45.446 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-001
+2025-10-02 21:18:45.446 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-002
+2025-10-02 21:18:45.446 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-003
+2025-10-02 21:18:45.446 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-004
+2025-10-02 21:18:45.446 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-005
+2025-10-02 21:18:45.446 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver removed from available pool: driverId=DRIVER-001
+2025-10-02 21:18:45.446 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver removed from available pool: driverId=DRIVER-002
+2025-10-02 21:18:45.447 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver removed from available pool: driverId=DRIVER-003
+2025-10-02 21:18:45.447 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver removed from available pool: driverId=DRIVER-004
+2025-10-02 21:18:45.447 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver removed from available pool: driverId=DRIVER-005
+2025-10-02 21:18:45.447 [main] INFO  com.deliveryplatform.models.Order - Order created: orderId=ORD-70E0CFAD, customerId=CUST-007, restaurantId=REST-001, amount=37.96
+2025-10-02 21:18:45.447 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-70E0CFAD, from=PENDING, to=ACCEPTED, reason=Restaurant REST-001 accepted the order
+2025-10-02 21:18:45.447 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-70E0CFAD, from=ACCEPTED, to=PREPARING, reason=Restaurant started preparing the order
+2025-10-02 21:18:45.447 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-70E0CFAD, from=PREPARING, to=READY_FOR_DELIVERY, reason=Order is ready for pickup by delivery driver
+2025-10-02 21:18:45.448 [main] WARN  com.deliveryplatform.services.OrderLoggingService - Delivery operation failed: orderId=ORD-70E0CFAD, driverId=unassigned, operation=DRIVER_ASSIGNMENT
+2025-10-02 21:18:45.448 [main] WARN  com.deliveryplatform.services.OrderLoggingService - Business exception occurred: orderId=ORD-70E0CFAD, errorCode=DELIVERY_ASSIGNMENT_FAILED, message=Failed to assign delivery for order ORD-70E0CFAD: No drivers available for delivery assignment, timestamp=2025-10-02T21:18:45.448566
+2025-10-02 21:18:45.449 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-001
+2025-10-02 21:18:45.449 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-002
+2025-10-02 21:18:45.449 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-003
+2025-10-02 21:18:45.450 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-004
+2025-10-02 21:18:45.450 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-005
+2025-10-02 21:18:45.450 [main] INFO  com.deliveryplatform.models.Order - Order created: orderId=ORD-02FC7F2D, customerId=CUST-016, restaurantId=REST-001, amount=37.96
+2025-10-02 21:18:45.450 [main] INFO  com.deliveryplatform.services.OrderService - Special instructions updated for order: orderId=ORD-02FC7F2D
+2025-10-02 21:18:45.450 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-02FC7F2D, from=PENDING, to=ACCEPTED, reason=Restaurant REST-001 accepted the order
+2025-10-02 21:18:45.451 [main] WARN  com.deliveryplatform.services.OrderLoggingService - Business exception occurred: orderId=ORD-02FC7F2D, errorCode=INVALID_STATE_TRANSITION, message=Cannot transition order ORD-02FC7F2D from ACCEPTED to ACCEPTED: Special instructions can only be updated for pending orders, timestamp=2025-10-02T21:18:45.450973
+2025-10-02 21:18:45.451 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-001
+2025-10-02 21:18:45.452 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-002
+2025-10-02 21:18:45.452 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-003
+2025-10-02 21:18:45.452 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-004
+2025-10-02 21:18:45.452 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-005
+2025-10-02 21:18:45.452 [main] INFO  com.deliveryplatform.models.Order - Order created: orderId=ORD-435DD6A3, customerId=CUST-002, restaurantId=REST-001, amount=37.96
+2025-10-02 21:18:45.452 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-435DD6A3, from=PENDING, to=REJECTED, reason=Out of ingredients for Margherita Pizza
+2025-10-02 21:18:45.452 [main] WARN  com.deliveryplatform.services.OrderLoggingService - Order termination: orderId=ORD-435DD6A3, finalStatus=REJECTED, reason=Rejected by restaurant: Out of ingredients for Margherita Pizza
+2025-10-02 21:18:45.453 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-001
+2025-10-02 21:18:45.453 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-002
+2025-10-02 21:18:45.454 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-003
+2025-10-02 21:18:45.454 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-004
+2025-10-02 21:18:45.454 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-005
+2025-10-02 21:18:45.454 [main] INFO  com.deliveryplatform.models.Order - Order created: orderId=ORD-0E2E082A, customerId=CUST-009, restaurantId=REST-001, amount=37.96
+2025-10-02 21:18:45.454 [main] INFO  com.deliveryplatform.models.Order - Order created: orderId=ORD-DDE836BE, customerId=CUST-010, restaurantId=REST-001, amount=37.96
+2025-10-02 21:18:45.454 [main] INFO  com.deliveryplatform.models.Order - Order created: orderId=ORD-76CCBD8B, customerId=CUST-011, restaurantId=REST-001, amount=37.96
+2025-10-02 21:18:45.454 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-0E2E082A, from=PENDING, to=ACCEPTED, reason=Restaurant REST-001 accepted the order
+2025-10-02 21:18:45.455 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-DDE836BE, from=PENDING, to=ACCEPTED, reason=Restaurant REST-001 accepted the order
+2025-10-02 21:18:45.455 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-76CCBD8B, from=PENDING, to=ACCEPTED, reason=Restaurant REST-001 accepted the order
+2025-10-02 21:18:45.456 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-001
+2025-10-02 21:18:45.456 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-002
+2025-10-02 21:18:45.456 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-003
+2025-10-02 21:18:45.456 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-004
+2025-10-02 21:18:45.456 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-005
+2025-10-02 21:18:45.456 [main] INFO  com.deliveryplatform.models.Order - Order created: orderId=ORD-5788E204, customerId=CUST-006, restaurantId=REST-001, amount=37.96
+2025-10-02 21:18:45.456 [main] WARN  com.deliveryplatform.services.OrderLoggingService - Business exception occurred: orderId=ORD-5788E204, errorCode=INVALID_STATE_TRANSITION, message=Cannot transition order ORD-5788E204 from PENDING to PREPARING: Order must be in ACCEPTED status to start preparation, timestamp=2025-10-02T21:18:45.456836
+2025-10-02 21:18:45.456 [main] WARN  com.deliveryplatform.services.OrderLoggingService - Restaurant operation failed: restaurantId=REST-001, operation=START_PREPARING, orderId=ORD-5788E204
+2025-10-02 21:18:45.457 [main] WARN  com.deliveryplatform.services.OrderLoggingService - Business exception occurred: orderId=ORD-5788E204, errorCode=INVALID_STATE_TRANSITION, message=Cannot transition order ORD-5788E204 from PENDING to READY_FOR_DELIVERY: Order must be in PREPARING status to be marked ready, timestamp=2025-10-02T21:18:45.457140
+2025-10-02 21:18:45.457 [main] WARN  com.deliveryplatform.services.OrderLoggingService - Restaurant operation failed: restaurantId=REST-001, operation=MARK_ORDER_READY, orderId=ORD-5788E204
+2025-10-02 21:18:45.457 [main] WARN  com.deliveryplatform.services.OrderLoggingService - Business exception occurred: orderId=ORD-5788E204, errorCode=INVALID_STATE_TRANSITION, message=Cannot transition order ORD-5788E204 from PENDING to IN_DELIVERY: Order must be ready for delivery to assign a driver, timestamp=2025-10-02T21:18:45.457415
+2025-10-02 21:18:45.457 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-5788E204, from=PENDING, to=ACCEPTED, reason=Restaurant REST-001 accepted the order
+2025-10-02 21:18:45.457 [main] WARN  com.deliveryplatform.services.OrderLoggingService - Business exception occurred: orderId=ORD-5788E204, errorCode=INVALID_STATE_TRANSITION, message=Cannot transition order ORD-5788E204 from ACCEPTED to READY_FOR_DELIVERY: Order must be in PREPARING status to be marked ready, timestamp=2025-10-02T21:18:45.457741
+2025-10-02 21:18:45.457 [main] WARN  com.deliveryplatform.services.OrderLoggingService - Restaurant operation failed: restaurantId=REST-001, operation=MARK_ORDER_READY, orderId=ORD-5788E204
+2025-10-02 21:18:45.458 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-001
+2025-10-02 21:18:45.458 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-002
+2025-10-02 21:18:45.458 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-003
+2025-10-02 21:18:45.458 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-004
+2025-10-02 21:18:45.459 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-005
+2025-10-02 21:18:45.459 [main] INFO  com.deliveryplatform.models.Order - Order created: orderId=ORD-71D0515D, customerId=CUST-012, restaurantId=REST-001, amount=37.96
+2025-10-02 21:18:45.459 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-71D0515D, from=PENDING, to=ACCEPTED, reason=Restaurant REST-001 accepted the order
+2025-10-02 21:18:45.459 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-71D0515D, from=ACCEPTED, to=PREPARING, reason=Restaurant started preparing the order
+2025-10-02 21:18:45.459 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-71D0515D, from=PREPARING, to=READY_FOR_DELIVERY, reason=Order is ready for pickup by delivery driver
+2025-10-02 21:18:45.459 [main] INFO  com.deliveryplatform.models.Order - Order created: orderId=ORD-277151CE, customerId=CUST-013, restaurantId=REST-001, amount=37.96
+2025-10-02 21:18:45.459 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-277151CE, from=PENDING, to=ACCEPTED, reason=Restaurant REST-001 accepted the order
+2025-10-02 21:18:45.460 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-277151CE, from=ACCEPTED, to=PREPARING, reason=Restaurant started preparing the order
+2025-10-02 21:18:45.460 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-277151CE, from=PREPARING, to=READY_FOR_DELIVERY, reason=Order is ready for pickup by delivery driver
+2025-10-02 21:18:45.460 [main] INFO  com.deliveryplatform.models.Order - Order created: orderId=ORD-6F4D2856, customerId=CUST-014, restaurantId=REST-001, amount=37.96
+2025-10-02 21:18:45.460 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-6F4D2856, from=PENDING, to=ACCEPTED, reason=Restaurant REST-001 accepted the order
+2025-10-02 21:18:45.460 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-6F4D2856, from=ACCEPTED, to=PREPARING, reason=Restaurant started preparing the order
+2025-10-02 21:18:45.460 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-6F4D2856, from=PREPARING, to=READY_FOR_DELIVERY, reason=Order is ready for pickup by delivery driver
+2025-10-02 21:18:45.460 [main] INFO  com.deliveryplatform.models.Order - Order created: orderId=ORD-282C80D5, customerId=CUST-015, restaurantId=REST-001, amount=37.96
+2025-10-02 21:18:45.460 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-282C80D5, from=PENDING, to=ACCEPTED, reason=Restaurant REST-001 accepted the order
+2025-10-02 21:18:45.461 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-282C80D5, from=ACCEPTED, to=PREPARING, reason=Restaurant started preparing the order
+2025-10-02 21:18:45.461 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-282C80D5, from=PREPARING, to=READY_FOR_DELIVERY, reason=Order is ready for pickup by delivery driver
+2025-10-02 21:18:45.461 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-71D0515D, from=READY_FOR_DELIVERY, to=IN_DELIVERY, reason=Assigned to driver: DRIVER-005
+2025-10-02 21:18:45.461 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver assigned successfully: orderId=ORD-71D0515D, driverId=DRIVER-005
+2025-10-02 21:18:45.461 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-277151CE, from=READY_FOR_DELIVERY, to=IN_DELIVERY, reason=Assigned to driver: DRIVER-005
+2025-10-02 21:18:45.461 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver assigned successfully: orderId=ORD-277151CE, driverId=DRIVER-005
+2025-10-02 21:18:45.461 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-6F4D2856, from=READY_FOR_DELIVERY, to=IN_DELIVERY, reason=Assigned to driver: DRIVER-005
+2025-10-02 21:18:45.461 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver at capacity: driverId=DRIVER-005, orderCount=3
+2025-10-02 21:18:45.461 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver assigned successfully: orderId=ORD-6F4D2856, driverId=DRIVER-005
+2025-10-02 21:18:45.462 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-282C80D5, from=READY_FOR_DELIVERY, to=IN_DELIVERY, reason=Assigned to driver: DRIVER-003
+2025-10-02 21:18:45.462 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver assigned successfully: orderId=ORD-282C80D5, driverId=DRIVER-003
+2025-10-02 21:18:45.462 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-71D0515D, from=IN_DELIVERY, to=DELIVERED, reason=Order delivered successfully
+2025-10-02 21:18:45.462 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver capacity released: driverId=DRIVER-005, remainingOrders=2
+2025-10-02 21:18:45.462 [main] INFO  com.deliveryplatform.services.DeliveryService - Delivery completed successfully: orderId=ORD-71D0515D, driverId=DRIVER-005
+2025-10-02 21:18:45.463 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-001
+2025-10-02 21:18:45.463 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-002
+2025-10-02 21:18:45.463 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-003
+2025-10-02 21:18:45.463 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-004
+2025-10-02 21:18:45.463 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-005
+2025-10-02 21:18:45.463 [main] INFO  com.deliveryplatform.models.Order - Order created: orderId=ORD-37F3971C, customerId=CUST-001, restaurantId=REST-001, amount=37.96
+2025-10-02 21:18:45.464 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-37F3971C, from=PENDING, to=ACCEPTED, reason=Restaurant REST-001 accepted the order
+2025-10-02 21:18:45.464 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-37F3971C, from=ACCEPTED, to=PREPARING, reason=Restaurant started preparing the order
+2025-10-02 21:18:45.464 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-37F3971C, from=PREPARING, to=READY_FOR_DELIVERY, reason=Order is ready for pickup by delivery driver
+2025-10-02 21:18:45.464 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-37F3971C, from=READY_FOR_DELIVERY, to=IN_DELIVERY, reason=Assigned to driver: DRIVER-005
+2025-10-02 21:18:45.464 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver assigned successfully: orderId=ORD-37F3971C, driverId=DRIVER-005
+2025-10-02 21:18:45.464 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-37F3971C, from=IN_DELIVERY, to=DELIVERED, reason=Order delivered successfully
+2025-10-02 21:18:45.464 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver capacity released: driverId=DRIVER-005, remainingOrders=0
+2025-10-02 21:18:45.464 [main] INFO  com.deliveryplatform.services.DeliveryService - Delivery completed successfully: orderId=ORD-37F3971C, driverId=DRIVER-005
+2025-10-02 21:18:45.468 [main] INFO  com.deliveryplatform.models.Order - Order created: orderId=ORD-AA7D869C, customerId=customer123, restaurantId=restaurant456, amount=34.97
+2025-10-02 21:18:45.469 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-AA7D869C, from=PENDING, to=ACCEPTED, reason=Restaurant confirmed
+2025-10-02 21:18:45.470 [main] INFO  com.deliveryplatform.models.Order - Order created: orderId=ORD-792C779A, customerId=customer123, restaurantId=restaurant456, amount=34.97
+2025-10-02 21:18:45.470 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-792C779A, from=PENDING, to=ACCEPTED, reason=Order accepted by restaurant
+2025-10-02 21:18:45.470 [main] INFO  com.deliveryplatform.models.Order - Order created: orderId=ORD-8CFA6E10, customerId=customer123, restaurantId=restaurant456, amount=34.97
+2025-10-02 21:18:45.471 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-8CFA6E10, from=PENDING, to=ACCEPTED, reason=Restaurant confirmed
+2025-10-02 21:18:45.471 [main] INFO  com.deliveryplatform.models.Order - Order created: orderId=ORD-C9204577, customerId=customer123, restaurantId=restaurant456, amount=34.97
+2025-10-02 21:18:45.484 [main] INFO  com.deliveryplatform.models.Order - Order created: orderId=ORD-E9E8A9C7, customerId=customer123, restaurantId=restaurant456, amount=34.97
+2025-10-02 21:18:45.494 [main] INFO  com.deliveryplatform.models.Order - Order created: orderId=ORD-C562E2AF, customerId=customer123, restaurantId=restaurant456, amount=34.97
+2025-10-02 21:18:45.494 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-C562E2AF, from=PENDING, to=ACCEPTED, reason=Restaurant confirmed
+2025-10-02 21:18:45.495 [main] INFO  com.deliveryplatform.models.Order - Order created: orderId=ORD-42B18AF5, customerId=customer123, restaurantId=restaurant456, amount=34.97
+2025-10-02 21:18:45.495 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-42B18AF5, from=PENDING, to=ACCEPTED, reason=Restaurant confirmed
+2025-10-02 21:18:45.496 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-42B18AF5, from=ACCEPTED, to=PREPARING, reason=Restaurant started preparing the order
+2025-10-02 21:18:45.497 [main] INFO  com.deliveryplatform.models.Order - Order created: orderId=ORD-FBDAF4DE, customerId=customer123, restaurantId=restaurant456, amount=34.97
+2025-10-02 21:18:45.497 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-FBDAF4DE, from=PENDING, to=ACCEPTED, reason=Restaurant confirmed
+2025-10-02 21:18:45.497 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-FBDAF4DE, from=ACCEPTED, to=PREPARING, reason=Restaurant started preparing the order
+2025-10-02 21:18:45.497 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-FBDAF4DE, from=PREPARING, to=READY_FOR_DELIVERY, reason=Order is ready for pickup by delivery driver
+2025-10-02 21:18:45.498 [main] INFO  com.deliveryplatform.models.Order - Order created: orderId=ORD-022B592A, customerId=customer123, restaurantId=restaurant456, amount=34.97
+2025-10-02 21:18:45.498 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-022B592A, from=PENDING, to=ACCEPTED, reason=Restaurant confirmed
+2025-10-02 21:18:45.498 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-022B592A, from=ACCEPTED, to=PREPARING, reason=Restaurant started preparing the order
+2025-10-02 21:18:45.498 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-022B592A, from=PREPARING, to=READY_FOR_DELIVERY, reason=Order is ready for pickup by delivery driver
+2025-10-02 21:18:45.498 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-022B592A, from=READY_FOR_DELIVERY, to=IN_DELIVERY, reason=Assigned to driver: driver123
+2025-10-02 21:18:45.499 [main] INFO  com.deliveryplatform.models.Order - Order created: orderId=ORD-A291746C, customerId=customer123, restaurantId=restaurant456, amount=34.97
+2025-10-02 21:18:45.500 [main] INFO  com.deliveryplatform.models.Order - Order created: orderId=ORD-3EB9DD2E, customerId=customer123, restaurantId=restaurant456, amount=34.97
+2025-10-02 21:18:45.500 [main] INFO  com.deliveryplatform.models.Order - Order created: orderId=ORD-0EDE54BF, customerId=cust1, restaurantId=rest1, amount=34.97
+2025-10-02 21:18:45.501 [main] INFO  com.deliveryplatform.models.Order - Order created: orderId=ORD-086A6EB6, customerId=cust2, restaurantId=rest2, amount=34.97
+2025-10-02 21:18:45.501 [main] INFO  com.deliveryplatform.models.Order - Order created: orderId=ORD-D5880D08, customerId=customer123, restaurantId=restaurant456, amount=34.97
+2025-10-02 21:18:45.502 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-D5880D08, from=PENDING, to=ACCEPTED, reason=Restaurant confirmed
+2025-10-02 21:18:45.502 [main] INFO  com.deliveryplatform.models.Order - Order created: orderId=ORD-B70236B2, customerId=customer123, restaurantId=restaurant456, amount=34.97
+2025-10-02 21:18:45.503 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-B70236B2, from=PENDING, to=ACCEPTED, reason=Restaurant confirmed order
+2025-10-02 21:18:45.504 [main] INFO  com.deliveryplatform.models.Order - Order created: orderId=ORD-EFC23D18, customerId=customer123, restaurantId=restaurant456, amount=34.97
+2025-10-02 21:18:45.505 [main] INFO  com.deliveryplatform.models.Order - Order created: orderId=ORD-DC93A3E7, customerId=customer123, restaurantId=restaurant456, amount=34.97
+2025-10-02 21:18:45.506 [main] INFO  com.deliveryplatform.models.Order - Order created: orderId=ORD-7E79D75C, customerId=customer123, restaurantId=restaurant456, amount=34.97
+2025-10-02 21:18:45.508 [main] INFO  com.deliveryplatform.models.Order - Order created: orderId=ORD-5C9AA6CE, customerId=customer123, restaurantId=restaurant456, amount=34.97
+2025-10-02 21:18:45.508 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-5C9AA6CE, from=PENDING, to=ACCEPTED, reason=Restaurant confirmed
+2025-10-02 21:18:45.508 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-5C9AA6CE, from=ACCEPTED, to=PREPARING, reason=Restaurant started preparing the order
+2025-10-02 21:18:45.508 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-5C9AA6CE, from=PREPARING, to=READY_FOR_DELIVERY, reason=Order is ready for pickup by delivery driver
+2025-10-02 21:18:45.508 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-5C9AA6CE, from=READY_FOR_DELIVERY, to=IN_DELIVERY, reason=Assigned to driver: driver123
+2025-10-02 21:18:45.508 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-5C9AA6CE, from=IN_DELIVERY, to=DELIVERED, reason=Order delivered successfully
+2025-10-02 21:18:45.509 [main] INFO  com.deliveryplatform.models.Order - Order created: orderId=ORD-805D59CC, customerId=customer123, restaurantId=restaurant456, amount=34.97
+2025-10-02 21:18:45.510 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-805D59CC, from=PENDING, to=CANCELLED, reason=Customer cancelled
+2025-10-02 21:18:45.511 [main] INFO  com.deliveryplatform.models.Order - Order created: orderId=ORD-FEAA9343, customerId=customer123, restaurantId=restaurant456, amount=34.97
+2025-10-02 21:18:45.511 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-FEAA9343, from=PENDING, to=REJECTED, reason=Restaurant rejected
+2025-10-02 21:18:45.511 [main] INFO  com.deliveryplatform.models.Order - Order created: orderId=ORD-B527CB9F, customerId=customer123, restaurantId=restaurant456, amount=34.97
+2025-10-02 21:18:45.511 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-B527CB9F, from=PENDING, to=REJECTED, reason=Restaurant is closed
+2025-10-02 21:18:45.512 [main] INFO  com.deliveryplatform.models.Order - Order created: orderId=ORD-937D493E, customerId=customer123, restaurantId=restaurant456, amount=34.97
+2025-10-02 21:18:45.513 [main] INFO  com.deliveryplatform.models.Order - Order created: orderId=ORD-A083C4D0, customerId=customer123, restaurantId=restaurant456, amount=34.97
+2025-10-02 21:18:45.513 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-A083C4D0, from=PENDING, to=ACCEPTED, reason=Restaurant confirmed
+2025-10-02 21:18:45.514 [main] INFO  com.deliveryplatform.models.Order - Order created: orderId=ORD-027ECCD1, customerId=customer123, restaurantId=restaurant456, amount=34.97
+2025-10-02 21:18:45.515 [main] INFO  com.deliveryplatform.models.Order - Order created: orderId=ORD-92F9A82B, customerId=customer123, restaurantId=restaurant456, amount=34.97
+2025-10-02 21:18:45.516 [main] INFO  com.deliveryplatform.models.Order - Order created: orderId=ORD-A283E769, customerId=customer123, restaurantId=restaurant456, amount=34.97
+2025-10-02 21:18:45.516 [main] INFO  com.deliveryplatform.models.Order - Order created: orderId=ORD-82C48177, customerId=customer123, restaurantId=restaurant456, amount=34.97
+2025-10-02 21:18:45.517 [main] INFO  com.deliveryplatform.models.Order - Order created: orderId=ORD-27BA4607, customerId=customer123, restaurantId=restaurant456, amount=34.97
+2025-10-02 21:18:45.518 [main] INFO  com.deliveryplatform.models.Order - Order created: orderId=ORD-9674B698, customerId=customer123, restaurantId=restaurant456, amount=34.97
+2025-10-02 21:18:45.518 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-9674B698, from=PENDING, to=ACCEPTED, reason=Restaurant confirmed
+2025-10-02 21:18:45.518 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-9674B698, from=ACCEPTED, to=PREPARING, reason=Restaurant started preparing the order
+2025-10-02 21:18:45.518 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-9674B698, from=PREPARING, to=READY_FOR_DELIVERY, reason=Order is ready for pickup by delivery driver
+2025-10-02 21:18:45.518 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-9674B698, from=READY_FOR_DELIVERY, to=IN_DELIVERY, reason=Assigned to driver: driver789
+2025-10-02 21:18:45.518 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-9674B698, from=IN_DELIVERY, to=DELIVERED, reason=Order delivered successfully
+2025-10-02 21:18:45.518 [main] INFO  com.deliveryplatform.models.Order - Order created: orderId=ORD-6214BD74, customerId=customer123, restaurantId=restaurant456, amount=34.97
+2025-10-02 21:18:45.519 [main] INFO  com.deliveryplatform.models.Order - Order created: orderId=ORD-BEA642D3, customerId=customer123, restaurantId=restaurant456, amount=34.97
+2025-10-02 21:18:45.519 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-BEA642D3, from=PENDING, to=CANCELLED, reason=Customer requested cancellation
+2025-10-02 21:18:45.520 [main] INFO  com.deliveryplatform.models.Order - Order created: orderId=ORD-AD4D19FF, customerId=customer123, restaurantId=restaurant456, amount=34.97
+2025-10-02 21:18:45.573 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-001
+2025-10-02 21:18:45.573 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-002
+2025-10-02 21:18:45.574 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-003
+2025-10-02 21:18:45.574 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-004
+2025-10-02 21:18:45.574 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-005
+2025-10-02 21:18:45.574 [main] INFO  com.deliveryplatform.models.Order - Order created: orderId=ORD-C586F3EB, customerId=CUST-007, restaurantId=REST-001, amount=34.97
+2025-10-02 21:18:45.574 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-C586F3EB, from=PENDING, to=ACCEPTED, reason=Restaurant REST-001 accepted the order
+2025-10-02 21:18:45.574 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-C586F3EB, from=ACCEPTED, to=PREPARING, reason=Restaurant started preparing the order
+2025-10-02 21:18:45.574 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-C586F3EB, from=PREPARING, to=READY_FOR_DELIVERY, reason=Order is ready for pickup by delivery driver
+2025-10-02 21:18:45.574 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-C586F3EB, from=READY_FOR_DELIVERY, to=IN_DELIVERY, reason=Assigned to driver: DRIVER-005
+2025-10-02 21:18:45.575 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver assigned successfully: orderId=ORD-C586F3EB, driverId=DRIVER-005
+2025-10-02 21:18:45.575 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-C586F3EB, from=IN_DELIVERY, to=DELIVERED, reason=Order delivered successfully
+2025-10-02 21:18:45.575 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver capacity released: driverId=DRIVER-005, remainingOrders=0
+2025-10-02 21:18:45.575 [main] INFO  com.deliveryplatform.services.DeliveryService - Delivery completed successfully: orderId=ORD-C586F3EB, driverId=DRIVER-005
+2025-10-02 21:18:45.576 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-001
+2025-10-02 21:18:45.576 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-002
+2025-10-02 21:18:45.576 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-003
+2025-10-02 21:18:45.576 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-004
+2025-10-02 21:18:45.576 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-005
+2025-10-02 21:18:45.576 [main] WARN  com.deliveryplatform.services.OrderLoggingService - Business exception occurred: orderId=unknown, errorCode=ORDER_VALIDATION_FAILED, message=Order validation failed: Customer ID is required, Restaurant ID is required, Delivery address is required, Order must have at least one item, timestamp=2025-10-02T21:18:45.576824
+2025-10-02 21:18:45.577 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-001
+2025-10-02 21:18:45.577 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-002
+2025-10-02 21:18:45.577 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-003
+2025-10-02 21:18:45.577 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-004
+2025-10-02 21:18:45.577 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-005
+2025-10-02 21:18:45.577 [main] INFO  com.deliveryplatform.models.Order - Order created: orderId=ORD-3AB1B89E, customerId=CUST-002, restaurantId=REST-001, amount=10.00
+2025-10-02 21:18:45.577 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-3AB1B89E, from=PENDING, to=ACCEPTED, reason=Restaurant REST-001 accepted the order
+2025-10-02 21:18:45.577 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-3AB1B89E, from=ACCEPTED, to=PREPARING, reason=Restaurant started preparing the order
+2025-10-02 21:18:45.577 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-3AB1B89E, from=PREPARING, to=READY_FOR_DELIVERY, reason=Order is ready for pickup by delivery driver
+2025-10-02 21:18:45.578 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-001
+2025-10-02 21:18:45.578 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-002
+2025-10-02 21:18:45.578 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-003
+2025-10-02 21:18:45.578 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-004
+2025-10-02 21:18:45.578 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-005
+2025-10-02 21:18:45.578 [main] INFO  com.deliveryplatform.models.Order - Order created: orderId=ORD-D06CAB3C, customerId=CUST-001, restaurantId=REST-001, amount=34.97
+2025-10-02 21:18:45.579 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-001
+2025-10-02 21:18:45.579 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-002
+2025-10-02 21:18:45.579 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-003
+2025-10-02 21:18:45.579 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-004
+2025-10-02 21:18:45.579 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-005
+2025-10-02 21:18:45.579 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver removed from available pool: driverId=DRIVER-001
+2025-10-02 21:18:45.579 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver removed from available pool: driverId=DRIVER-002
+2025-10-02 21:18:45.579 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver removed from available pool: driverId=DRIVER-003
+2025-10-02 21:18:45.580 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver removed from available pool: driverId=DRIVER-004
+2025-10-02 21:18:45.580 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver removed from available pool: driverId=DRIVER-005
+2025-10-02 21:18:45.580 [main] INFO  com.deliveryplatform.models.Order - Order created: orderId=ORD-2A2B7917, customerId=CUST-006, restaurantId=REST-001, amount=10.00
+2025-10-02 21:18:45.580 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-2A2B7917, from=PENDING, to=ACCEPTED, reason=Restaurant REST-001 accepted the order
+2025-10-02 21:18:45.580 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-2A2B7917, from=ACCEPTED, to=PREPARING, reason=Restaurant started preparing the order
+2025-10-02 21:18:45.580 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-2A2B7917, from=PREPARING, to=READY_FOR_DELIVERY, reason=Order is ready for pickup by delivery driver
+2025-10-02 21:18:45.580 [main] WARN  com.deliveryplatform.services.OrderLoggingService - Delivery operation failed: orderId=ORD-2A2B7917, driverId=unassigned, operation=DRIVER_ASSIGNMENT
+2025-10-02 21:18:45.580 [main] WARN  com.deliveryplatform.services.OrderLoggingService - Business exception occurred: orderId=ORD-2A2B7917, errorCode=DELIVERY_ASSIGNMENT_FAILED, message=Failed to assign delivery for order ORD-2A2B7917: No drivers available for delivery assignment, timestamp=2025-10-02T21:18:45.580915
+2025-10-02 21:18:45.581 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-001
+2025-10-02 21:18:45.581 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-002
+2025-10-02 21:18:45.581 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-003
+2025-10-02 21:18:45.581 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-004
+2025-10-02 21:18:45.581 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-005
+2025-10-02 21:18:45.581 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-001
+2025-10-02 21:18:45.581 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-002
+2025-10-02 21:18:45.581 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-003
+2025-10-02 21:18:45.581 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-004
+2025-10-02 21:18:45.581 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-005
+2025-10-02 21:18:45.582 [main] INFO  com.deliveryplatform.models.Order - Order created: orderId=ORD-28CF966A, customerId=CUST-003, restaurantId=REST-001, amount=10.00
+2025-10-02 21:18:45.582 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-28CF966A, from=PENDING, to=ACCEPTED, reason=Restaurant REST-001 accepted the order
+2025-10-02 21:18:45.582 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-28CF966A, from=ACCEPTED, to=PREPARING, reason=Restaurant started preparing the order
+2025-10-02 21:18:45.582 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-28CF966A, from=PREPARING, to=READY_FOR_DELIVERY, reason=Order is ready for pickup by delivery driver
+2025-10-02 21:18:45.582 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-28CF966A, from=READY_FOR_DELIVERY, to=IN_DELIVERY, reason=Assigned to driver: DRIVER-005
+2025-10-02 21:18:45.582 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver assigned successfully: orderId=ORD-28CF966A, driverId=DRIVER-005
+2025-10-02 21:18:45.582 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-28CF966A, from=IN_DELIVERY, to=DELIVERED, reason=Order delivered successfully
+2025-10-02 21:18:45.582 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver capacity released: driverId=DRIVER-005, remainingOrders=0
+2025-10-02 21:18:45.582 [main] INFO  com.deliveryplatform.services.DeliveryService - Delivery completed successfully: orderId=ORD-28CF966A, driverId=DRIVER-005
+2025-10-02 21:18:45.582 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-001
+2025-10-02 21:18:45.582 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-002
+2025-10-02 21:18:45.582 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-003
+2025-10-02 21:18:45.583 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-004
+2025-10-02 21:18:45.583 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-005
+2025-10-02 21:18:45.583 [main] INFO  com.deliveryplatform.models.Order - Order created: orderId=ORD-7AE872E5, customerId=CUST-005, restaurantId=REST-001, amount=10.00
+2025-10-02 21:18:45.583 [main] WARN  com.deliveryplatform.services.OrderLoggingService - Business exception occurred: orderId=ORD-7AE872E5, errorCode=INVALID_STATE_TRANSITION, message=Cannot transition order ORD-7AE872E5 from PENDING to PREPARING: Order must be in ACCEPTED status to start preparation, timestamp=2025-10-02T21:18:45.583479
+2025-10-02 21:18:45.583 [main] WARN  com.deliveryplatform.services.OrderLoggingService - Restaurant operation failed: restaurantId=REST-001, operation=START_PREPARING, orderId=ORD-7AE872E5
+2025-10-02 21:18:45.584 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-001
+2025-10-02 21:18:45.584 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-002
+2025-10-02 21:18:45.584 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-003
+2025-10-02 21:18:45.584 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-004
+2025-10-02 21:18:45.584 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-005
+2025-10-02 21:18:45.584 [main] INFO  com.deliveryplatform.models.Order - Order created: orderId=ORD-4DDFCBA8, customerId=CUST-004, restaurantId=REST-CLOSED, amount=10.00
+2025-10-02 21:18:45.584 [main] WARN  com.deliveryplatform.services.OrderLoggingService - Business exception occurred: orderId=ORD-4DDFCBA8, errorCode=RESTAURANT_UNAVAILABLE, message=Restaurant REST-CLOSED is currently unavailable: Restaurant is closed, timestamp=2025-10-02T21:18:45.584550
+2025-10-02 21:18:45.584 [main] WARN  com.deliveryplatform.services.OrderLoggingService - Restaurant operation failed: restaurantId=REST-CLOSED, operation=ACCEPT_ORDER, orderId=ORD-4DDFCBA8
+2025-10-02 21:19:25.006 [JavaFX Application Thread] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-001
+2025-10-02 21:19:25.008 [JavaFX Application Thread] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-002
+2025-10-02 21:19:25.008 [JavaFX Application Thread] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-003
+2025-10-02 21:19:25.008 [JavaFX Application Thread] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-004
+2025-10-02 21:19:25.008 [JavaFX Application Thread] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-005
+2025-10-02 21:19:34.926 [Thread-3] WARN  com.deliveryplatform.services.OrderLoggingService - Business exception occurred: orderId=unknown, errorCode=ORDER_VALIDATION_FAILED, message=Order validation failed: Customer ID is required, Restaurant ID is required, Delivery address is required, Order must have at least one item, timestamp=2025-10-02T21:19:34.926028
+2025-10-02 21:19:36.028 [Thread-4] WARN  com.deliveryplatform.services.OrderLoggingService - Business exception occurred: orderId=TEST-ORDER, errorCode=RESTAURANT_UNAVAILABLE, message=Restaurant REST-CLOSED is currently unavailable: Restaurant is closed, timestamp=2025-10-02T21:19:36.028282
+2025-10-02 21:19:36.029 [Thread-4] WARN  com.deliveryplatform.services.OrderLoggingService - Restaurant operation failed: restaurantId=REST-CLOSED, operation=ACCEPT_ORDER, orderId=TEST-ORDER
+2025-10-02 21:19:37.079 [Thread-5] ERROR ERROR_EVENTS - System error occurred: context=startPreparingOrder, orderId=FAKE-ORDER-ID, errorType=IllegalArgumentException, message=Order not found: FAKE-ORDER-ID
+java.lang.IllegalArgumentException: Order not found: FAKE-ORDER-ID
+	at com.deliveryplatform.services.RestaurantServiceImpl.getOrderAndValidateOwnership(RestaurantServiceImpl.java:365) ~[classes/:?]
+	at com.deliveryplatform.services.RestaurantServiceImpl.getOrderAndValidateForPreparation(RestaurantServiceImpl.java:339) ~[classes/:?]
+	at com.deliveryplatform.services.RestaurantServiceImpl.startPreparingOrder(RestaurantServiceImpl.java:181) [classes/:?]
+	at com.deliveryplatform.gui.MainController.lambda$onTriggerStateException$0(MainController.java:661) [classes/:?]
+	at com.deliveryplatform.gui.MainController$1.call(MainController.java:534) [classes/:?]
+	at com.deliveryplatform.gui.MainController$1.call(MainController.java:531) [classes/:?]
+	at javafx.concurrent.Task$TaskCallable.call(Task.java:1399) [javafx-graphics-21.0.1-mac-aarch64.jar:?]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:328) [?:?]
+	at java.lang.Thread.run(Thread.java:1474) [?:?]
+2025-10-02 21:19:37.093 [Thread-5] WARN  com.deliveryplatform.services.OrderLoggingService - Restaurant operation failed: restaurantId=REST-001, operation=START_PREPARING, orderId=FAKE-ORDER-ID
+2025-10-02 21:19:37.829 [Thread-6] INFO  com.deliveryplatform.services.DeliveryService - Driver removed from available pool: driverId=DRIVER-001
+2025-10-02 21:19:37.830 [Thread-6] INFO  com.deliveryplatform.services.DeliveryService - Driver removed from available pool: driverId=DRIVER-002
+2025-10-02 21:19:37.830 [Thread-6] INFO  com.deliveryplatform.services.DeliveryService - Driver removed from available pool: driverId=DRIVER-003
+2025-10-02 21:19:37.830 [Thread-6] INFO  com.deliveryplatform.services.DeliveryService - Driver removed from available pool: driverId=DRIVER-004
+2025-10-02 21:19:37.831 [Thread-6] INFO  com.deliveryplatform.services.DeliveryService - Driver removed from available pool: driverId=DRIVER-005
+2025-10-02 21:19:37.831 [Thread-6] ERROR ERROR_EVENTS - System error occurred: context=assignDriver, orderId=FAKE-ORDER-ID, errorType=IllegalArgumentException, message=Order not found: FAKE-ORDER-ID
+java.lang.IllegalArgumentException: Order not found: FAKE-ORDER-ID
+	at com.deliveryplatform.services.DeliveryService.getOrderAndValidateForDelivery(DeliveryService.java:258) ~[classes/:?]
+	at com.deliveryplatform.services.DeliveryService.assignDriver(DeliveryService.java:62) [classes/:?]
+	at com.deliveryplatform.gui.MainController.lambda$onTriggerDeliveryException$0(MainController.java:692) [classes/:?]
+	at com.deliveryplatform.gui.MainController$1.call(MainController.java:534) [classes/:?]
+	at com.deliveryplatform.gui.MainController$1.call(MainController.java:531) [classes/:?]
+	at javafx.concurrent.Task$TaskCallable.call(Task.java:1399) [javafx-graphics-21.0.1-mac-aarch64.jar:?]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:328) [?:?]
+	at java.lang.Thread.run(Thread.java:1474) [?:?]
