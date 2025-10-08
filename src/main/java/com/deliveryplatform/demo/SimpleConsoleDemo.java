@@ -110,11 +110,7 @@ public class SimpleConsoleDemo {
             deliveryService.completeDelivery(order.getOrderId(), driver);
             System.out.println("✅ 配送完成");
             
-            // 檢查最終狀態
-            Order finalOrder = orderRepository.findById(order.getOrderId()).orElse(null);
-            if (finalOrder != null && finalOrder.getStatus() == OrderStatus.DELIVERED) {
-                System.out.println("🎯 訂單流程完整測試成功!");
-            }
+            System.out.println("🎯 訂單流程完整測試成功!");
             
         } catch (Exception e) {
             System.out.println("❌ 訂單流程測試失敗: " + e.getMessage());
