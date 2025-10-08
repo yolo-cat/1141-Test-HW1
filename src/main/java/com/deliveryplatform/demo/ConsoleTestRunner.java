@@ -179,6 +179,9 @@ public class ConsoleTestRunner {
             System.out.println("   訂單ID: " + e.getOrderId());
             System.out.println("   失敗原因: " + e.getFailureReason());
             exceptionHandler.handleDeliveryAssignmentException(e);
+        } catch (Exception e) {
+            System.out.println("🔍 觸發了其他異常: " + e.getClass().getSimpleName());
+            System.out.println("   訊息: " + e.getMessage());
         }
         
         System.out.println("\n🎉 異常處理測試完成！");
@@ -210,8 +213,13 @@ public class ConsoleTestRunner {
             
             // 步驟2: 餐廳接受訂單
             System.out.println("\n2️⃣ 餐廳接受訂單...");
-            restaurantService.acceptOrder(order.getOrderId(), "REST-001");
-            System.out.println("✅ 訂單已被餐廳接受!");
+            try {
+                restaurantService.acceptOrder(order.getOrderId(), "REST-001");
+                System.out.println("✅ 訂單已被餐廳接受!");
+            } catch (Exception e) {
+                System.out.println("❌ 接受訂單時發生錯誤: " + e.getMessage());
+                throw e;
+            }
             
             // 步驟3: 開始準備
             System.out.println("\n3️⃣ 開始準備訂單...");
@@ -237,14 +245,19 @@ public class ConsoleTestRunner {
             System.out.println("\n5️⃣ 分配配送司機...");
             // 先確保有可用司機
             deliveryService.addDriver("DRIVER-001");
-            String assignedDriver = deliveryService.assignDriver(order.getOrderId());
-            System.out.println("✅ 司機分配成功!");
-            System.out.println("   分配司機: " + assignedDriver);
-            
-            // 步驟6: 完成配送
-            System.out.println("\n6️⃣ 完成配送...");
-            deliveryService.completeDelivery(order.getOrderId(), assignedDriver);
-            System.out.println("✅ 配送完成!");
+            try {
+                String assignedDriver = deliveryService.assignDriver(order.getOrderId());
+                System.out.println("✅ 司機分配成功!");
+                System.out.println("   分配司機: " + assignedDriver);
+                
+                // 步驟6: 完成配送
+                System.out.println("\n6️⃣ 完成配送...");
+                deliveryService.completeDelivery(order.getOrderId(), assignedDriver);
+                System.out.println("✅ 配送完成!");
+            } catch (Exception e) {
+                System.out.println("❌ 配送過程中發生錯誤: " + e.getMessage());
+                throw e;
+            }
             
             // 查看最終狀態
             Order finalOrder = orderRepository.findById(order.getOrderId()).orElse(null);

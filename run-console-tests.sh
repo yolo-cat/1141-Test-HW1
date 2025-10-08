@@ -61,3 +61,8 @@ else
     echo ""
     echo "範例: ./run-console-tests.sh console"
 fi
+5. 🎯 簡化控制台演示
+   ./run-console-tests.sh simple
+   - 無編譯問題版本
+   - 核心功能演示
+   - 快速驗證系統
