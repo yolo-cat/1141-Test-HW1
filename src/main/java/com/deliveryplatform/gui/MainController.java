@@ -166,12 +166,11 @@ public class MainController implements Initializable {
     private void startLogMonitoring() {
         // 粗野主義風格的啟動日誌
         appendLog("███████████████████████████████████████████████████");
-        appendLog("██  外賣平台異常演示系統 - 新粗野主義風格版本  ██");
+        appendLog("██  外賣平台異常演示系統 ██");
         appendLog("███████████████████████████████████████████████████");
         appendLog("啟動時間: " + LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss")));
         appendLog("系統狀態: 就緒");
         appendLog("可用異常類型: 4 種");
-        appendLog("GUI 風格: Neo-Brutalism (新粗野主義)");
         appendLog("═══════════════════════════════════════════════════");
     }
 
