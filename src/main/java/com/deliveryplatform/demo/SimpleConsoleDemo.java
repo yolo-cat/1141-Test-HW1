@@ -24,11 +24,10 @@ public class SimpleConsoleDemo {
         // 初始化系統
         var orderRepository = new InMemoryOrderRepository();
         var restaurantRepository = new InMemoryRestaurantRepository();
-        var loggingService = new OrderLoggingService();
         
-        var orderService = new OrderService(orderRepository, loggingService);
-        var restaurantService = new RestaurantServiceImpl(orderRepository, restaurantRepository, loggingService);
-        var deliveryService = new DeliveryService(orderRepository, loggingService);
+        var orderService = new OrderService(orderRepository);
+        var restaurantService = new RestaurantServiceImpl(orderRepository, restaurantRepository);
+        var deliveryService = new DeliveryService(orderRepository);
         
         // 建立24小時營業的測試餐廳
         Restaurant restaurant = new Restaurant(

@@ -10,12 +10,11 @@ import com.deliveryplatform.repositories.RestaurantRepository;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-
 import java.util.Optional;
 
 /**
- * Implementation of RestaurantService that handles restaurant operations for order management.
- * Includes proper validation, exception handling, and logging.
+ * 餐廳服務實現 - 處理餐廳相關的訂單操作
+ * 簡化版本，專注於核心功能：收單、開始製作、完成製作
  */
 public class RestaurantServiceImpl implements RestaurantService {
 
@@ -23,349 +22,232 @@ public class RestaurantServiceImpl implements RestaurantService {
 
     private final OrderRepository orderRepository;
     private final RestaurantRepository restaurantRepository;
-    private final OrderLoggingService loggingService;
 
     public RestaurantServiceImpl(OrderRepository orderRepository, 
-                               RestaurantRepository restaurantRepository,
-                               OrderLoggingService loggingService) {
+                               RestaurantRepository restaurantRepository) {
         this.orderRepository = orderRepository;
         this.restaurantRepository = restaurantRepository;
-        this.loggingService = loggingService;
     }
 
+    /**
+     * 餐廳收單 - 核心需求方法
+     */
     @Override
     public void acceptOrder(String orderId, String restaurantId) 
             throws RestaurantUnavailableException, InvalidOrderStateException {
         
-        loggingService.logMethodEntry("acceptOrder", orderId, restaurantId);
+        logger.info("餐廳 {} 嘗試接單 {}", restaurantId, orderId);
         
         try {
-            // Validate inputs
-            validateOrderAndRestaurantIds(orderId, restaurantId);
+            // 驗證餐廳狀態
+            Restaurant restaurant = validateRestaurantForOrder(restaurantId);
             
-            // Get the restaurant and verify availability
-            Restaurant restaurant = getRestaurantAndValidateAvailability(restaurantId);
+            // 驗證訂單狀態
+            Order order = validateOrderForAcceptance(orderId, restaurantId);
             
-            // Get the order and validate state
-            Order order = getOrderAndValidateForAcceptance(orderId, restaurantId);
-            
-            // Accept the order
-            order.accept("Restaurant " + restaurantId + " accepted the order");
-            
-            // Update restaurant capacity
-            restaurant.acceptOrder();
-            
-            // Save changes
+            // 接受訂單
+            order.accept("餐廳 " + restaurantId + " 接受了訂單");
             orderRepository.save(order);
-            restaurantRepository.save(restaurant);
             
-            // Log success
-            loggingService.logRestaurantOperation(restaurantId, "ACCEPT_ORDER", orderId, true);
-            loggingService.logOrderStatusChange(orderId, OrderStatus.PENDING, OrderStatus.ACCEPTED, 
-                                              "Accepted by restaurant");
-            
-            loggingService.logMethodExit("acceptOrder", "success");
+            logger.info("餐廳 {} 成功接單 {}", restaurantId, orderId);
             
         } catch (RestaurantUnavailableException | InvalidOrderStateException e) {
-            loggingService.logBusinessException(e, orderId);
-            loggingService.logRestaurantOperation(restaurantId, "ACCEPT_ORDER", orderId, false);
+            logger.warn("業務異常 - acceptOrder: orderId={}, restaurantId={}, 錯誤={}", 
+                       orderId, restaurantId, e.getMessage());
             throw e;
         } catch (Exception e) {
-            loggingService.logSystemError(e, "acceptOrder", orderId);
-            loggingService.logRestaurantOperation(restaurantId, "ACCEPT_ORDER", orderId, false);
-            throw new RuntimeException("Failed to accept order due to system error", e);
+            logger.error("系統異常 - acceptOrder: orderId={}, restaurantId={}", orderId, restaurantId, e);
+            throw new RuntimeException("接單失敗：系統錯誤", e);
         }
     }
 
+    /**
+     * 餐廳拒單 - 基本功能
+     */
     @Override
     public void rejectOrder(String orderId, String restaurantId, String reason) 
             throws InvalidOrderStateException {
         
-        loggingService.logMethodEntry("rejectOrder", orderId, restaurantId, reason);
+        logger.info("餐廳 {} 拒絕訂單 {} - 原因: {}", restaurantId, orderId, reason);
         
         try {
-            // Validate inputs
-            validateOrderAndRestaurantIds(orderId, restaurantId);
-            if (reason == null || reason.trim().isEmpty()) {
-                throw new IllegalArgumentException("Rejection reason is required");
-            }
-            
-            // Verify restaurant exists
-            if (!restaurantRepository.existsById(restaurantId)) {
-                throw new IllegalArgumentException("Restaurant not found: " + restaurantId);
-            }
-            
-            // Get the order and validate state
-            Order order = getOrderAndValidateForRejection(orderId, restaurantId);
-            
-            // Reject the order
+            Order order = validateOrderForRejection(orderId, restaurantId);
             order.reject(reason);
-            
-            // Save changes
             orderRepository.save(order);
             
-            // Log success
-            loggingService.logRestaurantOperation(restaurantId, "REJECT_ORDER", orderId, true);
-            loggingService.logOrderStatusChange(orderId, OrderStatus.PENDING, OrderStatus.REJECTED, 
-                                              "Rejected by restaurant: " + reason);
-            
-            loggingService.logMethodExit("rejectOrder", "success");
+            logger.info("餐廳 {} 成功拒絕訂單 {} - 原因: {}", restaurantId, orderId, reason);
             
         } catch (InvalidOrderStateException e) {
-            loggingService.logBusinessException(e, orderId);
-            loggingService.logRestaurantOperation(restaurantId, "REJECT_ORDER", orderId, false);
-            throw e;
-        } catch (IllegalArgumentException e) {
-            logger.warn("Invalid arguments for order rejection: orderId={}, restaurantId={}, reason={}", 
-                       orderId, restaurantId, reason);
-            loggingService.logRestaurantOperation(restaurantId, "REJECT_ORDER", orderId, false);
+            logger.warn("業務異常 - rejectOrder: orderId={}, restaurantId={}, 錯誤={}", 
+                       orderId, restaurantId, e.getMessage());
             throw e;
         } catch (Exception e) {
-            loggingService.logSystemError(e, "rejectOrder", orderId);
-            loggingService.logRestaurantOperation(restaurantId, "REJECT_ORDER", orderId, false);
-            throw new RuntimeException("Failed to reject order due to system error", e);
+            logger.error("系統異常 - rejectOrder: orderId={}, restaurantId={}", orderId, restaurantId, e);
+            throw new RuntimeException("拒單失敗：系統錯誤", e);
         }
     }
 
+    /**
+     * 標記訂單完成製作，可供外送 - 核心需求方法
+     */
     @Override
     public void markOrderReady(String orderId, String restaurantId) 
             throws InvalidOrderStateException {
         
-        loggingService.logMethodEntry("markOrderReady", orderId, restaurantId);
+        logger.info("餐廳 {} 標記訂單 {} 完成製作", restaurantId, orderId);
         
         try {
-            // Validate inputs
-            validateOrderAndRestaurantIds(orderId, restaurantId);
-            
-            // Get the order and validate state
-            Order order = getOrderAndValidateForReadyMarking(orderId, restaurantId);
-            
-            // Mark order ready for delivery
+            Order order = validateOrderForReadyMarking(orderId, restaurantId);
             order.markReadyForDelivery();
-            
-            // Save changes
             orderRepository.save(order);
             
-            // Log success
-            loggingService.logRestaurantOperation(restaurantId, "MARK_ORDER_READY", orderId, true);
-            loggingService.logOrderStatusChange(orderId, OrderStatus.PREPARING, OrderStatus.READY_FOR_DELIVERY, 
-                                              "Marked ready by restaurant");
-            
-            loggingService.logMethodExit("markOrderReady", "success");
+            logger.info("餐廳 {} 成功標記訂單 {} 完成製作", restaurantId, orderId);
             
         } catch (InvalidOrderStateException e) {
-            loggingService.logBusinessException(e, orderId);
-            loggingService.logRestaurantOperation(restaurantId, "MARK_ORDER_READY", orderId, false);
+            logger.warn("業務異常 - markOrderReady: orderId={}, restaurantId={}, 錯誤={}", 
+                       orderId, restaurantId, e.getMessage());
             throw e;
         } catch (Exception e) {
-            loggingService.logSystemError(e, "markOrderReady", orderId);
-            loggingService.logRestaurantOperation(restaurantId, "MARK_ORDER_READY", orderId, false);
-            throw new RuntimeException("Failed to mark order ready due to system error", e);
+            logger.error("系統異常 - markOrderReady: orderId={}, restaurantId={}", orderId, restaurantId, e);
+            throw new RuntimeException("標記完成失敗：系統錯誤", e);
         }
     }
 
+    /**
+     * 餐廳開始製作訂單 - 核心需求方法
+     */
     @Override
     public void startPreparingOrder(String orderId, String restaurantId) 
             throws InvalidOrderStateException {
         
-        loggingService.logMethodEntry("startPreparingOrder", orderId, restaurantId);
+        logger.info("餐廳 {} 開始製作訂單 {}", restaurantId, orderId);
         
         try {
-            // Validate inputs
-            validateOrderAndRestaurantIds(orderId, restaurantId);
-            
-            // Get the order and validate state
-            Order order = getOrderAndValidateForPreparation(orderId, restaurantId);
-            
-            // Start preparing the order
+            Order order = validateOrderForPreparation(orderId, restaurantId);
             order.startPreparing();
-            
-            // Save changes
             orderRepository.save(order);
             
-            // Log success
-            loggingService.logRestaurantOperation(restaurantId, "START_PREPARING", orderId, true);
-            loggingService.logOrderStatusChange(orderId, OrderStatus.ACCEPTED, OrderStatus.PREPARING, 
-                                              "Preparation started by restaurant");
-            
-            loggingService.logMethodExit("startPreparingOrder", "success");
+            logger.info("餐廳 {} 成功開始製作訂單 {}", restaurantId, orderId);
             
         } catch (InvalidOrderStateException e) {
-            loggingService.logBusinessException(e, orderId);
-            loggingService.logRestaurantOperation(restaurantId, "START_PREPARING", orderId, false);
+            logger.warn("業務異常 - startPreparingOrder: orderId={}, restaurantId={}, 錯誤={}", 
+                       orderId, restaurantId, e.getMessage());
             throw e;
         } catch (Exception e) {
-            loggingService.logSystemError(e, "startPreparingOrder", orderId);
-            loggingService.logRestaurantOperation(restaurantId, "START_PREPARING", orderId, false);
-            throw new RuntimeException("Failed to start preparing order due to system error", e);
+            logger.error("系統異常 - startPreparingOrder: orderId={}, restaurantId={}", orderId, restaurantId, e);
+            throw new RuntimeException("開始製作失敗：系統錯誤", e);
         }
     }
 
+    // 以下方法簡化為基本實現，專注核心功能
+
     @Override
     public boolean canAcceptOrders(String restaurantId) {
-        try {
-            Optional<Restaurant> restaurantOpt = restaurantRepository.findById(restaurantId);
-            return restaurantOpt.map(Restaurant::canAcceptOrder).orElse(false);
-        } catch (Exception e) {
-            loggingService.logSystemError(e, "canAcceptOrders", restaurantId);
-            return false;
-        }
+        return restaurantRepository.findById(restaurantId)
+                .map(Restaurant::canAcceptOrder)
+                .orElse(false);
     }
 
     @Override
     public int getRemainingCapacity(String restaurantId) {
-        try {
-            Optional<Restaurant> restaurantOpt = restaurantRepository.findById(restaurantId);
-            return restaurantOpt.map(Restaurant::getRemainingCapacity).orElse(0);
-        } catch (Exception e) {
-            loggingService.logSystemError(e, "getRemainingCapacity", restaurantId);
-            return 0;
-        }
+        return restaurantRepository.findById(restaurantId)
+                .map(Restaurant::getRemainingCapacity)
+                .orElse(0);
     }
 
     @Override
     public void disableOrderAcceptance(String restaurantId, String reason) {
-        try {
-            Optional<Restaurant> restaurantOpt = restaurantRepository.findById(restaurantId);
-            if (restaurantOpt.isPresent()) {
-                Restaurant restaurant = restaurantOpt.get();
-                restaurant.stopAcceptingOrders();
-                restaurantRepository.save(restaurant);
-                
-                logger.info("Order acceptance disabled for restaurant: restaurantId={}, reason={}", 
-                           restaurantId, reason);
-            } else {
-                logger.warn("Attempted to disable order acceptance for non-existent restaurant: {}", restaurantId);
-            }
-        } catch (Exception e) {
-            loggingService.logSystemError(e, "disableOrderAcceptance", restaurantId);
-        }
+        restaurantRepository.findById(restaurantId).ifPresent(restaurant -> {
+            restaurant.stopAcceptingOrders();
+            restaurantRepository.save(restaurant);
+            logger.info("餐廳 {} 停止接單 - 原因: {}", restaurantId, reason);
+        });
     }
 
     @Override
     public void enableOrderAcceptance(String restaurantId) {
-        try {
-            Optional<Restaurant> restaurantOpt = restaurantRepository.findById(restaurantId);
-            if (restaurantOpt.isPresent()) {
-                Restaurant restaurant = restaurantOpt.get();
-                restaurant.startAcceptingOrders();
-                restaurantRepository.save(restaurant);
-                
-                logger.info("Order acceptance enabled for restaurant: restaurantId={}", restaurantId);
-            } else {
-                logger.warn("Attempted to enable order acceptance for non-existent restaurant: {}", restaurantId);
-            }
-        } catch (Exception e) {
-            loggingService.logSystemError(e, "enableOrderAcceptance", restaurantId);
-        }
+        restaurantRepository.findById(restaurantId).ifPresent(restaurant -> {
+            restaurant.startAcceptingOrders();
+            restaurantRepository.save(restaurant);
+            logger.info("餐廳 {} 開始接單", restaurantId);
+        });
     }
 
-    // Private helper methods
+    // 簡化的驗證方法，專注核心邏輯
 
-    private void validateOrderAndRestaurantIds(String orderId, String restaurantId) {
-        if (orderId == null || orderId.trim().isEmpty()) {
-            throw new IllegalArgumentException("Order ID cannot be null or empty");
-        }
-        if (restaurantId == null || restaurantId.trim().isEmpty()) {
-            throw new IllegalArgumentException("Restaurant ID cannot be null or empty");
-        }
-    }
-
-    private Restaurant getRestaurantAndValidateAvailability(String restaurantId) 
+    private Restaurant validateRestaurantForOrder(String restaurantId) 
             throws RestaurantUnavailableException {
         
-        Optional<Restaurant> restaurantOpt = restaurantRepository.findById(restaurantId);
-        if (restaurantOpt.isEmpty()) {
-            throw new RestaurantUnavailableException(restaurantId, "Restaurant not found");
-        }
+        Restaurant restaurant = restaurantRepository.findById(restaurantId)
+                .orElseThrow(() -> new RestaurantUnavailableException(restaurantId, "餐廳不存在"));
         
-        Restaurant restaurant = restaurantOpt.get();
         if (!restaurant.canAcceptOrder()) {
-            String reason = buildUnavailabilityReason(restaurant);
+            String reason = restaurant.isOpen() ? "餐廳暫停接單" : "餐廳已關閉";
             throw new RestaurantUnavailableException(restaurantId, reason);
         }
         
         return restaurant;
     }
 
-    private String buildUnavailabilityReason(Restaurant restaurant) {
-        if (!restaurant.isOpen()) {
-            return "Restaurant is closed";
-        }
-        if (!restaurant.isWithinOperatingHours()) {
-            return "Outside operating hours";
-        }
-        if (!restaurant.isAcceptingOrders()) {
-            return "Temporarily not accepting orders";
-        }
-        if (restaurant.isAtCapacity()) {
-            return "At maximum capacity (" + restaurant.getMaxConcurrentOrders() + " orders)";
-        }
-        return "Unknown availability issue";
-    }
-
-    private Order getOrderAndValidateForAcceptance(String orderId, String restaurantId) 
+    private Order validateOrderForAcceptance(String orderId, String restaurantId) 
             throws InvalidOrderStateException {
         
         Order order = getOrderAndValidateOwnership(orderId, restaurantId);
         
         if (order.getStatus() != OrderStatus.PENDING) {
             throw new InvalidOrderStateException(orderId, order.getStatus(), OrderStatus.ACCEPTED,
-                                               "Order must be in PENDING status to be accepted");
+                                               "訂單必須為 PENDING 狀態才能接單");
         }
         
         return order;
     }
 
-    private Order getOrderAndValidateForRejection(String orderId, String restaurantId) 
+    private Order validateOrderForRejection(String orderId, String restaurantId) 
             throws InvalidOrderStateException {
         
         Order order = getOrderAndValidateOwnership(orderId, restaurantId);
         
         if (order.getStatus() != OrderStatus.PENDING) {
             throw new InvalidOrderStateException(orderId, order.getStatus(), OrderStatus.REJECTED,
-                                               "Order must be in PENDING status to be rejected");
+                                               "訂單必須為 PENDING 狀態才能拒單");
         }
         
         return order;
     }
 
-    private Order getOrderAndValidateForPreparation(String orderId, String restaurantId) 
+    private Order validateOrderForPreparation(String orderId, String restaurantId) 
             throws InvalidOrderStateException {
         
         Order order = getOrderAndValidateOwnership(orderId, restaurantId);
         
         if (order.getStatus() != OrderStatus.ACCEPTED) {
             throw new InvalidOrderStateException(orderId, order.getStatus(), OrderStatus.PREPARING,
-                                               "Order must be in ACCEPTED status to start preparation");
+                                               "訂單必須為 ACCEPTED 狀態才能開始製作");
         }
         
         return order;
     }
 
-    private Order getOrderAndValidateForReadyMarking(String orderId, String restaurantId) 
+    private Order validateOrderForReadyMarking(String orderId, String restaurantId) 
             throws InvalidOrderStateException {
         
         Order order = getOrderAndValidateOwnership(orderId, restaurantId);
         
         if (order.getStatus() != OrderStatus.PREPARING) {
             throw new InvalidOrderStateException(orderId, order.getStatus(), OrderStatus.READY_FOR_DELIVERY,
-                                               "Order must be in PREPARING status to be marked ready");
+                                               "訂單必須為 PREPARING 狀態才能標記完成");
         }
         
         return order;
     }
 
     private Order getOrderAndValidateOwnership(String orderId, String restaurantId) {
-        Optional<Order> orderOpt = orderRepository.findById(orderId);
-        if (orderOpt.isEmpty()) {
-            throw new IllegalArgumentException("Order not found: " + orderId);
-        }
+        Order order = orderRepository.findById(orderId)
+                .orElseThrow(() -> new IllegalArgumentException("訂單不存在: " + orderId));
         
-        Order order = orderOpt.get();
         if (!restaurantId.equals(order.getRestaurantId())) {
             throw new IllegalArgumentException(
-                String.format("Order %s does not belong to restaurant %s", orderId, restaurantId));
+                String.format("訂單 %s 不屬於餐廳 %s", orderId, restaurantId));
         }
         
         return order;

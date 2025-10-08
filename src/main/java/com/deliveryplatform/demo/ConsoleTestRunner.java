@@ -22,7 +22,6 @@ public class ConsoleTestRunner {
     private RestaurantService restaurantService;
     private DeliveryService deliveryService;
     private GlobalExceptionHandler exceptionHandler;
-    private OrderLoggingService loggingService;
     
     private InMemoryOrderRepository orderRepository;
     private InMemoryRestaurantRepository restaurantRepository;
@@ -44,13 +43,12 @@ public class ConsoleTestRunner {
         // 初始化資料庫
         orderRepository = new InMemoryOrderRepository();
         restaurantRepository = new InMemoryRestaurantRepository();
-        loggingService = new OrderLoggingService();
-        exceptionHandler = new GlobalExceptionHandler(loggingService);
+        exceptionHandler = new GlobalExceptionHandler();
         
         // 初始化服務
-        orderService = new OrderService(orderRepository, loggingService);
-        restaurantService = new RestaurantServiceImpl(orderRepository, restaurantRepository, loggingService);
-        deliveryService = new DeliveryService(orderRepository, loggingService);
+        orderService = new OrderService(orderRepository);
+        restaurantService = new RestaurantServiceImpl(orderRepository, restaurantRepository);
+        deliveryService = new DeliveryService(orderRepository);
         
         // 建立測試資料
         setupTestData();

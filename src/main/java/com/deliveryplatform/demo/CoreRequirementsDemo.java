@@ -35,7 +35,6 @@ public class CoreRequirementsDemo {
     private OrderService orderService;
     private RestaurantServiceImpl restaurantService;
     private DeliveryService deliveryService;
-    private OrderLoggingService loggingService;
     
     public static void main(String[] args) {
         logger.info("=== 美食外送伺服端功能演示開始 ===");
@@ -59,12 +58,11 @@ public class CoreRequirementsDemo {
         // 建立資料庫
         InMemoryOrderRepository orderRepository = new InMemoryOrderRepository();
         InMemoryRestaurantRepository restaurantRepository = new InMemoryRestaurantRepository();
-        loggingService = new OrderLoggingService();
         
-        // 建立服務
-        orderService = new OrderService(orderRepository, loggingService);
-        restaurantService = new RestaurantServiceImpl(orderRepository, restaurantRepository, loggingService);
-        deliveryService = new DeliveryService(orderRepository, loggingService);
+        // 建立服務 (已簡化，移除 OrderLoggingService)
+        orderService = new OrderService(orderRepository);
+        restaurantService = new RestaurantServiceImpl(orderRepository, restaurantRepository);
+        deliveryService = new DeliveryService(orderRepository);
         
         // 建立測試餐廳 (24小時營業)
         Restaurant restaurant = new Restaurant(

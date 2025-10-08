@@ -5,35 +5,25 @@ import com.deliveryplatform.exceptions.DeliveryPlatformException;
 import com.deliveryplatform.exceptions.InvalidOrderStateException;
 import com.deliveryplatform.exceptions.OrderValidationException;
 import com.deliveryplatform.exceptions.RestaurantUnavailableException;
-import com.deliveryplatform.services.OrderLoggingService;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import java.time.LocalDateTime;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-
 /**
- * Console-based exception handler for the food delivery platform.
- * Handles both business logic exceptions and system errors with proper logging and console output.
+ * Console-based exception handler for the food delivery platform - simplified version.
  */
 public class GlobalExceptionHandler {
 
     private static final Logger logger = LogManager.getLogger(GlobalExceptionHandler.class);
-    private static final Pattern ORDER_ID_PATTERN = Pattern.compile("order\\s+(\\w+-\\w+)", Pattern.CASE_INSENSITIVE);
 
-    private final OrderLoggingService loggingService;
-
-    public GlobalExceptionHandler(OrderLoggingService loggingService) {
-        this.loggingService = loggingService;
+    public GlobalExceptionHandler() {
+        // Simplified constructor
     }
 
     /**
      * Handles order validation exceptions.
      */
     public void handleOrderValidationException(OrderValidationException ex) {
-        String orderId = extractOrderId(ex.getMessage());
-        loggingService.logBusinessException(ex, orderId);
+        logger.warn("Order validation failed: errorCode={}, errors={}", ex.getErrorCode(), ex.getValidationErrors());
 
         System.err.println("=== ORDER VALIDATION EXCEPTION ===");
         System.err.println("Error Code: " + ex.getErrorCode());
@@ -47,8 +37,7 @@ public class GlobalExceptionHandler {
      * Handles restaurant unavailable exceptions.
      */
     public void handleRestaurantUnavailableException(RestaurantUnavailableException ex) {
-        String orderId = extractOrderId(ex.getMessage());
-        loggingService.logBusinessException(ex, orderId, "restaurantId=" + ex.getRestaurantId());
+        logger.warn("Restaurant unavailable: restaurantId={}, reason={}", ex.getRestaurantId(), ex.getMessage());
 
         System.err.println("=== RESTAURANT UNAVAILABLE EXCEPTION ===");
         System.err.println("Error Code: " + ex.getErrorCode());
@@ -62,9 +51,8 @@ public class GlobalExceptionHandler {
      * Handles invalid order state exceptions.
      */
     public void handleInvalidOrderStateException(InvalidOrderStateException ex) {
-        loggingService.logBusinessException(ex, ex.getOrderId(), 
-                                          String.format("currentStatus=%s, attemptedStatus=%s", 
-                                                       ex.getCurrentStatus(), ex.getAttemptedStatus()));
+        logger.warn("Invalid order state transition: orderId={}, currentStatus={}, attemptedStatus={}", 
+                   ex.getOrderId(), ex.getCurrentStatus(), ex.getAttemptedStatus());
 
         System.err.println("=== INVALID ORDER STATE EXCEPTION ===");
         System.err.println("Error Code: " + ex.getErrorCode());
@@ -80,7 +68,7 @@ public class GlobalExceptionHandler {
      * Handles delivery assignment exceptions.
      */
     public void handleDeliveryAssignmentException(DeliveryAssignmentException ex) {
-        loggingService.logBusinessException(ex, ex.getOrderId(), "failureReason=" + ex.getFailureReason());
+        logger.warn("Delivery assignment failed: orderId={}, reason={}", ex.getOrderId(), ex.getFailureReason());
 
         System.err.println("=== DELIVERY ASSIGNMENT EXCEPTION ===");
         System.err.println("Error Code: " + ex.getErrorCode());
@@ -95,8 +83,7 @@ public class GlobalExceptionHandler {
      * Handles generic delivery platform exceptions.
      */
     public void handleDeliveryPlatformException(DeliveryPlatformException ex) {
-        String orderId = extractOrderId(ex.getMessage());
-        loggingService.logBusinessException(ex, orderId);
+        logger.warn("Business exception: errorCode={}, message={}", ex.getErrorCode(), ex.getMessage());
 
         System.err.println("=== DELIVERY PLATFORM EXCEPTION ===");
         System.err.println("Error Code: " + ex.getErrorCode());
@@ -106,61 +93,27 @@ public class GlobalExceptionHandler {
     }
 
     /**
-     * Handles illegal argument exceptions.
-     */
-    public void handleIllegalArgumentException(IllegalArgumentException ex) {
-        String orderId = extractOrderId(ex.getMessage());
-        
-        logger.warn("Invalid request parameters: message={}, orderId={}", ex.getMessage(), orderId);
-
-        System.err.println("=== ILLEGAL ARGUMENT EXCEPTION ===");
-        System.err.println("Error Code: INVALID_REQUEST");
-        System.err.println("Message: Invalid request parameters: " + ex.getMessage());
-        System.err.println("Timestamp: " + LocalDateTime.now());
-        System.err.println("==================================");
-    }
-
-    /**
      * Handles runtime exceptions (system errors).
      */
     public void handleRuntimeException(RuntimeException ex) {
-        String orderId = extractOrderId(ex.getMessage());
-        loggingService.logSystemError(ex, "Unexpected runtime error", orderId);
+        logger.error("System error occurred", ex);
 
         System.err.println("=== RUNTIME EXCEPTION ===");
         System.err.println("Error Code: SYSTEM_ERROR");
         System.err.println("Message: An unexpected error occurred. Please try again later.");
-        System.err.println("Timestamp: " + LocalDateTime.now());
         System.err.println("=========================");
     }
 
     /**
-     * Handles all other exceptions.
+     * Handles generic exceptions (unchecked exceptions).
      */
     public void handleGenericException(Exception ex) {
-        String orderId = extractOrderId(ex.getMessage());
-        loggingService.logSystemError(ex, "Unexpected system error", orderId);
+        logger.error("Unchecked exception occurred", ex);
 
         System.err.println("=== GENERIC EXCEPTION ===");
-        System.err.println("Error Code: SYSTEM_ERROR");
-        System.err.println("Message: An unexpected system error occurred. Please contact support.");
-        System.err.println("Timestamp: " + LocalDateTime.now());
-        System.err.println("=========================");
-    }
-
-    /**
-     * Extracts order ID from exception message or other context.
-     */
-    private String extractOrderId(String message) {
-        if (message == null) {
-            return null;
-        }
-
-        Matcher matcher = ORDER_ID_PATTERN.matcher(message);
-        if (matcher.find()) {
-            return matcher.group(1);
-        }
-
-        return null;
+        System.err.println("Error Type: " + ex.getClass().getSimpleName());
+        System.err.println("Message: " + ex.getMessage());
+        System.err.println("Stack Trace: " + java.util.Arrays.toString(ex.getStackTrace()));
+        System.err.println("==========================");
     }
 }

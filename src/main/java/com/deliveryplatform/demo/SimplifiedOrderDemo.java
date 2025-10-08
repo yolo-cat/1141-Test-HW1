@@ -7,7 +7,6 @@ import com.deliveryplatform.models.OrderItem;
 import com.deliveryplatform.models.Restaurant;
 import com.deliveryplatform.repositories.InMemoryOrderRepository;
 import com.deliveryplatform.repositories.InMemoryRestaurantRepository;
-import com.deliveryplatform.services.OrderLoggingService;
 import com.deliveryplatform.services.OrderService;
 import com.deliveryplatform.services.RestaurantServiceImpl;
 
@@ -17,22 +16,21 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
- * 簡化的外賣平台演示程式 - 已移除 Spring 依賴
+ * 簡化的外賣平台演示程式 - 已移除 Spring 和 OrderLoggingService 依賴
  * 展示核心異常處理機制
  */
 public class SimplifiedOrderDemo {
     
     public static void main(String[] args) {
-        System.out.println("=== 外賣平台異常處理演示 (無 Spring 版本) ===\n");
+        System.out.println("=== 外賣平台異常處理演示 (簡化版本) ===\n");
         
-        // 手動建立所有依賴 (原本由 Spring 管理)
+        // 手動建立所有依賴
         var orderRepository = new InMemoryOrderRepository();
         var restaurantRepository = new InMemoryRestaurantRepository();
-        var loggingService = new OrderLoggingService();
-        var exceptionHandler = new GlobalExceptionHandler(loggingService);
+        var exceptionHandler = new GlobalExceptionHandler();
         
-        var orderService = new OrderService(orderRepository, loggingService);
-        var restaurantService = new RestaurantServiceImpl(orderRepository, restaurantRepository, loggingService);
+        var orderService = new OrderService(orderRepository);
+        var restaurantService = new RestaurantServiceImpl(orderRepository, restaurantRepository);
         
         // 建立測試餐廳 (營業時間：9:00-22:00)
         Restaurant restaurant = new Restaurant(

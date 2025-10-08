@@ -23,7 +23,6 @@ public class BatchTestRunner {
     
     private InMemoryOrderRepository orderRepository;
     private InMemoryRestaurantRepository restaurantRepository;
-    private OrderLoggingService loggingService;
     
     private AtomicInteger testCounter = new AtomicInteger(0);
     private AtomicInteger passedCounter = new AtomicInteger(0);
@@ -50,11 +49,10 @@ public class BatchTestRunner {
         // 初始化服務組件
         orderRepository = new InMemoryOrderRepository();
         restaurantRepository = new InMemoryRestaurantRepository();
-        loggingService = new OrderLoggingService();
         
-        orderService = new OrderService(orderRepository, loggingService);
-        restaurantService = new RestaurantServiceImpl(orderRepository, restaurantRepository, loggingService);
-        deliveryService = new DeliveryService(orderRepository, loggingService);
+        orderService = new OrderService(orderRepository);
+        restaurantService = new RestaurantServiceImpl(orderRepository, restaurantRepository);
+        deliveryService = new DeliveryService(orderRepository);
         
         // 建立24小時營業的測試餐廳
         Restaurant restaurant = new Restaurant(
