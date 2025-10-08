@@ -8,8 +8,7 @@ import com.deliveryplatform.models.OrderStatus;
 import com.deliveryplatform.repositories.OrderRepository;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
+
 
 import java.math.BigDecimal;
 import java.util.List;
@@ -18,7 +17,6 @@ import java.util.Optional;
 /**
  * Service for managing customer order operations including creation, validation, and lifecycle management.
  */
-@Service
 public class OrderService {
 
     private static final Logger logger = LogManager.getLogger(OrderService.class);
@@ -26,7 +24,6 @@ public class OrderService {
     private final OrderRepository orderRepository;
     private final OrderLoggingService loggingService;
 
-    @Autowired
     public OrderService(OrderRepository orderRepository, OrderLoggingService loggingService) {
         this.orderRepository = orderRepository;
         this.loggingService = loggingService;

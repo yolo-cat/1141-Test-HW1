@@ -1,7 +1,7 @@
 package com.deliveryplatform.repositories;
 
 import com.deliveryplatform.models.Restaurant;
-import org.springframework.stereotype.Repository;
+
 
 import java.util.List;
 import java.util.Map;
@@ -12,7 +12,6 @@ import java.util.stream.Collectors;
 /**
  * In-memory implementation of RestaurantRepository for development and testing.
  */
-@Repository
 public class InMemoryRestaurantRepository implements RestaurantRepository {
 
     private final Map<String, Restaurant> restaurants = new ConcurrentHashMap<>();

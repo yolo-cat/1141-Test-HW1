@@ -2,7 +2,7 @@ package com.deliveryplatform.repositories;
 
 import com.deliveryplatform.models.Order;
 import com.deliveryplatform.models.OrderStatus;
-import org.springframework.stereotype.Repository;
+
 
 import java.util.List;
 import java.util.Map;
@@ -13,7 +13,6 @@ import java.util.stream.Collectors;
 /**
  * In-memory implementation of OrderRepository for development and testing.
  */
-@Repository
 public class InMemoryOrderRepository implements OrderRepository {
 
     private final Map<String, Order> orders = new ConcurrentHashMap<>();

@@ -7,8 +7,7 @@ import com.deliveryplatform.models.OrderStatus;
 import com.deliveryplatform.repositories.OrderRepository;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
+
 
 import java.util.List;
 import java.util.Optional;
@@ -18,7 +17,6 @@ import java.util.concurrent.ConcurrentHashMap;
 /**
  * Service for managing delivery operations including driver assignment and delivery completion.
  */
-@Service
 public class DeliveryService {
 
     private static final Logger logger = LogManager.getLogger(DeliveryService.class);
@@ -31,7 +29,6 @@ public class DeliveryService {
     private final Set<String> availableDrivers = ConcurrentHashMap.newKeySet();
     private final ConcurrentHashMap<String, Integer> driverOrderCount = new ConcurrentHashMap<>();
 
-    @Autowired
     public DeliveryService(OrderRepository orderRepository, OrderLoggingService loggingService) {
         this.orderRepository = orderRepository;
         this.loggingService = loggingService;

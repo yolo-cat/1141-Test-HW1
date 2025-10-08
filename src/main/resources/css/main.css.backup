@@ -1,0 +1,337 @@
+/* 全局樣式 */
+.root {
+    -fx-font-family: "Microsoft YaHei", "微軟雅黑", Arial, sans-serif;
+    -fx-font-size: 13px;
+    -fx-background-color: #f5f5f5;
+}
+
+/* 標題區域 */
+.header {
+    -fx-background-color: linear-gradient(to bottom, #2c3e50, #34495e);
+    -fx-padding: 15;
+}
+
+.title-bar {
+    -fx-padding: 0 0 10 0;
+}
+
+.main-title {
+    -fx-text-fill: white;
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+}
+
+.status-label {
+    -fx-text-fill: #2ecc71;
+    -fx-font-size: 12px;
+    -fx-padding: 5 10;
+    -fx-background-color: rgba(255, 255, 255, 0.2);
+    -fx-background-radius: 15;
+}
+
+/* 進度條 */
+.progress-bar {
+    -fx-accent: #3498db;
+}
+
+/* 標籤頁樣式 */
+.main-tabs {
+    -fx-tab-min-width: 120px;
+    -fx-tab-max-width: 120px;
+}
+
+.main-tabs .tab-pane .tab-header-area .tab-header-background {
+    -fx-background-color: #ecf0f1;
+}
+
+.main-tabs .tab {
+    -fx-background-color: #bdc3c7;
+    -fx-background-radius: 0;
+    -fx-border-width: 0 1 0 0;
+    -fx-border-color: #95a5a6;
+}
+
+.main-tabs .tab:selected {
+    -fx-background-color: white;
+    -fx-border-color: #3498db;
+    -fx-border-width: 0 3 0 0;
+}
+
+.main-tabs .tab .tab-label {
+    -fx-text-fill: #2c3e50;
+    -fx-font-weight: bold;
+}
+
+.main-tabs .tab:selected .tab-label {
+    -fx-text-fill: #3498db;
+}
+
+/* 內容面板 */
+.content-panel {
+    -fx-padding: 20;
+    -fx-background-color: white;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 5, 0, 0, 2);
+}
+
+.section-title {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2c3e50;
+    -fx-padding: 0 0 10 0;
+}
+
+/* 按鈕樣式 */
+.button {
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-padding: 8 15;
+    -fx-cursor: hand;
+    -fx-background-radius: 5;
+    -fx-border-radius: 5;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 2, 0, 0, 1);
+}
+
+.primary-button {
+    -fx-background-color: #3498db;
+    -fx-text-fill: white;
+    -fx-border-color: #2980b9;
+    -fx-border-width: 1;
+}
+
+.primary-button:hover {
+    -fx-background-color: #2980b9;
+}
+
+.secondary-button {
+    -fx-background-color: #95a5a6;
+    -fx-text-fill: white;
+    -fx-border-color: #7f8c8d;
+    -fx-border-width: 1;
+}
+
+.secondary-button:hover {
+    -fx-background-color: #7f8c8d;
+}
+
+.success-button {
+    -fx-background-color: #2ecc71;
+    -fx-text-fill: white;
+    -fx-border-color: #27ae60;
+    -fx-border-width: 1;
+}
+
+.success-button:hover {
+    -fx-background-color: #27ae60;
+}
+
+.danger-button {
+    -fx-background-color: #e74c3c;
+    -fx-text-fill: white;
+    -fx-border-color: #c0392b;
+    -fx-border-width: 1;
+}
+
+.danger-button:hover {
+    -fx-background-color: #c0392b;
+}
+
+.warning-button {
+    -fx-background-color: #f39c12;
+    -fx-text-fill: white;
+    -fx-border-color: #e67e22;
+    -fx-border-width: 1;
+}
+
+.warning-button:hover {
+    -fx-background-color: #e67e22;
+}
+
+.info-button {
+    -fx-background-color: #9b59b6;
+    -fx-text-fill: white;
+    -fx-border-color: #8e44ad;
+    -fx-border-width: 1;
+}
+
+.info-button:hover {
+    -fx-background-color: #8e44ad;
+}
+
+.small-button {
+    -fx-font-size: 10px;
+    -fx-padding: 5 10;
+    -fx-background-color: #ecf0f1;
+    -fx-text-fill: #2c3e50;
+    -fx-border-color: #bdc3c7;
+    -fx-border-width: 1;
+}
+
+.small-button:hover {
+    -fx-background-color: #d5dbdb;
+}
+
+/* 輸入框樣式 */
+.text-field, .text-area {
+    -fx-background-color: white;
+    -fx-border-color: #bdc3c7;
+    -fx-border-width: 1;
+    -fx-border-radius: 3;
+    -fx-background-radius: 3;
+    -fx-padding: 8;
+}
+
+.text-field:focused, .text-area:focused {
+    -fx-border-color: #3498db;
+    -fx-border-width: 2;
+}
+
+.combo-box {
+    -fx-background-color: white;
+    -fx-border-color: #bdc3c7;
+    -fx-border-width: 1;
+    -fx-border-radius: 3;
+    -fx-background-radius: 3;
+}
+
+.combo-box:focused {
+    -fx-border-color: #3498db;
+    -fx-border-width: 2;
+}
+
+/* 訂單項目容器 */
+.items-container {
+    -fx-background-color: #f8f9fa;
+    -fx-padding: 15;
+    -fx-border-color: #dee2e6;
+    -fx-border-width: 1;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+}
+
+.item-row {
+    -fx-padding: 5;
+}
+
+.total-row {
+    -fx-padding: 10 5 5 5;
+    -fx-border-width: 1 0 0 0;
+    -fx-border-color: #dee2e6;
+}
+
+.total-label {
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+}
+
+.total-amount {
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+    -fx-text-fill: #e74c3c;
+}
+
+/* 異常資訊區域 */
+.exception-info {
+    -fx-background-color: #fff3cd;
+    -fx-border-color: #ffeaa7;
+    -fx-border-width: 1;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-padding: 15;
+}
+
+.info-title {
+    -fx-font-weight: bold;
+    -fx-text-fill: #856404;
+}
+
+.info-text {
+    -fx-text-fill: #856404;
+    -fx-padding: 2 0 2 15;
+}
+
+/* 日誌面板 */
+.log-panel {
+    -fx-background-color: #2c3e50;
+    -fx-padding: 0;
+}
+
+.log-header {
+    -fx-background-color: #34495e;
+    -fx-padding: 10 15;
+    -fx-border-width: 1 0 0 0;
+    -fx-border-color: #4a6741;
+}
+
+.log-title {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+}
+
+.log-area {
+    -fx-background-color: #2c3e50;
+    -fx-text-fill: #ecf0f1;
+    -fx-font-family: "Consolas", "Monaco", "Courier New", monospace;
+    -fx-font-size: 11px;
+    -fx-padding: 10;
+    -fx-border-width: 0;
+    -fx-background-insets: 0;
+    -fx-background-radius: 0;
+}
+
+.log-area .content {
+    -fx-background-color: #2c3e50;
+}
+
+.log-area .scroll-pane {
+    -fx-background-color: #2c3e50;
+}
+
+.log-area .viewport {
+    -fx-background-color: #2c3e50;
+}
+
+/* 分隔線 */
+.separator {
+    -fx-background-color: #ecf0f1;
+}
+
+.separator .line {
+    -fx-background-color: #bdc3c7;
+    -fx-border-width: 0;
+}
+
+/* 標籤 */
+.label {
+    -fx-text-fill: #2c3e50;
+}
+
+/* 滾動條 */
+.scroll-pane {
+    -fx-background-color: transparent;
+}
+
+.scroll-bar {
+    -fx-background-color: #ecf0f1;
+}
+
+.scroll-bar .thumb {
+    -fx-background-color: #bdc3c7;
+    -fx-background-radius: 5;
+}
+
+.scroll-bar .thumb:hover {
+    -fx-background-color: #95a5a6;
+}
+
+/* 響應式設計 */
+@media screen and (max-width: 800px) {
+    .main-tabs {
+        -fx-tab-min-width: 80px;
+        -fx-tab-max-width: 80px;
+    }
+    
+    .content-panel {
+        -fx-padding: 10;
+    }
+}

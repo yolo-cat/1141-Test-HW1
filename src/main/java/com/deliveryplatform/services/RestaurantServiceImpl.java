@@ -9,8 +9,7 @@ import com.deliveryplatform.repositories.OrderRepository;
 import com.deliveryplatform.repositories.RestaurantRepository;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
+
 
 import java.util.Optional;
 
@@ -18,7 +17,6 @@ import java.util.Optional;
  * Implementation of RestaurantService that handles restaurant operations for order management.
  * Includes proper validation, exception handling, and logging.
  */
-@Service
 public class RestaurantServiceImpl implements RestaurantService {
 
     private static final Logger logger = LogManager.getLogger(RestaurantServiceImpl.class);
@@ -27,7 +25,6 @@ public class RestaurantServiceImpl implements RestaurantService {
     private final RestaurantRepository restaurantRepository;
     private final OrderLoggingService loggingService;
 
-    @Autowired
     public RestaurantServiceImpl(OrderRepository orderRepository, 
                                RestaurantRepository restaurantRepository,
                                OrderLoggingService loggingService) {
