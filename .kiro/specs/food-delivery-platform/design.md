@@ -1,55 +1,55 @@
-# Design Document
+# 設計文件
 
-## Overview
+## 概述
 
-The food delivery platform backend is designed as a Java-based system using object-oriented principles with comprehensive exception handling and logging. The system follows a layered architecture with clear separation of concerns, utilizing Log4j 2 for structured logging and custom exception hierarchies for robust error handling. The design emphasizes maintainability, observability, and reliable order state management through enum-based state machines.
+本外送平台後端以 Java 為基礎，採用物件導向設計，並具備完整的例外處理與日誌紀錄。系統遵循分層架構，明確區分各層責任，使用 Log4j 2 進行結構化日誌，並以自訂例外階層強化錯誤處理。設計重點在於可維護性、可觀察性，以及透過 enum 狀態機確保訂單狀態管理的可靠性。
 
-## Architecture
+## 架構
 
-### System Architecture
+### 系統架構
 
 ```mermaid
 graph TB
-    A[Customer API] --> B[Order Service]
-    C[Restaurant API] --> D[Restaurant Service]
-    E[Driver API] --> F[Delivery Service]
+    A[顧客 API] --> B[訂單服務]
+    C[餐廳 API] --> D[餐廳服務]
+    E[外送員 API] --> F[外送服務]
     
-    B --> G[Order Manager]
+    B --> G[訂單管理器]
     D --> G
     F --> G
     
-    G --> H[Order Repository]
-    G --> I[Notification Service]
-    G --> J[Logging Service]
+    G --> H[訂單儲存庫]
+    G --> I[通知服務]
+    G --> J[日誌服務]
     
     J --> K[Log4j 2]
-    H --> L[Database]
+    H --> L[資料庫]
     
-    subgraph "Exception Handling"
-        M[Custom Checked Exceptions]
-        N[Unchecked Exception Handler]
+    subgraph "例外處理"
+        M[自訂 Checked 例外]
+        N[Unchecked 例外處理器]
     end
     
     G --> M
     G --> N
 ```
 
-### Layer Responsibilities
+### 各層責任
 
-- **API Layer**: REST endpoints for customer, restaurant, and driver interactions
-- **Service Layer**: Business logic implementation with exception handling
-- **Manager Layer**: Order lifecycle coordination and state management
-- **Repository Layer**: Data persistence and retrieval
-- **Cross-cutting Concerns**: Logging, exception handling, and notifications
+- **API 層**：提供顧客、餐廳、外送員的 REST 端點
+- **服務層**：實作商業邏輯並處理例外
+- **管理層**：協調訂單生命週期與狀態管理
+- **儲存層**：資料持久化與存取
+- **橫切關注**：日誌、例外處理、通知
 
-## Components and Interfaces
+## 元件與介面
 
-### Core Components
+### 核心元件
 
-#### 1. Order Management
+#### 1. 訂單管理
 
 ```java
-// Order entity with enum-based state management
+// 具 enum 狀態管理的訂單實體
 public class Order {
     private String orderId;
     private String customerId;
@@ -63,7 +63,7 @@ public class Order {
     private String driverId;
 }
 
-// Order status enum with state transition validation
+// 具狀態轉換驗證的訂單狀態 enum
 public enum OrderStatus {
     PENDING,
     ACCEPTED,
@@ -75,12 +75,12 @@ public enum OrderStatus {
     REJECTED;
     
     public boolean canTransitionTo(OrderStatus newStatus) {
-        // State transition validation logic
+        // 狀態轉換驗證邏輯
     }
 }
 ```
 
-#### 2. Restaurant Service Interface
+#### 2. 餐廳服務介面
 
 ```java
 public interface RestaurantService {
@@ -90,10 +90,10 @@ public interface RestaurantService {
 }
 ```
 
-#### 3. Exception Hierarchy
+#### 3. 例外階層
 
 ```java
-// Base checked exception for business logic errors
+// 商業邏輯錯誤的基礎 checked 例外
 public abstract class DeliveryPlatformException extends Exception {
     private final String errorCode;
     private final LocalDateTime timestamp;
@@ -105,57 +105,57 @@ public abstract class DeliveryPlatformException extends Exception {
     }
 }
 
-// Specific business exceptions
+// 特定商業例外
 public class RestaurantUnavailableException extends DeliveryPlatformException {
     public RestaurantUnavailableException(String restaurantId) {
-        super("Restaurant " + restaurantId + " is currently unavailable", "RESTAURANT_UNAVAILABLE");
+        super("餐廳 " + restaurantId + " 目前無法接單", "RESTAURANT_UNAVAILABLE");
     }
 }
 
 public class InvalidOrderStateException extends DeliveryPlatformException {
     public InvalidOrderStateException(String orderId, OrderStatus currentStatus, OrderStatus attemptedStatus) {
-        super(String.format("Cannot transition order %s from %s to %s", orderId, currentStatus, attemptedStatus), 
+        super(String.format("無法將訂單 %s 從 %s 轉換為 %s", orderId, currentStatus, attemptedStatus), 
               "INVALID_STATE_TRANSITION");
     }
 }
 
 public class DeliveryAssignmentException extends DeliveryPlatformException {
     public DeliveryAssignmentException(String orderId, String reason) {
-        super("Failed to assign delivery for order " + orderId + ": " + reason, "DELIVERY_ASSIGNMENT_FAILED");
+        super("訂單 " + orderId + " 指派外送失敗: " + reason, "DELIVERY_ASSIGNMENT_FAILED");
     }
 }
 ```
 
-### 4. Logging Service
+### 4. 日誌服務
 
 ```java
 public class OrderLoggingService {
     private static final Logger logger = LogManager.getLogger(OrderLoggingService.class);
     
     public void logOrderCreated(Order order) {
-        logger.info("Order created: orderId={}, customerId={}, restaurantId={}, amount={}", 
+        logger.info("建立訂單: orderId={}, customerId={}, restaurantId={}, amount={}", 
                    order.getOrderId(), order.getCustomerId(), order.getRestaurantId(), order.getTotalAmount());
     }
     
     public void logOrderStatusChange(String orderId, OrderStatus oldStatus, OrderStatus newStatus, String reason) {
-        logger.info("Order status changed: orderId={}, from={}, to={}, reason={}", 
+        logger.info("訂單狀態變更: orderId={}, from={}, to={}, reason={}", 
                    orderId, oldStatus, newStatus, reason);
     }
     
     public void logBusinessException(DeliveryPlatformException ex, String orderId) {
-        logger.warn("Business exception occurred: orderId={}, errorCode={}, message={}", 
+        logger.warn("商業例外發生: orderId={}, errorCode={}, message={}", 
                    orderId, ex.getErrorCode(), ex.getMessage());
     }
     
     public void logSystemError(Exception ex, String context) {
-        logger.error("System error occurred: context={}, error={}", context, ex.getMessage(), ex);
+        logger.error("系統錯誤: context={}, error={}", context, ex.getMessage(), ex);
     }
 }
 ```
 
-## Data Models
+## 資料模型
 
-### Order Entity Structure
+### 訂單實體結構
 
 ```java
 public class Order {
@@ -190,7 +190,7 @@ public class Order {
     
     private String cancellationReason;
     
-    // State transition methods with validation
+    // 狀態轉換方法，含驗證
     public void transitionTo(OrderStatus newStatus, String reason) throws InvalidOrderStateException {
         if (!this.status.canTransitionTo(newStatus)) {
             throw new InvalidOrderStateException(this.orderId, this.status, newStatus);
@@ -200,16 +200,16 @@ public class Order {
         this.status = newStatus;
         this.updatedAt = LocalDateTime.now();
         
-        // Log the transition
+        // 記錄狀態轉換
         LogManager.getLogger(Order.class).info(
-            "Order status transition: orderId={}, from={}, to={}, reason={}", 
+            "訂單狀態轉換: orderId={}, from={}, to={}, reason={}", 
             orderId, oldStatus, newStatus, reason
         );
     }
 }
 ```
 
-### Restaurant Entity
+### 餐廳實體
 
 ```java
 public class Restaurant {
@@ -227,23 +227,23 @@ public class Restaurant {
 }
 ```
 
-## Error Handling
+## 錯誤處理
 
-### Exception Handling Strategy
+### 例外處理策略
 
-#### Checked Exceptions (Business Logic Errors)
-- **RestaurantUnavailableException**: When restaurant is closed or at capacity
-- **InvalidOrderStateException**: When attempting invalid state transitions
-- **DeliveryAssignmentException**: When delivery assignment fails
-- **OrderValidationException**: When order data is invalid
+#### Checked 例外（商業邏輯錯誤）
+- **RestaurantUnavailableException**：餐廳關閉或已達容量時
+- **InvalidOrderStateException**：嘗試無效狀態轉換時
+- **DeliveryAssignmentException**：指派外送失敗時
+- **OrderValidationException**：訂單資料無效時
 
-#### Unchecked Exception Handling
-- **Global Exception Handler**: Catches all unchecked exceptions
-- **Logging**: All unchecked exceptions logged at ERROR level with full context
-- **Graceful Degradation**: System continues operation where possible
-- **Circuit Breaker**: Prevents cascade failures in external service calls
+#### Unchecked 例外處理
+- **全域例外處理器**：攔截所有未檢查例外
+- **日誌**：所有未檢查例外以 ERROR 層級記錄，並附完整上下文
+- **優雅降級**：系統盡可能持續運作
+- **斷路器**：防止外部服務連鎖失敗
 
-### Exception Processing Flow
+### 例外處理流程
 
 ```java
 @Component
@@ -259,40 +259,40 @@ public class GlobalExceptionHandler {
     
     @ExceptionHandler(RuntimeException.class)
     public ResponseEntity<ErrorResponse> handleSystemException(RuntimeException ex) {
-        loggingService.logSystemError(ex, "Unexpected system error");
+        loggingService.logSystemError(ex, "非預期系統錯誤");
         return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
-                           .body(new ErrorResponse("SYSTEM_ERROR", "An unexpected error occurred"));
+                           .body(new ErrorResponse("SYSTEM_ERROR", "發生非預期錯誤"));
     }
 }
 ```
 
-## Testing Strategy
+## 測試策略
 
-### Unit Testing Approach
-- **Service Layer Testing**: Mock dependencies, test business logic and exception scenarios
-- **Exception Testing**: Verify correct exception types and messages for various failure scenarios
-- **State Transition Testing**: Test all valid and invalid order status transitions
-- **Logging Verification**: Verify correct log levels and messages for different scenarios
+### 單元測試
+- **服務層測試**：mock 依賴，測試商業邏輯與例外情境
+- **例外測試**：驗證各種失敗情境下的例外型別與訊息
+- **狀態轉換測試**：測試所有合法與非法的訂單狀態轉換
+- **日誌驗證**：檢查不同情境下的日誌層級與訊息
 
-### Integration Testing
-- **End-to-End Order Flow**: Test complete order lifecycle from creation to delivery
-- **Exception Propagation**: Verify exceptions are properly caught and logged
-- **Database Transactions**: Test rollback scenarios and data consistency
-- **Logging Integration**: Verify Log4j 2 configuration and log output
+### 整合測試
+- **端到端訂單流程**：測試訂單從建立到送達的完整流程
+- **例外傳遞**：驗證例外正確被攔截與記錄
+- **資料庫交易**：測試回滾與資料一致性
+- **日誌整合**：驗證 Log4j 2 設定與日誌輸出
 
-### Test Data Management
-- **Order Test Fixtures**: Predefined orders in various states for testing
-- **Exception Scenarios**: Test cases for each custom exception type
-- **Mock Services**: Restaurant and driver service mocks for isolated testing
+### 測試資料管理
+- **訂單測試樣本**：預設多種狀態的訂單
+- **例外情境**：每種自訂例外的測試案例
+- **Mock 服務**：餐廳與外送員服務的 mock 物件
 
-## Log4j 2 Configuration
+## Log4j 2 設定
 
-### Logging Levels Usage
-- **INFO**: Normal operations (order creation, status changes, successful operations)
-- **WARN**: Business exceptions, potential issues, performance warnings
-- **ERROR**: System errors, unchecked exceptions, critical failures
+### 日誌層級
+- **INFO**：正常操作（訂單建立、狀態變更、成功操作）
+- **WARN**：商業例外、潛在問題、效能警告
+- **ERROR**：系統錯誤、未檢查例外、重大失敗
 
-### Log Configuration Structure
+### 設定範例
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <Configuration status="WARN">
@@ -321,4 +321,4 @@ public class GlobalExceptionHandler {
 </Configuration>
 ```
 
-This design provides a robust foundation for the food delivery platform with comprehensive exception handling, structured logging, and clear separation of concerns that will enable effective monitoring and troubleshooting of the system.
+本設計提供完整的例外處理、結構化日誌與分層架構，便於系統監控與除錯。

@@ -919,3 +919,127 @@ java.lang.IllegalArgumentException: Order not found: FAKE-ORDER
 2025-10-08 22:59:46.873 [com.deliveryplatform.demo.SimplifiedOrderDemo.main()] WARN  com.deliveryplatform.services.OrderLoggingService - Business exception occurred: orderId=ORD-B51A5FDB, errorCode=RESTAURANT_UNAVAILABLE, message=Restaurant REST-001 is currently unavailable: Restaurant is closed, timestamp=2025-10-08T22:59:46.873358
 2025-10-08 22:59:46.874 [com.deliveryplatform.demo.SimplifiedOrderDemo.main()] WARN  com.deliveryplatform.services.OrderLoggingService - Restaurant operation failed: restaurantId=REST-001, operation=ACCEPT_ORDER, orderId=ORD-B51A5FDB
 2025-10-08 22:59:46.874 [com.deliveryplatform.demo.SimplifiedOrderDemo.main()] WARN  com.deliveryplatform.services.OrderLoggingService - Business exception occurred: orderId=unknown, errorCode=RESTAURANT_UNAVAILABLE, message=Restaurant REST-001 is currently unavailable: Restaurant is closed, context=restaurantId=REST-001, timestamp=2025-10-08T22:59:46.873358
+2025-10-08 23:00:59.621 [com.deliveryplatform.demo.SimplifiedOrderDemo.main()] INFO  com.deliveryplatform.models.Order - Order created: orderId=ORD-B7F74D68, customerId=CUST-001, restaurantId=REST-001, amount=21.97
+2025-10-08 23:00:59.628 [com.deliveryplatform.demo.SimplifiedOrderDemo.main()] WARN  com.deliveryplatform.services.OrderLoggingService - Business exception occurred: orderId=ORD-B7F74D68, errorCode=RESTAURANT_UNAVAILABLE, message=Restaurant REST-001 is currently unavailable: Restaurant is closed, timestamp=2025-10-08T23:00:59.627689
+2025-10-08 23:00:59.628 [com.deliveryplatform.demo.SimplifiedOrderDemo.main()] WARN  com.deliveryplatform.services.OrderLoggingService - Restaurant operation failed: restaurantId=REST-001, operation=ACCEPT_ORDER, orderId=ORD-B7F74D68
+2025-10-08 23:00:59.629 [com.deliveryplatform.demo.SimplifiedOrderDemo.main()] WARN  com.deliveryplatform.services.OrderLoggingService - Business exception occurred: orderId=unknown, errorCode=RESTAURANT_UNAVAILABLE, message=Restaurant REST-001 is currently unavailable: Restaurant is closed, context=restaurantId=REST-001, timestamp=2025-10-08T23:00:59.627689
+2025-10-08 23:06:58.837 [com.deliveryplatform.demo.SimplifiedOrderDemo.main()] INFO  com.deliveryplatform.models.Order - Order created: orderId=ORD-76E6A666, customerId=CUST-001, restaurantId=REST-001, amount=21.97
+2025-10-08 23:06:58.842 [com.deliveryplatform.demo.SimplifiedOrderDemo.main()] WARN  com.deliveryplatform.services.OrderLoggingService - Business exception occurred: orderId=ORD-76E6A666, errorCode=RESTAURANT_UNAVAILABLE, message=Restaurant REST-001 is currently unavailable: Restaurant is closed, timestamp=2025-10-08T23:06:58.841927
+2025-10-08 23:06:58.842 [com.deliveryplatform.demo.SimplifiedOrderDemo.main()] WARN  com.deliveryplatform.services.OrderLoggingService - Restaurant operation failed: restaurantId=REST-001, operation=ACCEPT_ORDER, orderId=ORD-76E6A666
+2025-10-08 23:06:58.843 [com.deliveryplatform.demo.SimplifiedOrderDemo.main()] WARN  com.deliveryplatform.services.OrderLoggingService - Business exception occurred: orderId=unknown, errorCode=RESTAURANT_UNAVAILABLE, message=Restaurant REST-001 is currently unavailable: Restaurant is closed, context=restaurantId=REST-001, timestamp=2025-10-08T23:06:58.841927
+2025-10-08 23:25:39.718 [com.deliveryplatform.demo.CoreRequirementsDemo.main()] INFO  com.deliveryplatform.demo.CoreRequirementsDemo - === 美食外送伺服端功能演示開始 ===
+2025-10-08 23:25:39.721 [com.deliveryplatform.demo.CoreRequirementsDemo.main()] INFO  com.deliveryplatform.demo.CoreRequirementsDemo - 初始化服務組件...
+2025-10-08 23:25:39.732 [com.deliveryplatform.demo.CoreRequirementsDemo.main()] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-001
+2025-10-08 23:25:39.733 [com.deliveryplatform.demo.CoreRequirementsDemo.main()] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-002
+2025-10-08 23:25:39.733 [com.deliveryplatform.demo.CoreRequirementsDemo.main()] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-003
+2025-10-08 23:25:39.733 [com.deliveryplatform.demo.CoreRequirementsDemo.main()] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-004
+2025-10-08 23:25:39.734 [com.deliveryplatform.demo.CoreRequirementsDemo.main()] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-005
+2025-10-08 23:25:39.734 [com.deliveryplatform.demo.CoreRequirementsDemo.main()] INFO  com.deliveryplatform.demo.CoreRequirementsDemo - 服務組件初始化完成
+2025-10-08 23:25:39.734 [com.deliveryplatform.demo.CoreRequirementsDemo.main()] INFO  com.deliveryplatform.demo.CoreRequirementsDemo - === 1. 演示顧客訂單功能 ===
+2025-10-08 23:25:39.765 [com.deliveryplatform.demo.CoreRequirementsDemo.main()] INFO  com.deliveryplatform.models.Order - Order created: orderId=ORD-0DDCC4C5, customerId=CUST-001, restaurantId=REST-001, amount=41.30
+2025-10-08 23:25:39.765 [com.deliveryplatform.demo.CoreRequirementsDemo.main()] INFO  com.deliveryplatform.demo.CoreRequirementsDemo - 顧客訂單建立成功: orderId=ORD-0DDCC4C5, status=PENDING, amount=$41.30
+2025-10-08 23:25:39.766 [com.deliveryplatform.demo.CoreRequirementsDemo.main()] INFO  com.deliveryplatform.demo.CoreRequirementsDemo - 目前訂單狀態: PENDING
+2025-10-08 23:25:39.766 [com.deliveryplatform.demo.CoreRequirementsDemo.main()] INFO  com.deliveryplatform.demo.CoreRequirementsDemo - 可轉換到的狀態: [REJECTED, ACCEPTED, CANCELLED]
+2025-10-08 23:25:39.766 [com.deliveryplatform.demo.CoreRequirementsDemo.main()] INFO  com.deliveryplatform.demo.CoreRequirementsDemo - === 2. 演示餐廳 acceptOrder() 功能 ===
+2025-10-08 23:25:39.766 [com.deliveryplatform.demo.CoreRequirementsDemo.main()] INFO  com.deliveryplatform.models.Order - Order created: orderId=ORD-1B819595, customerId=CUST-002, restaurantId=REST-001, amount=21.90
+2025-10-08 23:25:39.770 [com.deliveryplatform.demo.CoreRequirementsDemo.main()] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-1B819595, from=PENDING, to=ACCEPTED, reason=Restaurant REST-001 accepted the order
+2025-10-08 23:25:39.772 [com.deliveryplatform.demo.CoreRequirementsDemo.main()] INFO  com.deliveryplatform.demo.CoreRequirementsDemo - 餐廳成功接單: orderId=ORD-1B819595, restaurantId=REST-001
+2025-10-08 23:25:39.772 [com.deliveryplatform.demo.CoreRequirementsDemo.main()] INFO  com.deliveryplatform.demo.CoreRequirementsDemo - 訂單狀態已更新: PENDING → ACCEPTED
+2025-10-08 23:25:39.772 [com.deliveryplatform.demo.CoreRequirementsDemo.main()] INFO  com.deliveryplatform.demo.CoreRequirementsDemo - === 3. 演示外送員接單功能 ===
+2025-10-08 23:25:39.773 [com.deliveryplatform.demo.CoreRequirementsDemo.main()] INFO  com.deliveryplatform.models.Order - Order created: orderId=ORD-16D252C9, customerId=CUST-003, restaurantId=REST-001, amount=16.50
+2025-10-08 23:25:39.773 [com.deliveryplatform.demo.CoreRequirementsDemo.main()] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-16D252C9, from=PENDING, to=ACCEPTED, reason=Restaurant REST-001 accepted the order
+2025-10-08 23:25:39.773 [com.deliveryplatform.demo.CoreRequirementsDemo.main()] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-16D252C9, from=ACCEPTED, to=PREPARING, reason=Restaurant started preparing the order
+2025-10-08 23:25:39.774 [com.deliveryplatform.demo.CoreRequirementsDemo.main()] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-16D252C9, from=PREPARING, to=READY_FOR_DELIVERY, reason=Order is ready for pickup by delivery driver
+2025-10-08 23:25:39.774 [com.deliveryplatform.demo.CoreRequirementsDemo.main()] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-001
+2025-10-08 23:25:39.775 [com.deliveryplatform.demo.CoreRequirementsDemo.main()] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-16D252C9, from=READY_FOR_DELIVERY, to=IN_DELIVERY, reason=Assigned to driver: DRIVER-005
+2025-10-08 23:25:39.775 [com.deliveryplatform.demo.CoreRequirementsDemo.main()] INFO  com.deliveryplatform.services.DeliveryService - Driver assigned successfully: orderId=ORD-16D252C9, driverId=DRIVER-005
+2025-10-08 23:25:39.777 [com.deliveryplatform.demo.CoreRequirementsDemo.main()] INFO  com.deliveryplatform.demo.CoreRequirementsDemo - 外送員成功接單: orderId=ORD-16D252C9, driverId=DRIVER-005
+2025-10-08 23:25:39.778 [com.deliveryplatform.demo.CoreRequirementsDemo.main()] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-16D252C9, from=IN_DELIVERY, to=DELIVERED, reason=Order delivered successfully
+2025-10-08 23:25:39.778 [com.deliveryplatform.demo.CoreRequirementsDemo.main()] INFO  com.deliveryplatform.services.DeliveryService - Driver capacity released: driverId=DRIVER-005, remainingOrders=0
+2025-10-08 23:25:39.778 [com.deliveryplatform.demo.CoreRequirementsDemo.main()] INFO  com.deliveryplatform.services.DeliveryService - Delivery completed successfully: orderId=ORD-16D252C9, driverId=DRIVER-005
+2025-10-08 23:25:39.778 [com.deliveryplatform.demo.CoreRequirementsDemo.main()] INFO  com.deliveryplatform.demo.CoreRequirementsDemo - 訂單完整生命週期: PENDING → ACCEPTED → PREPARING → READY_FOR_DELIVERY → IN_DELIVERY → DELIVERED
+2025-10-08 23:25:39.778 [com.deliveryplatform.demo.CoreRequirementsDemo.main()] INFO  com.deliveryplatform.demo.CoreRequirementsDemo - === 4. 演示各種例外處理 ===
+2025-10-08 23:25:39.778 [com.deliveryplatform.demo.CoreRequirementsDemo.main()] INFO  com.deliveryplatform.demo.CoreRequirementsDemo - 4.1 測試 OrderValidationException (Checked Exception)
+2025-10-08 23:25:39.780 [com.deliveryplatform.demo.CoreRequirementsDemo.main()] WARN  com.deliveryplatform.services.OrderLoggingService - Business exception occurred: orderId=unknown, errorCode=ORDER_VALIDATION_FAILED, message=Order validation failed: Customer ID is required, Restaurant ID is required, Delivery address is required, Order must have at least one item, timestamp=2025-10-08T23:25:39.780017
+2025-10-08 23:25:39.780 [com.deliveryplatform.demo.CoreRequirementsDemo.main()] WARN  com.deliveryplatform.demo.CoreRequirementsDemo - 捕獲 OrderValidationException: errorCode=ORDER_VALIDATION_FAILED, errorCount=4
+2025-10-08 23:25:39.781 [com.deliveryplatform.demo.CoreRequirementsDemo.main()] WARN  com.deliveryplatform.demo.CoreRequirementsDemo - 驗證錯誤詳情: [Customer ID is required, Restaurant ID is required, Delivery address is required, Order must have at least one item]
+2025-10-08 23:25:39.781 [com.deliveryplatform.demo.CoreRequirementsDemo.main()] INFO  com.deliveryplatform.demo.CoreRequirementsDemo - 4.2 測試 RestaurantUnavailableException (Checked Exception)
+2025-10-08 23:25:39.783 [com.deliveryplatform.demo.CoreRequirementsDemo.main()] WARN  com.deliveryplatform.services.OrderLoggingService - Business exception occurred: orderId=FAKE-ORDER, errorCode=RESTAURANT_UNAVAILABLE, message=Restaurant REST-002 is currently unavailable: Restaurant is closed, timestamp=2025-10-08T23:25:39.783717
+2025-10-08 23:25:39.784 [com.deliveryplatform.demo.CoreRequirementsDemo.main()] WARN  com.deliveryplatform.services.OrderLoggingService - Restaurant operation failed: restaurantId=REST-002, operation=ACCEPT_ORDER, orderId=FAKE-ORDER
+2025-10-08 23:25:39.786 [com.deliveryplatform.demo.CoreRequirementsDemo.main()] WARN  com.deliveryplatform.demo.CoreRequirementsDemo - 捕獲 RestaurantUnavailableException: restaurantId=REST-002, errorCode=RESTAURANT_UNAVAILABLE
+2025-10-08 23:25:39.786 [com.deliveryplatform.demo.CoreRequirementsDemo.main()] INFO  com.deliveryplatform.demo.CoreRequirementsDemo - 4.3 測試 InvalidOrderStateException (Checked Exception)
+2025-10-08 23:25:39.787 [com.deliveryplatform.demo.CoreRequirementsDemo.main()] ERROR ERROR_EVENTS - System error occurred: context=startPreparingOrder, orderId=NONEXISTENT-ORDER, errorType=IllegalArgumentException, message=Order not found: NONEXISTENT-ORDER
+java.lang.IllegalArgumentException: Order not found: NONEXISTENT-ORDER
+	at com.deliveryplatform.services.RestaurantServiceImpl.getOrderAndValidateOwnership(RestaurantServiceImpl.java:362) ~[classes/:?]
+	at com.deliveryplatform.services.RestaurantServiceImpl.getOrderAndValidateForPreparation(RestaurantServiceImpl.java:336) ~[classes/:?]
+	at com.deliveryplatform.services.RestaurantServiceImpl.startPreparingOrder(RestaurantServiceImpl.java:178) [classes/:?]
+	at com.deliveryplatform.demo.CoreRequirementsDemo.demonstrateExceptionHandling(CoreRequirementsDemo.java:263) [classes/:?]
+	at com.deliveryplatform.demo.CoreRequirementsDemo.main(CoreRequirementsDemo.java:50) [classes/:?]
+	at org.codehaus.mojo.exec.ExecJavaMojo.doExec(ExecJavaMojo.java:371) [exec-maven-plugin-3.6.1.jar:3.6.1]
+	at org.codehaus.mojo.exec.ExecJavaMojo.lambda$execute$0(ExecJavaMojo.java:289) [exec-maven-plugin-3.6.1.jar:3.6.1]
+	at java.lang.Thread.run(Thread.java:1474) [?:?]
+2025-10-08 23:25:39.792 [com.deliveryplatform.demo.CoreRequirementsDemo.main()] WARN  com.deliveryplatform.services.OrderLoggingService - Restaurant operation failed: restaurantId=REST-001, operation=START_PREPARING, orderId=NONEXISTENT-ORDER
+2025-10-08 23:25:39.792 [com.deliveryplatform.demo.CoreRequirementsDemo.main()] ERROR com.deliveryplatform.demo.CoreRequirementsDemo - 其他系統錯誤
+java.lang.RuntimeException: Failed to start preparing order due to system error
+	at com.deliveryplatform.services.RestaurantServiceImpl.startPreparingOrder(RestaurantServiceImpl.java:200) ~[classes/:?]
+	at com.deliveryplatform.demo.CoreRequirementsDemo.demonstrateExceptionHandling(CoreRequirementsDemo.java:263) [classes/:?]
+	at com.deliveryplatform.demo.CoreRequirementsDemo.main(CoreRequirementsDemo.java:50) [classes/:?]
+	at org.codehaus.mojo.exec.ExecJavaMojo.doExec(ExecJavaMojo.java:371) [exec-maven-plugin-3.6.1.jar:3.6.1]
+	at org.codehaus.mojo.exec.ExecJavaMojo.lambda$execute$0(ExecJavaMojo.java:289) [exec-maven-plugin-3.6.1.jar:3.6.1]
+	at java.lang.Thread.run(Thread.java:1474) [?:?]
+Caused by: java.lang.IllegalArgumentException: Order not found: NONEXISTENT-ORDER
+	at com.deliveryplatform.services.RestaurantServiceImpl.getOrderAndValidateOwnership(RestaurantServiceImpl.java:362) ~[classes/:?]
+	at com.deliveryplatform.services.RestaurantServiceImpl.getOrderAndValidateForPreparation(RestaurantServiceImpl.java:336) ~[classes/:?]
+	at com.deliveryplatform.services.RestaurantServiceImpl.startPreparingOrder(RestaurantServiceImpl.java:178) ~[classes/:?]
+	... 5 more
+2025-10-08 23:25:39.799 [com.deliveryplatform.demo.CoreRequirementsDemo.main()] INFO  com.deliveryplatform.demo.CoreRequirementsDemo - 4.4 測試 DeliveryAssignmentException (Checked Exception)
+2025-10-08 23:25:39.800 [com.deliveryplatform.demo.CoreRequirementsDemo.main()] INFO  com.deliveryplatform.services.DeliveryService - Driver removed from available pool: driverId=DRIVER-001
+2025-10-08 23:25:39.800 [com.deliveryplatform.demo.CoreRequirementsDemo.main()] INFO  com.deliveryplatform.services.DeliveryService - Driver removed from available pool: driverId=DRIVER-002
+2025-10-08 23:25:39.800 [com.deliveryplatform.demo.CoreRequirementsDemo.main()] INFO  com.deliveryplatform.services.DeliveryService - Driver removed from available pool: driverId=DRIVER-003
+2025-10-08 23:25:39.800 [com.deliveryplatform.demo.CoreRequirementsDemo.main()] INFO  com.deliveryplatform.services.DeliveryService - Driver removed from available pool: driverId=DRIVER-004
+2025-10-08 23:25:39.800 [com.deliveryplatform.demo.CoreRequirementsDemo.main()] INFO  com.deliveryplatform.services.DeliveryService - Driver removed from available pool: driverId=DRIVER-005
+2025-10-08 23:25:39.801 [com.deliveryplatform.demo.CoreRequirementsDemo.main()] ERROR ERROR_EVENTS - System error occurred: context=assignDriver, orderId=FAKE-ORDER, errorType=IllegalArgumentException, message=Order not found: FAKE-ORDER
+java.lang.IllegalArgumentException: Order not found: FAKE-ORDER
+	at com.deliveryplatform.services.DeliveryService.getOrderAndValidateForDelivery(DeliveryService.java:255) ~[classes/:?]
+	at com.deliveryplatform.services.DeliveryService.assignDriver(DeliveryService.java:59) [classes/:?]
+	at com.deliveryplatform.demo.CoreRequirementsDemo.demonstrateExceptionHandling(CoreRequirementsDemo.java:284) [classes/:?]
+	at com.deliveryplatform.demo.CoreRequirementsDemo.main(CoreRequirementsDemo.java:50) [classes/:?]
+	at org.codehaus.mojo.exec.ExecJavaMojo.doExec(ExecJavaMojo.java:371) [exec-maven-plugin-3.6.1.jar:3.6.1]
+	at org.codehaus.mojo.exec.ExecJavaMojo.lambda$execute$0(ExecJavaMojo.java:289) [exec-maven-plugin-3.6.1.jar:3.6.1]
+	at java.lang.Thread.run(Thread.java:1474) [?:?]
+2025-10-08 23:25:39.802 [com.deliveryplatform.demo.CoreRequirementsDemo.main()] ERROR com.deliveryplatform.demo.CoreRequirementsDemo - 其他系統錯誤
+java.lang.RuntimeException: Failed to assign driver due to system error
+	at com.deliveryplatform.services.DeliveryService.assignDriver(DeliveryService.java:92) ~[classes/:?]
+	at com.deliveryplatform.demo.CoreRequirementsDemo.demonstrateExceptionHandling(CoreRequirementsDemo.java:284) [classes/:?]
+	at com.deliveryplatform.demo.CoreRequirementsDemo.main(CoreRequirementsDemo.java:50) [classes/:?]
+	at org.codehaus.mojo.exec.ExecJavaMojo.doExec(ExecJavaMojo.java:371) [exec-maven-plugin-3.6.1.jar:3.6.1]
+	at org.codehaus.mojo.exec.ExecJavaMojo.lambda$execute$0(ExecJavaMojo.java:289) [exec-maven-plugin-3.6.1.jar:3.6.1]
+	at java.lang.Thread.run(Thread.java:1474) [?:?]
+Caused by: java.lang.IllegalArgumentException: Order not found: FAKE-ORDER
+	at com.deliveryplatform.services.DeliveryService.getOrderAndValidateForDelivery(DeliveryService.java:255) ~[classes/:?]
+	at com.deliveryplatform.services.DeliveryService.assignDriver(DeliveryService.java:59) ~[classes/:?]
+	... 5 more
+2025-10-08 23:25:39.803 [com.deliveryplatform.demo.CoreRequirementsDemo.main()] INFO  com.deliveryplatform.demo.CoreRequirementsDemo - 4.5 模擬 Unchecked Exception (程式碼邏輯錯誤)
+2025-10-08 23:25:39.803 [com.deliveryplatform.demo.CoreRequirementsDemo.main()] ERROR com.deliveryplatform.demo.CoreRequirementsDemo - 捕獲 NullPointerException (Unchecked Exception): 程式碼邏輯錯誤
+java.lang.NullPointerException: Cannot invoke "String.length()" because "nullString" is null
+	at com.deliveryplatform.demo.CoreRequirementsDemo.demonstrateExceptionHandling(CoreRequirementsDemo.java:297) [classes/:?]
+	at com.deliveryplatform.demo.CoreRequirementsDemo.main(CoreRequirementsDemo.java:50) [classes/:?]
+	at org.codehaus.mojo.exec.ExecJavaMojo.doExec(ExecJavaMojo.java:371) [exec-maven-plugin-3.6.1.jar:3.6.1]
+	at org.codehaus.mojo.exec.ExecJavaMojo.lambda$execute$0(ExecJavaMojo.java:289) [exec-maven-plugin-3.6.1.jar:3.6.1]
+	at java.lang.Thread.run(Thread.java:1474) [?:?]
+2025-10-08 23:25:39.804 [com.deliveryplatform.demo.CoreRequirementsDemo.main()] INFO  com.deliveryplatform.demo.CoreRequirementsDemo - === 5. 演示 Log4j2 日誌級別 ===
+2025-10-08 23:25:39.804 [com.deliveryplatform.demo.CoreRequirementsDemo.main()] INFO  com.deliveryplatform.demo.CoreRequirementsDemo - INFO 級別: 記錄正常的業務操作流程
+2025-10-08 23:25:39.804 [com.deliveryplatform.demo.CoreRequirementsDemo.main()] INFO  com.deliveryplatform.demo.CoreRequirementsDemo - INFO 級別: 用戶登入 userId=USER-123
+2025-10-08 23:25:39.805 [com.deliveryplatform.demo.CoreRequirementsDemo.main()] INFO  com.deliveryplatform.demo.CoreRequirementsDemo - INFO 級別: 訂單狀態更新 orderId=ORDER-456, newStatus=DELIVERED
+2025-10-08 23:25:39.805 [com.deliveryplatform.demo.CoreRequirementsDemo.main()] WARN  com.deliveryplatform.demo.CoreRequirementsDemo - WARN 級別: 記錄業務邏輯錯誤 (Checked Exception)
+2025-10-08 23:25:39.805 [com.deliveryplatform.demo.CoreRequirementsDemo.main()] WARN  com.deliveryplatform.demo.CoreRequirementsDemo - WARN 級別: 餐廳容量已滿 restaurantId=REST-001, currentOrders=10
+2025-10-08 23:25:39.805 [com.deliveryplatform.demo.CoreRequirementsDemo.main()] WARN  com.deliveryplatform.demo.CoreRequirementsDemo - WARN 級別: 訂單驗證失敗 orderId=ORDER-789, reason=無效的地址格式
+2025-10-08 23:25:39.805 [com.deliveryplatform.demo.CoreRequirementsDemo.main()] ERROR com.deliveryplatform.demo.CoreRequirementsDemo - ERROR 級別: 記錄系統錯誤 (Unchecked Exception)
+2025-10-08 23:25:39.805 [com.deliveryplatform.demo.CoreRequirementsDemo.main()] ERROR com.deliveryplatform.demo.CoreRequirementsDemo - ERROR 級別: 資料庫連線失敗
+2025-10-08 23:25:39.806 [com.deliveryplatform.demo.CoreRequirementsDemo.main()] ERROR com.deliveryplatform.demo.CoreRequirementsDemo - ERROR 級別: 外部 API 呼叫超時 service=PaymentService, timeout=5000ms
+2025-10-08 23:25:39.806 [com.deliveryplatform.demo.CoreRequirementsDemo.main()] INFO  com.deliveryplatform.demo.CoreRequirementsDemo - 日誌級別使用原則總結:
+2025-10-08 23:25:39.806 [com.deliveryplatform.demo.CoreRequirementsDemo.main()] INFO  com.deliveryplatform.demo.CoreRequirementsDemo - - INFO: 記錄正常業務操作，用於追蹤系統執行流程
+2025-10-08 23:25:39.806 [com.deliveryplatform.demo.CoreRequirementsDemo.main()] INFO  com.deliveryplatform.demo.CoreRequirementsDemo - - WARN: 記錄 Checked Exception (業務邏輯錯誤)，需要關注但不影響系統運行
+2025-10-08 23:25:39.806 [com.deliveryplatform.demo.CoreRequirementsDemo.main()] INFO  com.deliveryplatform.demo.CoreRequirementsDemo - - ERROR: 記錄 Unchecked Exception (程式碼邏輯或環境錯誤)，嚴重問題需要立即處理
+2025-10-08 23:25:39.806 [com.deliveryplatform.demo.CoreRequirementsDemo.main()] INFO  com.deliveryplatform.demo.CoreRequirementsDemo - 透過這些日誌，我們可以發現後端執行過程中發生的各種問題！
+2025-10-08 23:25:39.806 [com.deliveryplatform.demo.CoreRequirementsDemo.main()] INFO  com.deliveryplatform.demo.CoreRequirementsDemo - === 美食外送伺服端功能演示結束 ===
