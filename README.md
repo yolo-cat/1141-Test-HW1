@@ -548,31 +548,16 @@ All exceptions include:
 - Provide user-friendly error responses
 - Test both success and failure scenarios
 
-### Logging Best Practices
-- Log all business operations at INFO level
-- Log business exceptions at WARN level
-- Log system errors at ERROR level with stack traces
-- Include order IDs and user context in log messages
-- Use structured logging for easy parsing
+## 📄 授權條款
 
-## Future Enhancements
+本專案採用 MIT 授權條款，詳見 [LICENSE](LICENSE) 文件。
 
-### Potential Improvements
-- Database persistence (JPA/Hibernate integration)
-- REST API endpoints for external access
-- Real-time notifications (WebSocket/Server-Sent Events)
-- Payment processing integration
-- Geographic routing for driver assignment
-- Performance monitoring and metrics
-- Caching layer for improved performance
+## 👨‍💻 作者資訊
 
-### Scalability Considerations
-- Database sharding by geographic region
-- Message queue integration for asynchronous processing  
-- Microservices architecture for independent scaling
-- Load balancing and horizontal scaling
-- Event sourcing for complete audit trails
+**專案維護者**: [您的姓名]  
+**聯絡方式**: [您的郵件]  
+**專案連結**: [GitHub Repository]
 
-## License
+---
 
-This project is developed as part of a food delivery platform requirements implementation with comprehensive exception handling and logging capabilities.
+**🎊 感謝使用外賣平台後端系統！如果這個專案對您有幫助，請給個 ⭐ Star！**
