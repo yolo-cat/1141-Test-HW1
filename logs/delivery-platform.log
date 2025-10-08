@@ -228,3 +228,38 @@
 2025-10-08 22:10:51.997 [com.deliveryplatform.demo.SimplifiedOrderDemo.main()] WARN  com.deliveryplatform.services.OrderLoggingService - Business exception occurred: orderId=ORD-2C850A92, errorCode=RESTAURANT_UNAVAILABLE, message=Restaurant REST-001 is currently unavailable: Restaurant is closed, timestamp=2025-10-08T22:10:51.996956
 2025-10-08 22:10:51.997 [com.deliveryplatform.demo.SimplifiedOrderDemo.main()] WARN  com.deliveryplatform.services.OrderLoggingService - Restaurant operation failed: restaurantId=REST-001, operation=ACCEPT_ORDER, orderId=ORD-2C850A92
 2025-10-08 22:10:51.997 [com.deliveryplatform.demo.SimplifiedOrderDemo.main()] WARN  com.deliveryplatform.services.OrderLoggingService - Business exception occurred: orderId=unknown, errorCode=RESTAURANT_UNAVAILABLE, message=Restaurant REST-001 is currently unavailable: Restaurant is closed, context=restaurantId=REST-001, timestamp=2025-10-08T22:10:51.996956
+2025-10-08 22:12:46.759 [JavaFX Application Thread] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-001
+2025-10-08 22:12:46.761 [JavaFX Application Thread] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-002
+2025-10-08 22:12:46.761 [JavaFX Application Thread] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-003
+2025-10-08 22:12:46.761 [JavaFX Application Thread] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-004
+2025-10-08 22:12:46.761 [JavaFX Application Thread] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-005
+2025-10-08 22:12:57.932 [Thread-3] WARN  com.deliveryplatform.services.OrderLoggingService - Business exception occurred: orderId=unknown, errorCode=ORDER_VALIDATION_FAILED, message=Order validation failed: Customer ID is required, Restaurant ID is required, Delivery address is required, Order must have at least one item, timestamp=2025-10-08T22:12:57.932149
+2025-10-08 22:13:51.542 [Thread-4] WARN  com.deliveryplatform.services.OrderLoggingService - Business exception occurred: orderId=TEST-ORDER, errorCode=RESTAURANT_UNAVAILABLE, message=Restaurant REST-CLOSED is currently unavailable: Restaurant is closed, timestamp=2025-10-08T22:13:51.542412
+2025-10-08 22:13:51.543 [Thread-4] WARN  com.deliveryplatform.services.OrderLoggingService - Restaurant operation failed: restaurantId=REST-CLOSED, operation=ACCEPT_ORDER, orderId=TEST-ORDER
+2025-10-08 22:14:28.756 [Thread-5] ERROR ERROR_EVENTS - System error occurred: context=startPreparingOrder, orderId=FAKE-ORDER-ID, errorType=IllegalArgumentException, message=Order not found: FAKE-ORDER-ID
+java.lang.IllegalArgumentException: Order not found: FAKE-ORDER-ID
+	at com.deliveryplatform.services.RestaurantServiceImpl.getOrderAndValidateOwnership(RestaurantServiceImpl.java:362) ~[classes/:?]
+	at com.deliveryplatform.services.RestaurantServiceImpl.getOrderAndValidateForPreparation(RestaurantServiceImpl.java:336) ~[classes/:?]
+	at com.deliveryplatform.services.RestaurantServiceImpl.startPreparingOrder(RestaurantServiceImpl.java:178) [classes/:?]
+	at com.deliveryplatform.gui.MainController.lambda$onTriggerStateException$0(MainController.java:661) [classes/:?]
+	at com.deliveryplatform.gui.MainController$1.call(MainController.java:534) [classes/:?]
+	at com.deliveryplatform.gui.MainController$1.call(MainController.java:531) [classes/:?]
+	at javafx.concurrent.Task$TaskCallable.call(Task.java:1399) [javafx-graphics-21.0.1-mac-aarch64.jar:?]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:328) [?:?]
+	at java.lang.Thread.run(Thread.java:1474) [?:?]
+2025-10-08 22:14:28.770 [Thread-5] WARN  com.deliveryplatform.services.OrderLoggingService - Restaurant operation failed: restaurantId=REST-001, operation=START_PREPARING, orderId=FAKE-ORDER-ID
+2025-10-08 22:14:46.297 [Thread-6] INFO  com.deliveryplatform.services.DeliveryService - Driver removed from available pool: driverId=DRIVER-001
+2025-10-08 22:14:46.298 [Thread-6] INFO  com.deliveryplatform.services.DeliveryService - Driver removed from available pool: driverId=DRIVER-002
+2025-10-08 22:14:46.298 [Thread-6] INFO  com.deliveryplatform.services.DeliveryService - Driver removed from available pool: driverId=DRIVER-003
+2025-10-08 22:14:46.298 [Thread-6] INFO  com.deliveryplatform.services.DeliveryService - Driver removed from available pool: driverId=DRIVER-004
+2025-10-08 22:14:46.299 [Thread-6] INFO  com.deliveryplatform.services.DeliveryService - Driver removed from available pool: driverId=DRIVER-005
+2025-10-08 22:14:46.299 [Thread-6] ERROR ERROR_EVENTS - System error occurred: context=assignDriver, orderId=FAKE-ORDER-ID, errorType=IllegalArgumentException, message=Order not found: FAKE-ORDER-ID
+java.lang.IllegalArgumentException: Order not found: FAKE-ORDER-ID
+	at com.deliveryplatform.services.DeliveryService.getOrderAndValidateForDelivery(DeliveryService.java:255) ~[classes/:?]
+	at com.deliveryplatform.services.DeliveryService.assignDriver(DeliveryService.java:59) [classes/:?]
+	at com.deliveryplatform.gui.MainController.lambda$onTriggerDeliveryException$0(MainController.java:692) [classes/:?]
+	at com.deliveryplatform.gui.MainController$1.call(MainController.java:534) [classes/:?]
+	at com.deliveryplatform.gui.MainController$1.call(MainController.java:531) [classes/:?]
+	at javafx.concurrent.Task$TaskCallable.call(Task.java:1399) [javafx-graphics-21.0.1-mac-aarch64.jar:?]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:328) [?:?]
+	at java.lang.Thread.run(Thread.java:1474) [?:?]

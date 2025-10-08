@@ -10,9 +10,9 @@
          <children>
             <HBox alignment="CENTER_LEFT" spacing="20.0" styleClass="brutalist-title-bar">
                <children>
-                  <Label styleClass="brutalist-main-title" text="⚠️ EXCEPTION DEMO SYSTEM" />
+                  <Label styleClass="brutalist-main-title" text="異常處理演示系統" />
                   <Region HBox.hgrow="ALWAYS" />
-                  <Label fx:id="statusLabel" styleClass="brutalist-status" text="READY" />
+                  <Label fx:id="statusLabel" styleClass="brutalist-status" text="系統就緒" />
                </children>
             </HBox>
             <ProgressBar fx:id="operationProgress" maxWidth="1.7976931348623157E308" styleClass="brutalist-progress" />
@@ -25,45 +25,45 @@
             <!-- Exception Trigger Panel -->
             <VBox styleClass="brutalist-exception-panel" spacing="25.0" HBox.hgrow="NEVER">
                <children>
-                  <Label styleClass="brutalist-panel-title" text="EXCEPTION TRIGGERS" />
+                  <Label styleClass="brutalist-panel-title" text="異常觸發器" />
                   
                   <!-- OrderValidationException -->
                   <VBox spacing="10.0" styleClass="brutalist-exception-block validation-block">
                      <children>
-                        <Label styleClass="brutalist-exception-label" text="ORDER VALIDATION" />
+                        <Label styleClass="brutalist-exception-label" text="訂單驗證" />
                         <Button fx:id="orderValidationExceptionBtn" onAction="#triggerOrderValidationException" 
-                                styleClass="brutalist-exception-btn validation-btn" text="TRIGGER VALIDATION ERROR" maxWidth="1.7976931348623157E308" />
-                        <Label styleClass="brutalist-exception-desc" text="INVALID ORDER DATA" wrapText="true" />
+                                styleClass="brutalist-exception-btn validation-btn" text="觸發驗證異常" maxWidth="1.7976931348623157E308" />
+                        <Label styleClass="brutalist-exception-desc" text="無效的訂單資料" wrapText="true" />
                      </children>
                   </VBox>
                   
                   <!-- RestaurantUnavailableException -->
                   <VBox spacing="10.0" styleClass="brutalist-exception-block restaurant-block">
                      <children>
-                        <Label styleClass="brutalist-exception-label" text="RESTAURANT ERROR" />
+                        <Label styleClass="brutalist-exception-label" text="餐廳狀態" />
                         <Button fx:id="restaurantUnavailableExceptionBtn" onAction="#triggerRestaurantUnavailableException" 
-                                styleClass="brutalist-exception-btn restaurant-btn" text="TRIGGER RESTAURANT ERROR" maxWidth="1.7976931348623157E308" />
-                        <Label styleClass="brutalist-exception-desc" text="RESTAURANT CLOSED/FULL" wrapText="true" />
+                                styleClass="brutalist-exception-btn restaurant-btn" text="觸發餐廳異常" maxWidth="1.7976931348623157E308" />
+                        <Label styleClass="brutalist-exception-desc" text="餐廳關閉或滿載" wrapText="true" />
                      </children>
                   </VBox>
                   
                   <!-- InvalidOrderStateException -->
                   <VBox spacing="10.0" styleClass="brutalist-exception-block state-block">
                      <children>
-                        <Label styleClass="brutalist-exception-label" text="INVALID STATE" />
+                        <Label styleClass="brutalist-exception-label" text="狀態轉換" />
                         <Button fx:id="invalidStateExceptionBtn" onAction="#triggerInvalidStateException" 
-                                styleClass="brutalist-exception-btn state-btn" text="TRIGGER STATE ERROR" maxWidth="1.7976931348623157E308" />
-                        <Label styleClass="brutalist-exception-desc" text="INVALID STATUS TRANSITION" wrapText="true" />
+                                styleClass="brutalist-exception-btn state-btn" text="觸發狀態異常" maxWidth="1.7976931348623157E308" />
+                        <Label styleClass="brutalist-exception-desc" text="無效的狀態轉換" wrapText="true" />
                      </children>
                   </VBox>
                   
                   <!-- DeliveryAssignmentException -->
                   <VBox spacing="10.0" styleClass="brutalist-exception-block delivery-block">
                      <children>
-                        <Label styleClass="brutalist-exception-label" text="DELIVERY ERROR" />
+                        <Label styleClass="brutalist-exception-label" text="配送分配" />
                         <Button fx:id="deliveryAssignmentExceptionBtn" onAction="#triggerDeliveryAssignmentException" 
-                                styleClass="brutalist-exception-btn delivery-btn" text="TRIGGER DELIVERY ERROR" maxWidth="1.7976931348623157E308" />
-                        <Label styleClass="brutalist-exception-desc" text="NO DRIVERS AVAILABLE" wrapText="true" />
+                                styleClass="brutalist-exception-btn delivery-btn" text="觸發配送異常" maxWidth="1.7976931348623157E308" />
+                        <Label styleClass="brutalist-exception-desc" text="沒有可用司機" wrapText="true" />
                      </children>
                   </VBox>
                   
@@ -72,11 +72,11 @@
                   <!-- Quick Actions -->
                   <VBox spacing="12.0">
                      <children>
-                        <Label styleClass="brutalist-panel-subtitle" text="QUICK ACTIONS" />
+                        <Label styleClass="brutalist-panel-subtitle" text="快速操作" />
                         <Button fx:id="createOrderBtn" onAction="#onCreateOrder" 
-                                styleClass="brutalist-action-btn create-btn" text="CREATE ORDER" maxWidth="1.7976931348623157E308" />
+                                styleClass="brutalist-action-btn create-btn" text="建立訂單" maxWidth="1.7976931348623157E308" />
                         <Button fx:id="clearLogBtn" onAction="#onClearLog" 
-                                styleClass="brutalist-action-btn clear-btn" text="CLEAR LOGS" maxWidth="1.7976931348623157E308" />
+                                styleClass="brutalist-action-btn clear-btn" text="清除日誌" maxWidth="1.7976931348623157E308" />
                      </children>
                   </VBox>
                </children>
@@ -90,10 +90,10 @@
          <children>
             <HBox alignment="CENTER_LEFT" spacing="10.0" styleClass="log-header">
                <children>
-                  <Label styleClass="log-title" text="📋 系統日誌與異常記錄" />
+                  <Label styleClass="log-title" text="系統日誌與異常記錄" />
                   <Region HBox.hgrow="ALWAYS" />
-                  <Button fx:id="refreshLogBtn" onAction="#onRefreshLog" styleClass="small-button" text="🔄 刷新" />
-                  <Button fx:id="clearLogBtn" onAction="#onClearLog" styleClass="small-button" text="🗑️ 清除" />
+                  <Button fx:id="refreshLogBtn" onAction="#onRefreshLog" styleClass="small-button" text="刷新" />
+                  <Button fx:id="clearLogBtn" onAction="#onClearLog" styleClass="small-button" text="清除" />
                </children>
             </HBox>
             <TextArea fx:id="logDisplayArea" prefRowCount="12" styleClass="log-area" wrapText="true" />
