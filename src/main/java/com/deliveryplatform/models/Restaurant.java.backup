@@ -1,0 +1,236 @@
+package com.deliveryplatform.models;
+
+import java.util.Objects;
+
+/**
+ * Represents a restaurant - simplified version.
+ */
+public class Restaurant {
+
+    private String restaurantId;
+    private String name;
+    private boolean isOpen;
+
+    /**
+     * Default constructor for frameworks.
+     */
+    public Restaurant() {
+        this.acceptingOrders = true;
+    }
+
+    /**
+     * Constructor for creating a restaurant.
+     * 
+     * @param restaurantId the unique identifier for this restaurant
+     * @param name the name of the restaurant
+     * @param openTime the opening time
+     * @param closeTime the closing time
+     * @param maxConcurrentOrders the maximum number of concurrent orders
+     */
+    public Restaurant(String restaurantId, String name, LocalTime openTime, LocalTime closeTime, 
+                     int maxConcurrentOrders) {
+        this.restaurantId = restaurantId;
+        this.name = name;
+        this.openTime = openTime;
+        this.closeTime = closeTime;
+        this.maxConcurrentOrders = maxConcurrentOrders;
+        this.currentOrderCount = 0;
+        this.isOpen = true;
+        this.acceptingOrders = true;
+    }
+
+    /**
+     * Checks if the restaurant can accept a new order.
+     * A restaurant can accept orders if it is open, within operating hours,
+     * accepting orders, and has capacity for more orders.
+     * 
+     * @return true if the restaurant can accept orders
+     */
+    public boolean canAcceptOrder() {
+        return isOpen && 
+               isWithinOperatingHours() && 
+               acceptingOrders && 
+               currentOrderCount < maxConcurrentOrders;
+    }
+
+    /**
+     * Checks if the current time is within the restaurant's operating hours.
+     * 
+     * @return true if within operating hours
+     */
+    public boolean isWithinOperatingHours() {
+        LocalTime now = LocalTime.now();
+        
+        // Handle case where close time is before open time (spans midnight)
+        if (closeTime.isBefore(openTime)) {
+            return now.isAfter(openTime) || now.isBefore(closeTime);
+        } else {
+            return now.isAfter(openTime) && now.isBefore(closeTime);
+        }
+    }
+
+    /**
+     * Increments the current order count when an order is accepted.
+     * 
+     * @throws IllegalStateException if the restaurant is at capacity
+     */
+    public void acceptOrder() {
+        if (!canAcceptOrder()) {
+            throw new IllegalStateException("Restaurant cannot accept more orders");
+        }
+        this.currentOrderCount++;
+    }
+
+    /**
+     * Decrements the current order count when an order is completed or cancelled.
+     * 
+     * @throws IllegalStateException if there are no orders to complete
+     */
+    public void completeOrder() {
+        if (currentOrderCount <= 0) {
+            throw new IllegalStateException("No orders to complete");
+        }
+        this.currentOrderCount--;
+    }
+
+    /**
+     * Gets the remaining capacity for new orders.
+     * 
+     * @return the number of additional orders that can be accepted
+     */
+    public int getRemainingCapacity() {
+        return Math.max(0, maxConcurrentOrders - currentOrderCount);
+    }
+
+    /**
+     * Checks if the restaurant is at full capacity.
+     * 
+     * @return true if at maximum capacity
+     */
+    public boolean isAtCapacity() {
+        return currentOrderCount >= maxConcurrentOrders;
+    }
+
+    /**
+     * Temporarily stops accepting orders (emergency close).
+     */
+    public void stopAcceptingOrders() {
+        this.acceptingOrders = false;
+    }
+
+    /**
+     * Resumes accepting orders.
+     */
+    public void startAcceptingOrders() {
+        this.acceptingOrders = true;
+    }
+
+    // Getters and Setters
+
+    public String getRestaurantId() {
+        return restaurantId;
+    }
+
+    public void setRestaurantId(String restaurantId) {
+        this.restaurantId = restaurantId;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public boolean isOpen() {
+        return isOpen;
+    }
+
+    public void setOpen(boolean open) {
+        isOpen = open;
+    }
+
+    public LocalTime getOpenTime() {
+        return openTime;
+    }
+
+    public void setOpenTime(LocalTime openTime) {
+        this.openTime = openTime;
+    }
+
+    public LocalTime getCloseTime() {
+        return closeTime;
+    }
+
+    public void setCloseTime(LocalTime closeTime) {
+        this.closeTime = closeTime;
+    }
+
+    public int getMaxConcurrentOrders() {
+        return maxConcurrentOrders;
+    }
+
+    public void setMaxConcurrentOrders(int maxConcurrentOrders) {
+        this.maxConcurrentOrders = maxConcurrentOrders;
+    }
+
+    public int getCurrentOrderCount() {
+        return currentOrderCount;
+    }
+
+    public void setCurrentOrderCount(int currentOrderCount) {
+        this.currentOrderCount = currentOrderCount;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
+    public String getCuisine() {
+        return cuisine;
+    }
+
+    public void setCuisine(String cuisine) {
+        this.cuisine = cuisine;
+    }
+
+    public boolean isAcceptingOrders() {
+        return acceptingOrders;
+    }
+
+    public void setAcceptingOrders(boolean acceptingOrders) {
+        this.acceptingOrders = acceptingOrders;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Restaurant that = (Restaurant) o;
+        return Objects.equals(restaurantId, that.restaurantId);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(restaurantId);
+    }
+
+    @Override
+    public String toString() {
+        return String.format("Restaurant{restaurantId='%s', name='%s', isOpen=%s, capacity=%d/%d, acceptingOrders=%s}",
+                           restaurantId, name, isOpen, currentOrderCount, maxConcurrentOrders, acceptingOrders);
+    }
+}
