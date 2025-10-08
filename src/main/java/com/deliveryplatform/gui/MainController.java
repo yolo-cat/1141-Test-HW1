@@ -537,14 +537,18 @@ public class MainController implements Initializable {
         
         task.setOnRunning(e -> {
             Platform.runLater(() -> {
-                operationProgress.setVisible(true);
+                if (operationProgress != null) {
+                    operationProgress.setVisible(true);
+                }
                 updateStatus("正在執行: " + operationName, true);
             });
         });
         
         task.setOnSucceeded(e -> {
             Platform.runLater(() -> {
-                operationProgress.setVisible(false);
+                if (operationProgress != null) {
+                    operationProgress.setVisible(false);
+                }
                 updateStatus("完成: " + operationName, false);
             });
         });
@@ -552,7 +556,9 @@ public class MainController implements Initializable {
         task.setOnFailed(e -> {
             Throwable exception = task.getException();
             Platform.runLater(() -> {
-                operationProgress.setVisible(false);
+                if (operationProgress != null) {
+                    operationProgress.setVisible(false);
+                }
                 updateStatus("失敗: " + operationName + " - " + exception.getClass().getSimpleName(), true);
                 
                 if (exception instanceof DeliveryPlatformException) {

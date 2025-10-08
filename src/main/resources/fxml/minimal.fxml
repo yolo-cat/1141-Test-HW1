@@ -45,7 +45,7 @@
                               <Button fx:id="orderValidationExceptionBtn" 
                                       text="觸發驗證錯誤" 
                                       styleClass="exception-btn-validation"
-                                      onAction="#triggerOrderValidationException"
+                                      onAction="#onTriggerValidationException"
                                       maxWidth="Infinity" />
                               <Label text="模擬無效的訂單資料" styleClass="info-text" />
                            </children>
@@ -58,7 +58,7 @@
                               <Button fx:id="restaurantUnavailableExceptionBtn"
                                       text="觸發餐廳異常" 
                                       styleClass="exception-btn-restaurant"
-                                      onAction="#triggerRestaurantUnavailableException"
+                                      onAction="#onTriggerRestaurantException"
                                       maxWidth="Infinity" />
                               <Label text="模擬餐廳關閉或滿載" styleClass="info-text" />
                            </children>
@@ -71,7 +71,7 @@
                               <Button fx:id="invalidStateExceptionBtn"
                                       text="觸發狀態異常" 
                                       styleClass="exception-btn-state"
-                                      onAction="#triggerInvalidStateException"
+                                      onAction="#onTriggerStateException"
                                       maxWidth="Infinity" />
                               <Label text="模擬非法的訂單狀態變更" styleClass="info-text" />
                            </children>
@@ -84,7 +84,7 @@
                               <Button fx:id="deliveryAssignmentExceptionBtn"
                                       text="觸發配送異常" 
                                       styleClass="exception-btn-delivery"
-                                      onAction="#triggerDeliveryAssignmentException"
+                                      onAction="#onTriggerDeliveryException"
                                       maxWidth="Infinity" />
                               <Label text="模擬沒有可用配送員" styleClass="info-text" />
                            </children>
