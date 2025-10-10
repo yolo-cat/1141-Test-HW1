@@ -4799,3 +4799,90 @@ java.lang.IllegalArgumentException: 訂單不存在: NONEXISTENT-ORDER
 2025-10-09 01:18:58.277 [main] INFO  com.deliveryplatform.services.RestaurantServiceImpl - 餐廳 REST-001 嘗試接單 ORD-1161A8DC
 2025-10-09 01:18:58.277 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-1161A8DC, from=PENDING, to=ACCEPTED
 2025-10-09 01:18:58.277 [main] INFO  com.deliveryplatform.services.RestaurantServiceImpl - 餐廳 REST-001 成功接單 ORD-1161A8DC
+2025-10-09 16:22:09.676 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-001
+2025-10-09 16:22:09.678 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-002
+2025-10-09 16:22:09.678 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-003
+2025-10-09 16:22:09.678 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-004
+2025-10-09 16:22:09.678 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-005
+2025-10-09 16:22:09.678 [main] INFO  com.deliveryplatform.services.OrderService - Creating order: customerId=null, restaurantId=null, itemCount=0
+2025-10-09 16:22:09.679 [main] WARN  com.deliveryplatform.services.OrderService - Order validation failed: customerId=null, restaurantId=null, errors=[Customer ID is required, Restaurant ID is required, Delivery address is required, Order must have at least one item]
+2025-10-09 16:22:09.690 [main] INFO  com.deliveryplatform.services.OrderService - Creating order: customerId=CUST-001, restaurantId=REST-001, itemCount=1
+2025-10-09 16:22:09.692 [main] INFO  com.deliveryplatform.models.Order - Order created: orderId=ORD-21285F26, customerId=CUST-001, restaurantId=REST-001, amount=15.99
+2025-10-09 16:22:09.694 [main] INFO  com.deliveryplatform.services.OrderService - Order created successfully: orderId=ORD-21285F26, amount=15.99
+2025-10-09 16:22:09.694 [main] INFO  com.deliveryplatform.services.RestaurantServiceImpl - 餐廳 REST-001 嘗試接單 ORD-21285F26
+2025-10-09 16:22:09.694 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-21285F26, from=PENDING, to=ACCEPTED
+2025-10-09 16:22:09.694 [main] INFO  com.deliveryplatform.services.RestaurantServiceImpl - 餐廳 REST-001 成功接單 ORD-21285F26
+2025-10-09 16:22:09.695 [main] INFO  com.deliveryplatform.services.RestaurantServiceImpl - 餐廳 REST-001 開始製作訂單 ORD-21285F26
+2025-10-09 16:22:09.695 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-21285F26, from=ACCEPTED, to=PREPARING
+2025-10-09 16:22:09.695 [main] INFO  com.deliveryplatform.services.RestaurantServiceImpl - 餐廳 REST-001 成功開始製作訂單 ORD-21285F26
+2025-10-09 16:22:09.695 [main] INFO  com.deliveryplatform.services.RestaurantServiceImpl - 餐廳 REST-001 標記訂單 ORD-21285F26 完成製作
+2025-10-09 16:22:09.695 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-21285F26, from=PREPARING, to=READY_FOR_DELIVERY
+2025-10-09 16:22:09.695 [main] INFO  com.deliveryplatform.services.RestaurantServiceImpl - 餐廳 REST-001 成功標記訂單 ORD-21285F26 完成製作
+2025-10-09 16:22:09.695 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-001
+2025-10-09 16:22:09.695 [main] INFO  com.deliveryplatform.services.DeliveryService - Attempting to assign driver for order: ORD-21285F26
+2025-10-09 16:22:09.696 [main] INFO  com.deliveryplatform.models.Order - Driver DRIVER-005 assigned to order ORD-21285F26
+2025-10-09 16:22:09.696 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-21285F26, from=READY_FOR_DELIVERY, to=IN_DELIVERY
+2025-10-09 16:22:09.696 [main] INFO  com.deliveryplatform.services.DeliveryService - Driver assigned successfully: orderId=ORD-21285F26, driverId=DRIVER-005
+2025-10-09 16:22:09.696 [main] INFO  com.deliveryplatform.services.DeliveryService - Completing delivery: orderId=ORD-21285F26, driverId=DRIVER-005
+2025-10-09 16:22:09.696 [main] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-21285F26, from=IN_DELIVERY, to=DELIVERED
+2025-10-09 16:22:09.696 [main] INFO  com.deliveryplatform.services.DeliveryService - Delivery completed successfully: orderId=ORD-21285F26, driverId=DRIVER-005
+2025-10-09 16:22:09.696 [main] INFO  com.deliveryplatform.services.RestaurantServiceImpl - 餐廳 NONEXISTENT-RESTAURANT 嘗試接單 FAKE-ORDER
+2025-10-09 16:22:09.696 [main] WARN  com.deliveryplatform.services.RestaurantServiceImpl - 業務異常 - acceptOrder: orderId=FAKE-ORDER, restaurantId=NONEXISTENT-RESTAURANT, 錯誤=Restaurant NONEXISTENT-RESTAURANT is currently unavailable: 餐廳不存在
+2025-10-09 16:28:42.262 [com.deliveryplatform.demo.SimpleConsoleDemo.main()] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-001
+2025-10-09 16:28:42.263 [com.deliveryplatform.demo.SimpleConsoleDemo.main()] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-002
+2025-10-09 16:28:42.263 [com.deliveryplatform.demo.SimpleConsoleDemo.main()] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-003
+2025-10-09 16:28:42.263 [com.deliveryplatform.demo.SimpleConsoleDemo.main()] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-004
+2025-10-09 16:28:42.263 [com.deliveryplatform.demo.SimpleConsoleDemo.main()] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-005
+2025-10-09 16:28:42.264 [com.deliveryplatform.demo.SimpleConsoleDemo.main()] INFO  com.deliveryplatform.services.OrderService - Creating order: customerId=null, restaurantId=null, itemCount=0
+2025-10-09 16:28:42.265 [com.deliveryplatform.demo.SimpleConsoleDemo.main()] WARN  com.deliveryplatform.services.OrderService - Order validation failed: customerId=null, restaurantId=null, errors=[Customer ID is required, Restaurant ID is required, Delivery address is required, Order must have at least one item]
+2025-10-09 16:28:42.273 [com.deliveryplatform.demo.SimpleConsoleDemo.main()] INFO  com.deliveryplatform.services.OrderService - Creating order: customerId=CUST-001, restaurantId=REST-001, itemCount=1
+2025-10-09 16:28:42.277 [com.deliveryplatform.demo.SimpleConsoleDemo.main()] INFO  com.deliveryplatform.models.Order - Order created: orderId=ORD-47A67E24, customerId=CUST-001, restaurantId=REST-001, amount=15.99
+2025-10-09 16:28:42.277 [com.deliveryplatform.demo.SimpleConsoleDemo.main()] INFO  com.deliveryplatform.services.OrderService - Order created successfully: orderId=ORD-47A67E24, amount=15.99
+2025-10-09 16:28:42.277 [com.deliveryplatform.demo.SimpleConsoleDemo.main()] INFO  com.deliveryplatform.services.RestaurantServiceImpl - 餐廳 REST-001 嘗試接單 ORD-47A67E24
+2025-10-09 16:28:42.277 [com.deliveryplatform.demo.SimpleConsoleDemo.main()] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-47A67E24, from=PENDING, to=ACCEPTED
+2025-10-09 16:28:42.277 [com.deliveryplatform.demo.SimpleConsoleDemo.main()] INFO  com.deliveryplatform.services.RestaurantServiceImpl - 餐廳 REST-001 成功接單 ORD-47A67E24
+2025-10-09 16:28:42.277 [com.deliveryplatform.demo.SimpleConsoleDemo.main()] INFO  com.deliveryplatform.services.RestaurantServiceImpl - 餐廳 REST-001 開始製作訂單 ORD-47A67E24
+2025-10-09 16:28:42.277 [com.deliveryplatform.demo.SimpleConsoleDemo.main()] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-47A67E24, from=ACCEPTED, to=PREPARING
+2025-10-09 16:28:42.278 [com.deliveryplatform.demo.SimpleConsoleDemo.main()] INFO  com.deliveryplatform.services.RestaurantServiceImpl - 餐廳 REST-001 成功開始製作訂單 ORD-47A67E24
+2025-10-09 16:28:42.278 [com.deliveryplatform.demo.SimpleConsoleDemo.main()] INFO  com.deliveryplatform.services.RestaurantServiceImpl - 餐廳 REST-001 標記訂單 ORD-47A67E24 完成製作
+2025-10-09 16:28:42.278 [com.deliveryplatform.demo.SimpleConsoleDemo.main()] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-47A67E24, from=PREPARING, to=READY_FOR_DELIVERY
+2025-10-09 16:28:42.278 [com.deliveryplatform.demo.SimpleConsoleDemo.main()] INFO  com.deliveryplatform.services.RestaurantServiceImpl - 餐廳 REST-001 成功標記訂單 ORD-47A67E24 完成製作
+2025-10-09 16:28:42.278 [com.deliveryplatform.demo.SimpleConsoleDemo.main()] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-001
+2025-10-09 16:28:42.278 [com.deliveryplatform.demo.SimpleConsoleDemo.main()] INFO  com.deliveryplatform.services.DeliveryService - Attempting to assign driver for order: ORD-47A67E24
+2025-10-09 16:28:42.279 [com.deliveryplatform.demo.SimpleConsoleDemo.main()] INFO  com.deliveryplatform.models.Order - Driver DRIVER-005 assigned to order ORD-47A67E24
+2025-10-09 16:28:42.279 [com.deliveryplatform.demo.SimpleConsoleDemo.main()] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-47A67E24, from=READY_FOR_DELIVERY, to=IN_DELIVERY
+2025-10-09 16:28:42.279 [com.deliveryplatform.demo.SimpleConsoleDemo.main()] INFO  com.deliveryplatform.services.DeliveryService - Driver assigned successfully: orderId=ORD-47A67E24, driverId=DRIVER-005
+2025-10-09 16:28:42.279 [com.deliveryplatform.demo.SimpleConsoleDemo.main()] INFO  com.deliveryplatform.services.DeliveryService - Completing delivery: orderId=ORD-47A67E24, driverId=DRIVER-005
+2025-10-09 16:28:42.279 [com.deliveryplatform.demo.SimpleConsoleDemo.main()] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-47A67E24, from=IN_DELIVERY, to=DELIVERED
+2025-10-09 16:28:42.279 [com.deliveryplatform.demo.SimpleConsoleDemo.main()] INFO  com.deliveryplatform.services.DeliveryService - Delivery completed successfully: orderId=ORD-47A67E24, driverId=DRIVER-005
+2025-10-09 16:28:42.279 [com.deliveryplatform.demo.SimpleConsoleDemo.main()] INFO  com.deliveryplatform.services.RestaurantServiceImpl - 餐廳 NONEXISTENT-RESTAURANT 嘗試接單 FAKE-ORDER
+2025-10-09 16:28:42.279 [com.deliveryplatform.demo.SimpleConsoleDemo.main()] WARN  com.deliveryplatform.services.RestaurantServiceImpl - 業務異常 - acceptOrder: orderId=FAKE-ORDER, restaurantId=NONEXISTENT-RESTAURANT, 錯誤=Restaurant NONEXISTENT-RESTAURANT is currently unavailable: 餐廳不存在
+2025-10-09 16:32:57.251 [com.deliveryplatform.demo.SimpleConsoleDemo.main()] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-001
+2025-10-09 16:32:57.252 [com.deliveryplatform.demo.SimpleConsoleDemo.main()] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-002
+2025-10-09 16:32:57.252 [com.deliveryplatform.demo.SimpleConsoleDemo.main()] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-003
+2025-10-09 16:32:57.252 [com.deliveryplatform.demo.SimpleConsoleDemo.main()] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-004
+2025-10-09 16:32:57.252 [com.deliveryplatform.demo.SimpleConsoleDemo.main()] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-005
+2025-10-09 16:32:57.252 [com.deliveryplatform.demo.SimpleConsoleDemo.main()] INFO  com.deliveryplatform.services.OrderService - Creating order: customerId=null, restaurantId=null, itemCount=0
+2025-10-09 16:32:57.253 [com.deliveryplatform.demo.SimpleConsoleDemo.main()] WARN  com.deliveryplatform.services.OrderService - Order validation failed: customerId=null, restaurantId=null, errors=[Customer ID is required, Restaurant ID is required, Delivery address is required, Order must have at least one item]
+2025-10-09 16:32:57.266 [com.deliveryplatform.demo.SimpleConsoleDemo.main()] INFO  com.deliveryplatform.services.OrderService - Creating order: customerId=CUST-001, restaurantId=REST-001, itemCount=1
+2025-10-09 16:32:57.270 [com.deliveryplatform.demo.SimpleConsoleDemo.main()] INFO  com.deliveryplatform.models.Order - Order created: orderId=ORD-BC471602, customerId=CUST-001, restaurantId=REST-001, amount=15.99
+2025-10-09 16:32:57.270 [com.deliveryplatform.demo.SimpleConsoleDemo.main()] INFO  com.deliveryplatform.services.OrderService - Order created successfully: orderId=ORD-BC471602, amount=15.99
+2025-10-09 16:32:57.270 [com.deliveryplatform.demo.SimpleConsoleDemo.main()] INFO  com.deliveryplatform.services.RestaurantServiceImpl - 餐廳 REST-001 嘗試接單 ORD-BC471602
+2025-10-09 16:32:57.270 [com.deliveryplatform.demo.SimpleConsoleDemo.main()] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-BC471602, from=PENDING, to=ACCEPTED
+2025-10-09 16:32:57.270 [com.deliveryplatform.demo.SimpleConsoleDemo.main()] INFO  com.deliveryplatform.services.RestaurantServiceImpl - 餐廳 REST-001 成功接單 ORD-BC471602
+2025-10-09 16:32:57.270 [com.deliveryplatform.demo.SimpleConsoleDemo.main()] INFO  com.deliveryplatform.services.RestaurantServiceImpl - 餐廳 REST-001 開始製作訂單 ORD-BC471602
+2025-10-09 16:32:57.270 [com.deliveryplatform.demo.SimpleConsoleDemo.main()] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-BC471602, from=ACCEPTED, to=PREPARING
+2025-10-09 16:32:57.270 [com.deliveryplatform.demo.SimpleConsoleDemo.main()] INFO  com.deliveryplatform.services.RestaurantServiceImpl - 餐廳 REST-001 成功開始製作訂單 ORD-BC471602
+2025-10-09 16:32:57.271 [com.deliveryplatform.demo.SimpleConsoleDemo.main()] INFO  com.deliveryplatform.services.RestaurantServiceImpl - 餐廳 REST-001 標記訂單 ORD-BC471602 完成製作
+2025-10-09 16:32:57.271 [com.deliveryplatform.demo.SimpleConsoleDemo.main()] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-BC471602, from=PREPARING, to=READY_FOR_DELIVERY
+2025-10-09 16:32:57.271 [com.deliveryplatform.demo.SimpleConsoleDemo.main()] INFO  com.deliveryplatform.services.RestaurantServiceImpl - 餐廳 REST-001 成功標記訂單 ORD-BC471602 完成製作
+2025-10-09 16:32:57.271 [com.deliveryplatform.demo.SimpleConsoleDemo.main()] INFO  com.deliveryplatform.services.DeliveryService - Driver added to available pool: driverId=DRIVER-001
+2025-10-09 16:32:57.271 [com.deliveryplatform.demo.SimpleConsoleDemo.main()] INFO  com.deliveryplatform.services.DeliveryService - Attempting to assign driver for order: ORD-BC471602
+2025-10-09 16:32:57.271 [com.deliveryplatform.demo.SimpleConsoleDemo.main()] INFO  com.deliveryplatform.models.Order - Driver DRIVER-005 assigned to order ORD-BC471602
+2025-10-09 16:32:57.271 [com.deliveryplatform.demo.SimpleConsoleDemo.main()] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-BC471602, from=READY_FOR_DELIVERY, to=IN_DELIVERY
+2025-10-09 16:32:57.271 [com.deliveryplatform.demo.SimpleConsoleDemo.main()] INFO  com.deliveryplatform.services.DeliveryService - Driver assigned successfully: orderId=ORD-BC471602, driverId=DRIVER-005
+2025-10-09 16:32:57.271 [com.deliveryplatform.demo.SimpleConsoleDemo.main()] INFO  com.deliveryplatform.services.DeliveryService - Completing delivery: orderId=ORD-BC471602, driverId=DRIVER-005
+2025-10-09 16:32:57.272 [com.deliveryplatform.demo.SimpleConsoleDemo.main()] INFO  com.deliveryplatform.models.Order - Order status transition: orderId=ORD-BC471602, from=IN_DELIVERY, to=DELIVERED
+2025-10-09 16:32:57.272 [com.deliveryplatform.demo.SimpleConsoleDemo.main()] INFO  com.deliveryplatform.services.DeliveryService - Delivery completed successfully: orderId=ORD-BC471602, driverId=DRIVER-005
+2025-10-09 16:32:57.272 [com.deliveryplatform.demo.SimpleConsoleDemo.main()] INFO  com.deliveryplatform.services.RestaurantServiceImpl - 餐廳 NONEXISTENT-RESTAURANT 嘗試接單 FAKE-ORDER
+2025-10-09 16:32:57.272 [com.deliveryplatform.demo.SimpleConsoleDemo.main()] WARN  com.deliveryplatform.services.RestaurantServiceImpl - 業務異常 - acceptOrder: orderId=FAKE-ORDER, restaurantId=NONEXISTENT-RESTAURANT, 錯誤=Restaurant NONEXISTENT-RESTAURANT is currently unavailable: 餐廳不存在
